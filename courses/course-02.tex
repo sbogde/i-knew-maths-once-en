@@ -96,3 +96,112 @@ Let $(A, R)$ be a set with an equivalence relation $R$.
     \item If $C'$ and $C''$ are two equivalence classes, then either $C' = C''$ or $C' \cap C'' = \emptyset$.
 \end{enumerate}
 \end{proposition}
+
+\begin{proof}
+(1)
+``$\implies$'': $\hat{a} = \hat{b} \implies a \in \hat{a} \implies a \in \hat{b} \implies a \sim b$. \\
+``$\impliedby$'': $a \sim b \overset{?}{\implies} \hat{a} = \hat{b}$. \\
+``$\subseteq$'': Let $x \in \hat{a} \implies x \sim a$. Since $a \sim b \implies x \sim b \implies x \in \hat{b}$. \\
+``$\supseteq$'': Analogous (idem).
+
+(2) Let $c \in C' \cap C'' \implies C' = \hat{c} = C''$.
+\end{proof}
+
+\begin{definition}
+Let $(A, R)$ with $A \neq \emptyset$ and $R$ an equivalence relation. A family of elements from $A$ is called a \textbf{complete system of representatives} (transversal) if:
+\begin{itemize}
+    \item[$(\alpha)$] $(\forall) i, j \in I, i \neq j \implies a_i \not\sim a_j$
+    \item[$(\beta)$] $(\forall) x \in A, \exists! i \in I \text{ s.t. } x \sim a_i$
+\end{itemize}
+\end{definition}
+
+\textbf{Examples:}
+\begin{enumerate}
+    \item $(\mathbb{Z}, R_6)$, the set $\{0, 1, 2, 3, 4, 5\} \subset \mathbb{Z}$ is a complete system of representatives for $R_6$. \\
+    $x \in \mathbb{Z} \implies x = 6q + r, \quad 0 \leq r < 6$. \\
+    The set $\{6q, 1+6q, \dots, 5+6q\}$ is also a transversal. \\
+    $x - r \text{ is a multiple of } 6 \implies x \equiv r \pmod 6$.
+    \item $A = \mathbb{R}$. The interval $[0, 1) \subset \mathbb{R}$, and $R = \{(x, y) \in \mathbb{R} \times \mathbb{R} \mid x - y \in \mathbb{Z}\}$. \\
+    $x \in \mathbb{R} \implies \exists! a \in [0, 1) \text{ s.t. } x - a \in \mathbb{Z}$. \\
+    $x = [x] + \{x\}$, where $a = \{x\} \in [0, 1) \implies [0, 1)$ is a complete system of representatives.
+\end{enumerate}
+
+\begin{definition}
+Let $(A, R)$, where $R$ is an equivalence relation. The set:
+$$ \frac{A}{R} = \{\hat{a} \mid a \in A\} $$
+represents the set of all equivalence classes and is called the \textbf{quotient set} of $A$ by $R$.
+\end{definition}
+
+\begin{proposition}
+$\frac{A}{R} = \{\hat{a}_i \mid i \in I\}$ where $\{a_i\}_{i \in I}$ is a complete system of representatives. \\
+$(\forall) a \in A, \exists a_i$ s.t. $\hat{a} = \hat{a}_i$.
+\end{proposition}
+
+\textbf{Examples:}
+$\frac{\mathbb{Z}}{R_6} = \{\hat{0}, \hat{1}, \hat{2}, \hat{3}, \hat{4}, \hat{5}\}$. Generally, $\frac{\mathbb{Z}}{R_n} = \{\hat{0}, \hat{1}, \dots, \widehat{n-1}\}$.
+
+\begin{remark}
+If $\{a_i\}_{i \in I} \subset A$ is a transversal in $A$ for an equivalence relation $R$, then:
+$$ A = \bigcup_{i \in I} \hat{a}_i \quad \text{(disjoint union)} $$
+\end{remark}
+
+\begin{proof}
+``$\supseteq$'': Obvious. \\
+``$\subseteq$'': We use point $(\beta)$ from the definition of a complete system of representatives. \\
+Let $x \in A \implies \exists i \in I \text{ s.t. } x \sim a_i \implies x \in \hat{a}_i \implies x \in \bigcup_{i \in I} \hat{a}_i$. \\
+The union is disjoint because $\hat{a}_i \cap \hat{a}_j = \emptyset$ for $i \neq j$.
+\end{proof}
+
+\textbf{Example:} $\mathbb{Z} = 6\mathbb{Z} \cup (6\mathbb{Z}+1) \cup \dots \cup (6\mathbb{Z}+5)$.
+
+\begin{definition}
+A \textbf{partition} of a set $A \neq \emptyset$ is a family of subsets $A_i \subset A$, $A_i \neq \emptyset$, such that:
+\begin{itemize}
+    \item $i \neq j \implies A_i \cap A_j = \emptyset$
+    \item $\bigcup_{i \in I} A_i = A$
+\end{itemize}
+
+% Partition Diagram
+\begin{center}
+\begin{tikzpicture}[scale=0.8]
+  \draw[thick] (0,0) circle (1.5cm);
+  \draw[thick] (-1.5,0) to[out=20,in=160] (1.5,0);
+  \draw[thick] (-0.5,-1.4) to[out=80,in=260] (0.5,1.4);
+  \draw[thick] (-0.8,0.3) to[out=-20,in=100] (0.8,-1.2);
+\end{tikzpicture}
+\end{center}
+\end{definition}
+
+On a set $A$, we can define as many equivalence relations as there are possible partitions for $A$.
+Given a partition, we define the relation: $x, y \in A \implies \left( x \sim y \overset{\text{def}}{\iff} \exists i \text{ s.t. } x, y \in A_i \right)$.
+
+\textbf{Exercise:} How many equivalence relations can be defined on a set with 6 elements? 
+
+\begin{definition}
+Let $(A, R)$, where $R$ is an equivalence relation. We define the map:
+$$ p : A \rightarrow \frac{A}{R}, \quad p(a) = \hat{a} $$
+The map $p$ is surjective and is called the \textbf{canonical projection} to the quotient set. The preimage of an element from the quotient set is an equivalence class.
+\end{definition}
+
+\textbf{Example:} $p: \mathbb{Z} \rightarrow \frac{\mathbb{Z}}{R_n} = \mathbb{Z}_n, \quad p(x) = \hat{x} = n\mathbb{Z} + x$.
+
+\begin{theorem}[Factorization theorem for a set map]
+(The map induced on a quotient set by a set map). \\
+If $f: A \rightarrow B$ is a function compatible with the equivalence relation $R$, then $\exists f^* : \frac{A}{R} \rightarrow B$ such that the following triangle commutes ($f = f^* \circ p$).
+
+\begin{center}
+\begin{tikzcd}[row sep=large, column sep=large]
+A \arrow[r, "f"] \arrow[d, "p"'] & B \\
+A/R \arrow[ur, dashed, "f^*"'] &
+\end{tikzcd}
+\hspace{2cm}
+\begin{tikzcd}[row sep=large, column sep=large]
+a \arrow[r, mapsto] \arrow[d, mapsto] & f(a) \\
+\hat{a} \arrow[ur, mapsto] &
+\end{tikzcd}
+\end{center}
+\end{theorem}
+
+\begin{remark}
+If the function $f^*$ exists, it is unique. If $f_1^* \circ p = f_2^* \circ p$, since $p$ is surjective (an epimorphism), it follows that $f_1^* = f_2^*$.
+\end{remark}
