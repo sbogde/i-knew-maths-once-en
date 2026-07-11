@@ -205,3 +205,81 @@ a \arrow[r, mapsto] \arrow[d, mapsto] & f(a) \\
 \begin{remark}
 If the function $f^*$ exists, it is unique. If $f_1^* \circ p = f_2^* \circ p$, since $p$ is surjective (an epimorphism), it follows that $f_1^* = f_2^*$.
 \end{remark}
+
+\vspace{1em}
+\textbf{Examples of commutative diagrams (universal property):}
+
+\begin{center}
+\begin{minipage}{0.3\textwidth}
+\begin{tikzcd}[row sep=large, column sep=large]
+\mathbb{Z} \arrow[r, "f_n"] \arrow[d, "p_n"'] & \mathbb{C} \\
+\mathbb{Z}_n \arrow[ur, dashed, "f_n^*"'] & 
+\end{tikzcd}
+\\[1ex] \centering $f_n = f_n^* \circ p_n$
+\end{minipage}%
+\begin{minipage}{0.3\textwidth}
+\begin{tikzcd}[row sep=large, column sep=large]
+\mathbb{Z} \arrow[r, "p_n"] \arrow[d, "p_m"'] & \mathbb{Z}_n \\
+\mathbb{Z}_m \arrow[ur, dashed, "f^*"'] & 
+\end{tikzcd}
+\\[1ex] \centering $p_n = f^* \circ p_m \iff n \mid m$
+\end{minipage}%
+\begin{minipage}{0.3\textwidth}
+\begin{tikzcd}[row sep=large, column sep=large]
+A \arrow[r, "f"] \arrow[d, "p"'] & B \arrow[d, "q"] \\
+A/R \arrow[r, dashed, "f^*"'] & B/Q
+\end{tikzcd}
+\\[1ex] \centering $f^* \circ p = q \circ f$ \\
+(where $p, q$ are canonical projections)
+\end{minipage}
+\end{center}
+
+\begin{theorem}
+Let $f: A \rightarrow B$ be a set map, $R$ an equivalence relation on $A$, and $p: A \rightarrow \frac{A}{R}$ the canonical projection.
+\begin{enumerate}
+    \item $\exists$ a map $f^*: \frac{A}{R} \rightarrow B$ such that $f^* \circ p = f \iff R \subseteq R_f$. \\
+    (where $R_f = \{(x,y) \in A \times A \mid f(x) = f(y)\}$)
+    \item $f^*$ is surjective $\iff f$ is surjective.
+    \item $f^*$ is injective $\iff R = R_f$.
+    \item $f^*$ is bijective $\iff f$ is surjective and $R = R_f$.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+(1) $R \subseteq R_f \iff f$ is constant on equivalence classes. \\
+``$\implies$'': $(x,y) \in R \implies x \sim y \implies x, y \in C \implies f(x) = f(y) \implies (x,y) \in R_f$. \\
+``$\impliedby$'': Assume $\exists f^*: \frac{A}{R} \rightarrow B$ such that $f = f^* \circ p$. \\
+Let $(x,y) \in R \implies \hat{x} = \hat{y}$. \\
+$f(x) = (f^* \circ p)(x) = f^*(p(x)) = f^*(\hat{x}) = f^*(\hat{y}) = f^*(p(y)) = (f^* \circ p)(y) = f(y) \implies (x,y) \in R_f$.
+
+Now, assume $R \subseteq R_f$ and we have the commutative triangle $f^* \circ p = f$. We must assign the rule of correspondence for $f^*$. \\
+Let $C \in \frac{A}{R}$. We seek $f^*(C) \in B$. \\
+We set $f^*(C) \overset{\text{def}}{=} f(a)$, where $a \in C$. \\
+\textit{Well-definedness:} Let $b \in C \implies f^*(C) = f(b)$. \\
+$\implies f(a) = f(b)$ is true (since $R \subseteq R_f$). \\
+(from $a,b \in C \implies a \sim b \implies (a,b) \in R \implies f(a) = f(b)$). \\
+$\implies f^*$ is well-defined. \\
+We have $f^*(\hat{a}) = f(a)$ (since $\hat{a} = C$). \\
+$(\forall) a \in A \implies f^*(p(a)) = f(a) \implies (f^* \circ p)(a) = f(a) \implies f^* \circ p = f$.
+
+(2) 
+``$\implies$'': $f^* \circ p$ surjective $\implies f$ surjective. \\
+``$\impliedby$'': $f$ surjective $\implies f^* \circ p$ surjective $\implies f^*$ surjective.
+
+(3) $f^*$ injective $\iff \left( f^*(\hat{x}) = f^*(\hat{y}) \implies \hat{x} = \hat{y} \right)$. \\
+Since $f^*(\hat{x}) = f(x)$ and $f^*(\hat{y}) = f(y)$, this is equivalent to: \\
+$\iff \left( f(x) = f(y) \implies x \sim y \right) \iff \left( (x,y) \in R_f \implies (x,y) \in R \right)$. \\
+``$\implies$'': Assume $R = R_f$. \\
+$f^*(\hat{x}) = f^*(\hat{y}) \implies f(x) = f(y) \implies (x,y) \in R_f \implies (x,y) \in R \implies \hat{x} = \hat{y} \implies f^*$ is injective. \\
+``$\impliedby$'': Let $(x,y) \in R_f \implies f(x) = f(y) \implies f^*(\hat{x}) = f^*(\hat{y}) \implies \hat{x} = \hat{y} \implies x \sim y \implies (x,y) \in R \implies R_f \subseteq R$. But $R \subseteq R_f$ (by hypothesis), so $R = R_f$.
+
+(4) Obvious (by combining points 2 and 3).
+\end{proof}
+
+\vspace{1em}
+\textbf{Returning to the example with the map $f_n(k) = \cos \frac{2k\pi}{n} + i \sin \frac{2k\pi}{n}$:} \\
+We have $R_{f_n} = \{(h,k) \in \mathbb{Z} \times \mathbb{Z} \mid f_n(k) = f_n(h)\}$.
+$$ \cos \frac{2k\pi}{n} + i \sin \frac{2k\pi}{n} = \cos \frac{2h\pi}{n} + i \sin \frac{2h\pi}{n} $$
+$$ \implies \frac{2k\pi}{n} - \frac{2h\pi}{n} = 2\pi t, \quad t \in \mathbb{Z} $$
+$$ \implies k - h = nt \implies n \mid (k - h) \implies (h,k) \in R_n $$
+Thus, $R_{f_n} = R_n$. According to the factorization theorem, $(\mathbb{Z}_n, +) \simeq U_n$ (the group of $n$-th complex roots of unity).
