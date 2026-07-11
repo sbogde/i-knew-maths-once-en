@@ -1,0 +1,98 @@
+\subsection*{Equivalence Relations. Quotient Sets (11-Oct-1994)}
+
+Sets $\rightarrow$ maps (morphisms) of sets $\rightarrow$ subsets $\rightarrow$ quotient sets.
+
+\begin{definition}
+A binary relation is a pair $(A, R)$, with $A \neq \emptyset$ and $R \subseteq A \times A$.
+\end{definition}
+
+\textbf{Examples:}
+\begin{enumerate}
+    \item[(1)] $A = \mathbb{N}, \quad R = \{(x, y) \in \mathbb{N} \times \mathbb{N} \mid \exists u \in \mathbb{N} \text{ such that } x + u = y\}$
+    \item[(2)] $A = \mathbb{N}, \quad R = \{(x, y) \in \mathbb{N} \times \mathbb{N} \mid \exists q \in \mathbb{N} \text{ such that } x \cdot q = y\}$
+    \item[(1)'] $A = \mathbb{Z}, \quad R = \{(x, y) \in \mathbb{Z} \times \mathbb{Z} \mid \exists u \in \mathbb{Z} \text{ such that } x + u = y\}$
+    \item[(2)'] $A = \mathbb{Z}, \quad R = \{(x, y) \in \mathbb{Z} \times \mathbb{Z} \mid \exists q \in \mathbb{N} \text{ such that } x \cdot q = y\}$
+    \item[(3)] $A = \mathbb{R}, \quad R = \{(x, y) \in \mathbb{R} \times \mathbb{R} \mid x - y \in \mathbb{Z}\}$
+    \item[(4)] $n \in \mathbb{N}^*, \quad A = \mathbb{Z}, \quad R_n = \{(x, y) \in \mathbb{Z} \mid n \mid x - y \}$
+    \item[(5)] $A = \text{the set of lines in a Euclidean plane}$, \\ $R = \{(d_1, d_2) \in A \times A \mid d_1 = d_2 \text{ or } d_1 \cap d_2 = \emptyset\}$
+    \item[(6)] $A \xrightarrow{f} B, \quad R_f = \{(x, y) \in A \times A \mid f(x) = f(y)\}$
+\end{enumerate}
+
+\textbf{Example for (6):} $n \in \mathbb{N}^*$, $f: \mathbb{Z} \rightarrow \mathbb{C}$, $f(k) = \cos \frac{2k\pi}{n} + i \sin \frac{2k\pi}{n}$. Then $R_f = R_n$.
+
+\begin{definition}
+Let $A \neq \emptyset$ be a set. A subset $R \subseteq A \times A$ is called a \textbf{binary relation} on $A$.
+\end{definition}
+
+\begin{remark}
+Let $M$ be a set. A \textbf{characteristic property} of the set $M$ is defined as a criterion that allows us to decide which of the following statements is true:
+1) $x \in M$ \quad 2) $x \notin M$. \\
+$M = \{x \in M \mid p(x)\}$.
+\end{remark}
+
+If $x, y \in A$ and $(x, y) \in R$, we denote this by $x R y$. If $(x, y) \notin R$, we denote this by $x \not R y$.
+
+\begin{definition}
+Let $R$ be a binary relation on $A$. We say the binary relation is:
+\begin{itemize}
+    \item \textbf{reflexive} if $(\forall) x \in A \implies x R x$.
+    \item \textbf{symmetric} if $x R y \implies y R x$.
+    \item \textbf{antisymmetric} if $x R y$ and $y R x \implies x = y$.
+    \item \textbf{transitive} if $x R y$ and $y R z \implies x R z$.
+\end{itemize}
+\end{definition}
+
+\begin{definition}
+A binary relation $R$ on $A$ which is:
+\begin{enumerate}
+    \item reflexive, symmetric, and transitive is called an \textbf{equivalence relation}.
+    \item reflexive, antisymmetric, and transitive is called an \textbf{order relation}.
+    \item reflexive and transitive is called a \textbf{preorder (quasi-order)}.
+\end{enumerate}
+\end{definition}
+
+\textbf{Example:} $(\mathbb{Z}, \equiv \pmod n)$.
+
+Concepts associated with an equivalence relation: \textbf{equivalence class} and \textbf{complete system of representatives (transversal)}.
+
+\begin{definition}
+Let $A \neq \emptyset$ be a set equipped with an equivalence relation. A subset $\emptyset \neq C \subseteq A$ is called an \textbf{equivalence class} if:
+\begin{enumerate}
+    \item $(\forall) x, y \in C \implies x \sim y$
+    \item if $z \sim x$, $x \in A$, and $x \in C \implies z \in C$
+\end{enumerate}
+\end{definition}
+
+\textbf{Example:} $n = 6$, $C = 6\mathbb{Z} + 1 \subset \mathbb{Z}$. \\
+$R_6 = \{(x, y) \in \mathbb{Z} \times \mathbb{Z} \mid 6 \mid x - y\}$
+\begin{enumerate}
+    \item $x, y \in C \implies 6 \mid x - y$
+    \item $z \equiv x \pmod 6 \implies z - x = 6q_1$. Knowing that $x = 6q + 1$, we get: \\
+    $z - (6q + 1) = 6q_1 \implies z = 6(q + q_1) + 1 \in C$.
+\end{enumerate}
+
+Let $(A, R)$ be given and $a \in A$. We denote $[a]_R = \hat{a} = C_a = \{x \in A \mid x \sim a\} \subseteq A$.
+
+\begin{proposition}
+\begin{enumerate}
+    \item $\hat{a}$ is an equivalence class.
+    \item If $C \subseteq A$ is an equivalence class, then $C = [a]_R \quad (\forall) a \in C$.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+1) $\emptyset \neq C_a$ because $a \in C_a$ (by reflexivity $a \sim a$). \\
+$(\forall) x, y \in C_a \implies x \sim a$ and $y \sim a \implies x \sim y$ (by symmetry and transitivity). \\
+Assume $z \sim x$, $z \in A$, and $x \in C_a \implies x \sim a \implies z \sim a \implies z \in C_a$.
+
+2) ``$\subseteq$'': Let $x \in C$. Since $a \in C$, we have $x \sim a \implies x \in C_a \implies C \subseteq C_a$ (the equivalence class of $a$). \\
+``$\supseteq$'': Let $x \in C_a \implies x \sim a$. Since $a \in C$, we obtain $x \in C \implies C_a \subseteq C$.
+\end{proof}
+
+\begin{proposition}
+Let $(A, R)$ be a set with an equivalence relation $R$.
+\begin{enumerate}
+    \item For $a, b \in A$, we have $\hat{a} = \hat{b} \iff a \sim b$.
+    \item If $C'$ and $C''$ are two equivalence classes, then either $C' = C''$ or $C' \cap C'' = \emptyset$.
+\end{enumerate}
+\end{proposition}
