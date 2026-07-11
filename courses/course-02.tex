@@ -8,17 +8,17 @@ A binary relation is a pair $(A, R)$, with $A \neq \emptyset$ and $R \subseteq A
 
 \textbf{Examples:}
 \begin{enumerate}
-    \item[(1)] $A = \mathbb{N}, \quad R = \{(x, y) \in \mathbb{N} \times \mathbb{N} \mid \exists u \in \mathbb{N} \text{ such that } x + u = y\}$
-    \item[(2)] $A = \mathbb{N}, \quad R = \{(x, y) \in \mathbb{N} \times \mathbb{N} \mid \exists q \in \mathbb{N} \text{ such that } x \cdot q = y\}$
-    \item[(1)'] $A = \mathbb{Z}, \quad R = \{(x, y) \in \mathbb{Z} \times \mathbb{Z} \mid \exists u \in \mathbb{Z} \text{ such that } x + u = y\}$
-    \item[(2)'] $A = \mathbb{Z}, \quad R = \{(x, y) \in \mathbb{Z} \times \mathbb{Z} \mid \exists q \in \mathbb{N} \text{ such that } x \cdot q = y\}$
+    \item[(1)] $A = \mathbb{N}, \quad R = \{(x, y) \in \mathbb{N} \times \mathbb{N} \mid (\exists) u \in \mathbb{N} \text{ such that } x + u = y\}$
+    \item[(2)] $A = \mathbb{N}, \quad R = \{(x, y) \in \mathbb{N} \times \mathbb{N} \mid (\exists) q \in \mathbb{N} \text{ such that } x \cdot q = y\}$
+    \item[(1)'] $A = \mathbb{Z}, \quad R = \{(x, y) \in \mathbb{Z} \times \mathbb{Z} \mid (\exists) u \in \mathbb{Z} \text{ such that } x + u = y\}$
+    \item[(2)'] $A = \mathbb{Z}, \quad R = \{(x, y) \in \mathbb{Z} \times \mathbb{Z} \mid (\exists) q \in \mathbb{N} \text{ such that } x \cdot q = y\}$
     \item[(3)] $A = \mathbb{R}, \quad R = \{(x, y) \in \mathbb{R} \times \mathbb{R} \mid x - y \in \mathbb{Z}\}$
     \item[(4)] $n \in \mathbb{N}^*, \quad A = \mathbb{Z}, \quad R_n = \{(x, y) \in \mathbb{Z} \mid n \mid x - y \}$
     \item[(5)] $A = \text{the set of lines in a Euclidean plane}$, \\ $R = \{(d_1, d_2) \in A \times A \mid d_1 = d_2 \text{ or } d_1 \cap d_2 = \emptyset\}$
     \item[(6)] $A \xrightarrow{f} B, \quad R_f = \{(x, y) \in A \times A \mid f(x) = f(y)\}$
 \end{enumerate}
 
-\textbf{Example for (6):} $n \in \mathbb{N}^*$, $f: \mathbb{Z} \rightarrow \mathbb{C}$, $f(k) = \cos \frac{2k\pi}{n} + i \sin \frac{2k\pi}{n}$. Then $R_f = R_n$.
+\textbf{Example (with notations from (4) and (6)):} $n \in \mathbb{N}^*$, $f: \mathbb{Z} \rightarrow \mathbb{C}$, $f(k) = \cos \frac{2k\pi}{n} + i \sin \frac{2k\pi}{n}$. Then $R_f = R_n$. \textit{(The proof for this statement is presented at the end of the course).}
 
 \begin{definition}
 Let $A \neq \emptyset$ be a set. A subset $R \subseteq A \times A$ is called a \textbf{binary relation} on $A$.
@@ -51,7 +51,12 @@ A binary relation $R$ on $A$ which is:
 \end{enumerate}
 \end{definition}
 
-\textbf{Example:} $(\mathbb{Z}, \equiv \pmod n)$.
+\textbf{Examples:}
+\begin{itemize}
+    \item \textbf{Equivalence relation:} Congruence modulo $n$ on $\mathbb{Z}$, i.e., $(\mathbb{Z}, \equiv \pmod n)$.
+    \item \textbf{Order relation:} Set inclusion $\subseteq$ on the power set of a set, $(\mathcal{P}(X), \subseteq)$.
+    \item \textbf{Preorder relation:} Divisibility on $\mathbb{Z}$. It is reflexive and transitive, but fails to be antisymmetric since $a \mid b$ and $b \mid a \implies a = \pm b$.
+\end{itemize}
 
 Concepts associated with an equivalence relation: \textbf{equivalence class} and \textbf{complete system of representatives (transversal)}.
 
@@ -97,6 +102,8 @@ Let $(A, R)$ be a set with an equivalence relation $R$.
 \end{enumerate}
 \end{proposition}
 
+\vspace{1em}
+\textbf{Proof continuation:}
 \begin{proof}
 (1)
 ``$\implies$'': $\hat{a} = \hat{b} \implies a \in \hat{a} \implies a \in \hat{b} \implies a \sim b$. \\
@@ -111,7 +118,7 @@ Let $(A, R)$ be a set with an equivalence relation $R$.
 Let $(A, R)$ with $A \neq \emptyset$ and $R$ an equivalence relation. A family of elements from $A$ is called a \textbf{complete system of representatives} (transversal) if:
 \begin{itemize}
     \item[$(\alpha)$] $(\forall) i, j \in I, i \neq j \implies a_i \not\sim a_j$
-    \item[$(\beta)$] $(\forall) x \in A, \exists! i \in I \text{ s.t. } x \sim a_i$
+    \item[$(\beta)$] $(\forall) x \in A, (\exists!) i \in I \text{ s.t. } x \sim a_i$
 \end{itemize}
 \end{definition}
 
@@ -122,23 +129,23 @@ Let $(A, R)$ with $A \neq \emptyset$ and $R$ an equivalence relation. A family o
     The set $\{6q, 1+6q, \dots, 5+6q\}$ is also a transversal. \\
     $x - r \text{ is a multiple of } 6 \implies x \equiv r \pmod 6$.
     \item $A = \mathbb{R}$. The interval $[0, 1) \subset \mathbb{R}$, and $R = \{(x, y) \in \mathbb{R} \times \mathbb{R} \mid x - y \in \mathbb{Z}\}$. \\
-    $x \in \mathbb{R} \implies \exists! a \in [0, 1) \text{ s.t. } x - a \in \mathbb{Z}$. \\
+    $x \in \mathbb{R} \implies (\exists!) a \in [0, 1) \text{ s.t. } x - a \in \mathbb{Z}$. \\
     $x = [x] + \{x\}$, where $a = \{x\} \in [0, 1) \implies [0, 1)$ is a complete system of representatives.
 \end{enumerate}
 
 \begin{definition}
 Let $(A, R)$, where $R$ is an equivalence relation. The set:
-$$ \frac{A}{R} = \{\hat{a} \mid a \in A\} $$
+$$ A/R = \{\hat{a} \mid a \in A\} $$
 represents the set of all equivalence classes and is called the \textbf{quotient set} of $A$ by $R$.
 \end{definition}
 
 \begin{proposition}
-$\frac{A}{R} = \{\hat{a}_i \mid i \in I\}$ where $\{a_i\}_{i \in I}$ is a complete system of representatives. \\
-$(\forall) a \in A, \exists a_i$ s.t. $\hat{a} = \hat{a}_i$.
+$A/R = \{\hat{a}_i \mid i \in I\}$ where $\{a_i\}_{i \in I}$ is a complete system of representatives. \\
+$(\forall) a \in A, (\exists) a_i$ s.t. $\hat{a} = \hat{a}_i$.
 \end{proposition}
 
 \textbf{Examples:}
-$\frac{\mathbb{Z}}{R_6} = \{\hat{0}, \hat{1}, \hat{2}, \hat{3}, \hat{4}, \hat{5}\}$. Generally, $\frac{\mathbb{Z}}{R_n} = \{\hat{0}, \hat{1}, \dots, \widehat{n-1}\}$.
+$\mathbb{Z}/R_6 = \{\hat{0}, \hat{1}, \hat{2}, \hat{3}, \hat{4}, \hat{5}\}$. Generally, $\mathbb{Z}/R_n = \{\hat{0}, \hat{1}, \dots, \widehat{n-1}\}$.
 
 \begin{remark}
 If $\{a_i\}_{i \in I} \subset A$ is a transversal in $A$ for an equivalence relation $R$, then:
@@ -148,7 +155,7 @@ $$ A = \bigcup_{i \in I} \hat{a}_i \quad \text{(disjoint union)} $$
 \begin{proof}
 ``$\supseteq$'': Obvious. \\
 ``$\subseteq$'': We use point $(\beta)$ from the definition of a complete system of representatives. \\
-Let $x \in A \implies \exists i \in I \text{ s.t. } x \sim a_i \implies x \in \hat{a}_i \implies x \in \bigcup_{i \in I} \hat{a}_i$. \\
+Let $x \in A \implies (\exists) i \in I \text{ s.t. } x \sim a_i \implies x \in \hat{a}_i \implies x \in \bigcup_{i \in I} \hat{a}_i$. \\
 The union is disjoint because $\hat{a}_i \cap \hat{a}_j = \emptyset$ for $i \neq j$.
 \end{proof}
 
@@ -173,21 +180,21 @@ A \textbf{partition} of a set $A \neq \emptyset$ is a family of subsets $A_i \su
 \end{definition}
 
 On a set $A$, we can define as many equivalence relations as there are possible partitions for $A$.
-Given a partition, we define the relation: $x, y \in A \implies \left( x \sim y \overset{\text{def}}{\iff} \exists i \text{ s.t. } x, y \in A_i \right)$.
+Given a partition, we define the relation: $x, y \in A \implies \left( x \sim y \overset{\text{def}}{\iff} (\exists) i \text{ s.t. } x, y \in A_i \right)$.
 
 \textbf{Exercise:} How many equivalence relations can be defined on a set with 6 elements? 
 
 \begin{definition}
 Let $(A, R)$, where $R$ is an equivalence relation. We define the map:
-$$ p : A \rightarrow \frac{A}{R}, \quad p(a) = \hat{a} $$
+$$ p : A \rightarrow A/R, \quad p(a) = \hat{a} $$
 The map $p$ is surjective and is called the \textbf{canonical projection} to the quotient set. The preimage of an element from the quotient set is an equivalence class.
 \end{definition}
 
-\textbf{Example:} $p: \mathbb{Z} \rightarrow \frac{\mathbb{Z}}{R_n} = \mathbb{Z}_n, \quad p(x) = \hat{x} = n\mathbb{Z} + x$.
+\textbf{Example:} $p: \mathbb{Z} \rightarrow \mathbb{Z}/R_n = \mathbb{Z}_n, \quad p(x) = \hat{x} = n\mathbb{Z} + x$.
 
 \begin{theorem}[Factorization theorem for a set map]
 (The map induced on a quotient set by a set map). \\
-If $f: A \rightarrow B$ is a function compatible with the equivalence relation $R$, then $\exists f^* : \frac{A}{R} \rightarrow B$ such that the following triangle commutes ($f = f^* \circ p$).
+If $f: A \rightarrow B$ is a function compatible with the equivalence relation $R$, then $(\exists) f^* : A/R \rightarrow B$ such that the following triangle commutes ($f = f^* \circ p$).
 
 \begin{center}
 \begin{tikzcd}[row sep=large, column sep=large]
@@ -235,9 +242,9 @@ A/R \arrow[r, dashed, "f^*"'] & B/Q
 \end{center}
 
 \begin{theorem}
-Let $f: A \rightarrow B$ be a set map, $R$ an equivalence relation on $A$, and $p: A \rightarrow \frac{A}{R}$ the canonical projection.
+Let $f: A \rightarrow B$ be a set map, $R$ an equivalence relation on $A$, and $p: A \rightarrow A/R$ the canonical projection.
 \begin{enumerate}
-    \item $\exists$ a map $f^*: \frac{A}{R} \rightarrow B$ such that $f^* \circ p = f \iff R \subseteq R_f$. \\
+    \item $(\exists)$ a map $f^*: A/R \rightarrow B$ such that $f^* \circ p = f \iff R \subseteq R_f$. \\
     (where $R_f = \{(x,y) \in A \times A \mid f(x) = f(y)\}$)
     \item $f^*$ is surjective $\iff f$ is surjective.
     \item $f^*$ is injective $\iff R = R_f$.
@@ -248,12 +255,12 @@ Let $f: A \rightarrow B$ be a set map, $R$ an equivalence relation on $A$, and $
 \begin{proof}
 (1) $R \subseteq R_f \iff f$ is constant on equivalence classes. \\
 ``$\implies$'': $(x,y) \in R \implies x \sim y \implies x, y \in C \implies f(x) = f(y) \implies (x,y) \in R_f$. \\
-``$\impliedby$'': Assume $\exists f^*: \frac{A}{R} \rightarrow B$ such that $f = f^* \circ p$. \\
+``$\impliedby$'': Assume $(\exists) f^*: A/R \rightarrow B$ such that $f = f^* \circ p$. \\
 Let $(x,y) \in R \implies \hat{x} = \hat{y}$. \\
 $f(x) = (f^* \circ p)(x) = f^*(p(x)) = f^*(\hat{x}) = f^*(\hat{y}) = f^*(p(y)) = (f^* \circ p)(y) = f(y) \implies (x,y) \in R_f$.
 
 Now, assume $R \subseteq R_f$ and we have the commutative triangle $f^* \circ p = f$. We must assign the rule of correspondence for $f^*$. \\
-Let $C \in \frac{A}{R}$. We seek $f^*(C) \in B$. \\
+Let $C \in A/R$. We seek $f^*(C) \in B$. \\
 We set $f^*(C) \overset{\text{def}}{=} f(a)$, where $a \in C$. \\
 \textit{Well-definedness:} Let $b \in C \implies f^*(C) = f(b)$. \\
 $\implies f(a) = f(b)$ is true (since $R \subseteq R_f$). \\
@@ -282,4 +289,4 @@ We have $R_{f_n} = \{(h,k) \in \mathbb{Z} \times \mathbb{Z} \mid f_n(k) = f_n(h)
 $$ \cos \frac{2k\pi}{n} + i \sin \frac{2k\pi}{n} = \cos \frac{2h\pi}{n} + i \sin \frac{2h\pi}{n} $$
 $$ \implies \frac{2k\pi}{n} - \frac{2h\pi}{n} = 2\pi t, \quad t \in \mathbb{Z} $$
 $$ \implies k - h = nt \implies n \mid (k - h) \implies (h,k) \in R_n $$
-Thus, $R_{f_n} = R_n$. According to the factorization theorem, $(\mathbb{Z}_n, +) \simeq U_n$ (the group of $n$-th complex roots of unity).
+Thus, $R_{f_n} = R_n$. According to the factorization theorem, $(\mathbb{Z}_n, +) \cong U_n$ (the group of $n$-th complex roots of unity).
