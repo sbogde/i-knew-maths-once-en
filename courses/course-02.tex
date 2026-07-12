@@ -6,7 +6,7 @@ Sets $\rightarrow$ maps (morphisms) of sets $\rightarrow$ subsets $\rightarrow$ 
 A binary relation is a pair $(A, R)$, with $A \neq \emptyset$ and $R \subseteq A \times A$.
 \end{definition}
 
-\textbf{Examples:}
+\begin{example}
 \begin{enumerate}
     \item[(1)] $A = \mathbb{N}, \quad R = \{(x, y) \in \mathbb{N} \times \mathbb{N} \mid (\exists) u \in \mathbb{N} \text{ such that } x + u = y\}$
     \item[(2)] $A = \mathbb{N}, \quad R = \{(x, y) \in \mathbb{N} \times \mathbb{N} \mid (\exists) q \in \mathbb{N} \text{ such that } x \cdot q = y\}$
@@ -16,9 +16,11 @@ A binary relation is a pair $(A, R)$, with $A \neq \emptyset$ and $R \subseteq A
     \item[(4)] $n \in \mathbb{N}^*, \quad A = \mathbb{Z}, \quad R_n = \{(x, y) \in \mathbb{Z} \mid n \mid x - y \}$
     \item[(5)] $A = \text{the set of lines in a Euclidean plane}$, \\ $R = \{(d_1, d_2) \in A \times A \mid d_1 = d_2 \text{ or } d_1 \cap d_2 = \emptyset\}$
     \item[(6)] $A \xrightarrow{f} B, \quad R_f = \{(x, y) \in A \times A \mid f(x) = f(y)\}$
+    \item[(7)] (with notations from (4) and (6)): $n \in \mathbb{N}^*$, $f: \mathbb{Z} \rightarrow \mathbb{C}$, $f(k) = \cos \frac{2k\pi}{n} + i \sin \frac{2k\pi}{n}$. Then $R_f = R_n$. \textit{(The proof for this statement is presented at the end of the course).}
 \end{enumerate}
+\end{example}
 
-\textbf{Example (with notations from (4) and (6)):} $n \in \mathbb{N}^*$, $f: \mathbb{Z} \rightarrow \mathbb{C}$, $f(k) = \cos \frac{2k\pi}{n} + i \sin \frac{2k\pi}{n}$. Then $R_f = R_n$. \textit{(The proof for this statement is presented at the end of the course).}
+% \textbf{Example (with notations from (4) and (6)):} $n \in \mathbb{N}^*$, $f: \mathbb{Z} \rightarrow \mathbb{C}$, $f(k) = \cos \frac{2k\pi}{n} + i \sin \frac{2k\pi}{n}$. Then $R_f = R_n$. \textit{(The proof for this statement is presented at the end of the course).}
 
 % it repeats the previous definition
 % \begin{definition}
@@ -54,12 +56,14 @@ A binary relation $R$ on $A$ which is:
 \end{enumerate}
 \end{definition}
 
-\textbf{Examples:}
+\begin{example}\leavevmode
 \begin{itemize}
     \item \textbf{Equivalence relation:} Congruence modulo $n$ on $\mathbb{Z}$, i.e., $(\mathbb{Z}, \equiv \pmod n)$.
     \item \textbf{Order relation:} Set inclusion $\subseteq$ on the power set of a set, $(\mathcal{P}(X), \subseteq)$.
     \item \textbf{Preorder relation:} Divisibility on $\mathbb{Z}$. It is reflexive and transitive, but fails to be antisymmetric since $a \mid b$ and $b \mid a \implies a = \pm b$.
 \end{itemize}
+\end{example}
+
 
 Concepts associated with an equivalence relation: \textbf{equivalence class} and \textbf{complete system of representatives (transversal)}.
 
@@ -71,13 +75,16 @@ Let $A \neq \emptyset$ be a set equipped with an equivalence relation. A subset 
 \end{enumerate}
 \end{definition}
 
-\textbf{Example:} $n = 6$, $C = 6\mathbb{Z} + 1 \subset \mathbb{Z}$. \\
+\begin{example}\mbox{}\\
+$n = 6$, $C = 6\mathbb{Z} + 1 \subset \mathbb{Z}$. \\
 $R_6 = \{(x, y) \in \mathbb{Z} \times \mathbb{Z} \mid 6 \mid x - y\}$
 \begin{enumerate}
     \item $x, y \in C \implies 6 \mid x - y$
     \item $z \equiv x \pmod 6 \implies z - x = 6q_1$. Knowing that $x = 6q + 1$, we get: \\
     $z - (6q + 1) = 6q_1 \implies z = 6(q + q_1) + 1 \in C$.
 \end{enumerate}
+\end{example}
+
 
 Let $(A, R)$ be given and $a \in A$. We denote $[a]_R = \hat{a} = C_a = \{x \in A \mid x \sim a\} \subseteq A$.
 
@@ -105,8 +112,7 @@ Let $(A, R)$ be a set with an equivalence relation $R$.
 \end{enumerate}
 \end{proposition}
 
-\vspace{1em}
-\textbf{Proof continuation:}
+% \vspace{1em}
 \begin{proof}
 (1)
 ``$\implies$'': $\hat{a} = \hat{b} \implies a \in \hat{a} \implies a \in \hat{b} \implies a \sim b$. \\
@@ -125,7 +131,7 @@ Let $(A, R)$ with $A \neq \emptyset$ and $R$ an equivalence relation. A family o
 \end{itemize}
 \end{definition}
 
-\textbf{Examples:}
+\begin{example}\leavevmode
 \begin{enumerate}
     \item $(\mathbb{Z}, R_6)$, the set $\{0, 1, 2, 3, 4, 5\} \subset \mathbb{Z}$ is a complete system of representatives for $R_6$. \\
     $x \in \mathbb{Z} \implies x = 6q + r, \quad 0 \leq r < 6$. \\
@@ -135,6 +141,8 @@ Let $(A, R)$ with $A \neq \emptyset$ and $R$ an equivalence relation. A family o
     $x \in \mathbb{R} \implies (\exists!) a \in [0, 1) \text{ s.t. } x - a \in \mathbb{Z}$. \\
     $x = [x] + \{x\}$, where $a = \{x\} \in [0, 1) \implies [0, 1)$ is a complete system of representatives.
 \end{enumerate}
+\end{example}
+
 
 \begin{definition}
 Let $(A, R)$, where $R$ is an equivalence relation. The set:
@@ -147,8 +155,9 @@ $A/R = \{\hat{a}_i \mid i \in I\}$ where $\{a_i\}_{i \in I}$ is a complete syste
 $(\forall) a \in A, (\exists) a_i$ s.t. $\hat{a} = \hat{a}_i$.
 \end{proposition}
 
-\textbf{Examples:}
+\begin{example}\mbox{}\\
 $\mathbb{Z}/R_6 = \{\hat{0}, \hat{1}, \hat{2}, \hat{3}, \hat{4}, \hat{5}\}$. Generally, $\mathbb{Z}/R_n = \{\hat{0}, \hat{1}, \dots, \widehat{n-1}\}$.
+\end{example}
 
 \begin{remark}
 If $\{a_i\}_{i \in I} \subset A$ is a transversal in $A$ for an equivalence relation $R$, then:
@@ -162,7 +171,11 @@ Let $x \in A \implies (\exists) i \in I \text{ s.t. } x \sim a_i \implies x \in 
 The union is disjoint because $\hat{a}_i \cap \hat{a}_j = \emptyset$ for $i \neq j$.
 \end{proof}
 
-\textbf{Example:} $\mathbb{Z} = 6\mathbb{Z} \cup (6\mathbb{Z}+1) \cup \dots \cup (6\mathbb{Z}+5)$.
+
+\begin{example}\mbox{}\\
+$\mathbb{Z} = 6\mathbb{Z} \cup (6\mathbb{Z}+1) \cup \dots \cup (6\mathbb{Z}+5)$.
+\end{example}
+
 
 \begin{definition}
 A \textbf{partition} of a set $A \neq \emptyset$ is a family of subsets $A_i \subset A$, $A_i \neq \emptyset$, such that:
@@ -193,7 +206,11 @@ $$ p : A \rightarrow A/R, \quad p(a) = \hat{a} $$
 The map $p$ is surjective and is called the \textbf{canonical projection} to the quotient set. The preimage of an element from the quotient set is an equivalence class.
 \end{definition}
 
-\textbf{Example:} $p: \mathbb{Z} \rightarrow \mathbb{Z}/R_n = \mathbb{Z}_n, \quad p(x) = \hat{x} = n\mathbb{Z} + x$.
+
+\begin{example}\mbox{}\\
+$p: \mathbb{Z} \rightarrow \mathbb{Z}/R_n = \mathbb{Z}_n, \quad p(x) = \hat{x} = n\mathbb{Z} + x$.
+\end{example}
+
 
 \begin{theorem}[Factorization theorem for a set map]
 (The map induced on a quotient set by a set map). \\
