@@ -166,3 +166,78 @@ If $S$ is a monoid: $x^0 \stackrel{\text{def}}{=} e$ (by convention).
 $$ nx + mx = (n+m)x $$
 $$ m(nx) = (mn)x $$
 If $S$ is a monoid: $0 \cdot x = 0$.
+
+% page 4
+\subsection*{Subgroups}
+
+\begin{definition}
+Let $(G, \cdot)$ be a group and $H \subseteq G$, $H \neq \emptyset$. The subset $H$ is called a \textbf{subgroup} of $G$ (denoted $H \le G$) if:
+\begin{enumerate}
+    \item $(\forall) x, y \in H \implies x \cdot y \in H$ ($H$ is closed under $\cdot$).
+    \item $(\forall) x \in H \implies x^{-1} \in H$.
+\end{enumerate}
+\end{definition}
+
+\begin{remark}
+Obviously: $e \in H$. $(x \in H, x^{-1} \in H \implies x \cdot x^{-1} \in H \implies e \in H)$.
+\end{remark}
+
+\begin{theorem}[Subgroup characterization]
+$$ H \le G \iff (\forall) x, y \in H \implies x \cdot y^{-1} \in H $$
+\end{theorem}
+
+\begin{proof}
+``$\implies$'': $y \in H \implies y^{-1} \in H \implies x \cdot y^{-1} \in H$. \\
+``$\impliedby$'': Assume that $x \cdot y^{-1} \in H$, $(\forall) x, y \in H$.
+\begin{itemize}
+    \item $\implies$ (for $x=y$) $x \cdot x^{-1} = e \in H$.
+    \item $e \in H, x \in H \implies e \cdot x^{-1} = x^{-1} \in H$ (2).
+    \item from $x, y \in H \implies x \in H$ and $y^{-1} \in H \implies x \cdot (y^{-1})^{-1} \in H \implies x \cdot y \in H$ (1).
+\end{itemize}
+$\implies H \le G$.
+\end{proof}
+
+\begin{example}\leavevmode
+\begin{itemize}
+    \item[(1)] $(\mathbb{Z}, +) \le (\mathbb{Q}, +) \le (\mathbb{R}, +) \le (\mathbb{C}, +)$.
+    \item[(2)] $n \in \mathbb{N}, n\mathbb{Z} = \{nk \mid k \in \mathbb{Z}\} \le (\mathbb{Z}, +)$. \\
+    \textit{Proof:} $x, y \in n\mathbb{Z} \implies x = nk_1, y = nk_2 \implies x - y = n(k_1 - k_2) \in n\mathbb{Z}$.
+    \item[(3)] $U_n = \{z \in \mathbb{C} \mid z^n = 1\} \le (\mathbb{C}^*, \cdot)$.
+\end{itemize}
+\end{example}
+
+\subsection*{Group Homomorphisms. Isomorphisms}
+
+\begin{definition}
+Let $(G, \cdot)$ and $(G', *)$ be two groups. A map $f: G \rightarrow G'$ is called a \textbf{group homomorphism} if:
+$$ f(x \cdot y) = f(x) * f(y), \quad (\forall) x, y \in G $$
+\end{definition}
+
+\begin{proposition}
+If $f: G \rightarrow G'$ is a homomorphism $\implies$
+\begin{enumerate}
+    \item $f(e) = e'$
+    \item $f(x^{-1}) = (f(x))^{-1}, \quad (\forall) x \in G$
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+1) $f(x) = f(x \cdot e) = f(x) * f(e) \implies e' = f(e)$. \\
+2) $e' = f(e) = f(x \cdot x^{-1}) = f(x) * f(x^{-1}) \implies f(x^{-1}) = (f(x))^{-1}$.
+\end{proof}
+
+\begin{definition}
+A bijective homomorphism is called an \textbf{isomorphism}. ($G \cong G'$).
+\end{definition}
+
+\begin{example}\leavevmode
+\begin{itemize}
+    \item[(1)] $f: \mathbb{Z} \rightarrow 2\mathbb{Z}, f(x) = 2x$. \\
+    \textit{Proof:} $f(x + y) = 2(x + y) = 2x + 2y = f(x) + f(y) \implies$ homomorphism; bijective $\implies$ isomorphism.
+    \item[(2)] $f: (\mathbb{R}, +) \rightarrow ((0, \infty), \cdot), f(x) = e^x$. \\
+    \textit{Proof:} $f(x + y) = e^{x+y} = e^x \cdot e^y = f(x) \cdot f(y) \implies$ homomorphism; bijective $\implies$ isomorphism.
+    \item[(3)] $f: ((0, \infty), \cdot) \rightarrow (\mathbb{R}, +), f(x) = \ln x$. \\
+    \textit{Proof:} $f(x \cdot y) = \ln(x \cdot y) = \ln x + \ln y = f(x) + f(y) \implies$ homomorphism; bijective $\implies$ isomorphism.
+\end{itemize}
+\end{example}
+
