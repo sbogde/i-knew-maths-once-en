@@ -97,3 +97,72 @@ $$ (x_1 \dots x_{m_1})(x_{m_1+1} \dots x_{m_1+m_2}) \dots (x_{n-m_r+1} \dots x_n
 $$ x_{\sigma(1)} x_{\sigma(2)} \dots x_{\sigma(n)} = x_1 x_2 \dots x_n $$
 \end{example}
 
+\begin{example}\leavevmode
+\begin{itemize}
+    \item $(\mathbb{Z}, +), (\mathbb{Q}, +), (\mathbb{R}, +), (\mathbb{C}, +)$.
+    \item $(\mathbb{Z}, \cdot), (\mathbb{Q}, \cdot), (\mathbb{R}, \cdot), (\mathbb{C}, \cdot)$.
+    \item $(\mathcal{P}(A), \cup), (\mathcal{P}(A), \cap), (\mathcal{P}(A), \Delta)$ where $A \Delta B = (A \setminus B) \cup (B \setminus A)$. (The neutral element is $\emptyset$).
+\end{itemize}
+\end{example}
+
+% Crossed-out example in the original manuscript:
+% (\mathcal{P}(A), \setminus) \rightarrow A \setminus B = A \cap \complement_A B.
+% associative ? A \setminus \emptyset = A, \emptyset \setminus A = \emptyset (It is not commutative).
+
+\begin{definition}
+Let $S \neq \emptyset$. A pair $(S, \varphi)$ where $\varphi$ is a law of composition on $S$ is called a \textbf{groupoid}.
+\end{definition}
+
+\begin{example}\leavevmode
+\begin{itemize}
+    \item $(\mathbb{N}, +), (\mathbb{N}, \cdot), (\mathbb{Z}, +)$ etc. are groupoids.
+    \item $(\mathcal{M}_n(\mathbb{C}), +), (\mathcal{M}_n(\mathbb{C}), \cdot)$ are groupoids.
+\end{itemize}
+\end{example}
+
+\begin{definition}
+A groupoid $(S, \varphi)$ is called a \textbf{semigroup} if $\varphi$ is associative.
+\end{definition}
+
+\begin{example}
+All of the above.
+\end{example}
+
+\begin{definition}
+A semigroup which admits a neutral element is called a \textbf{monoid}.
+\end{definition}
+
+\begin{example}\leavevmode
+\begin{itemize}
+    \item $(\mathbb{N}, +) \rightarrow e = 0$; $(\mathbb{N}, \cdot) \rightarrow e = 1$ (similarly for $\mathbb{Z}, \mathbb{Q}, \mathbb{R}, \mathbb{C}$).
+    \item $(\mathcal{M}_n(\mathbb{C}), +) \rightarrow e = O_n$; $(\mathcal{M}_n(\mathbb{C}), \cdot) \rightarrow e = I_n$.
+    \item $(\mathcal{P}(A), \cup) \rightarrow e = \emptyset$; $(\mathcal{P}(A), \cap) \rightarrow e = A$; $(\mathcal{P}(A), \Delta) \rightarrow e = \emptyset$.
+    \item $(\mathcal{P}(A), \setminus)$ - no (it does not have a neutral element).
+    \item $(A^A, \circ)$ where $A^A = \{f \mid f: A \rightarrow A\}$, the neutral element is $1_A$.
+\end{itemize}
+\end{example}
+
+\vspace{1em}
+\textbf{Calculation rules in a semigroup}
+
+Let $(S, \cdot)$ be a semigroup and $x \in S$.
+\begin{align*}
+    x^1 &= x \\
+    x^2 &= x \cdot x \\
+    &\dots \\
+    x^n &= \underbrace{x \cdot x \dots x}_{n \text{ times}}
+\end{align*}
+$$ x^n \cdot x^m = x^{n+m} $$
+$$ (x^n)^m = x^{n \cdot m} $$
+If $S$ is a monoid: $x^0 \stackrel{\text{def}}{=} e$ (by convention).
+
+\textit{Additive form:}
+\begin{align*}
+    1 \cdot x &= x \\
+    2x &= x + x \\
+    &\dots \\
+    nx &= \underbrace{x + x \dots x}_{n \text{ times}}
+\end{align*}
+$$ nx + mx = (n+m)x $$
+$$ m(nx) = (mn)x $$
+If $S$ is a monoid: $0 \cdot x = 0$.
