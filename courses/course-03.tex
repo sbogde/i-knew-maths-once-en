@@ -1,0 +1,86 @@
+\subsection*{Laws of Composition. Groupoid. Semigroup. Monoid. Group (18-Oct-1994)}
+
+\begin{definition}
+An internal \textbf{law of composition} (or algebraic operation) on a set $A \neq \emptyset$ is a map $\varphi: A \times A \rightarrow A$. \\
+(It is generally denoted by $\varphi(x, y) = x \circ y = x * y = x \cdot y = x + y$).
+\end{definition}
+
+\begin{definition}
+A pair $(A, \varphi)$ where $A \neq \emptyset$ and $\varphi$ is an internal law of composition on $A$ is called a \textbf{groupoid}.
+\end{definition}
+
+\begin{definition}
+A groupoid $(A, \varphi)$ in which the law $\varphi$ is associative is called a \textbf{semigroup}.
+\end{definition}
+
+\begin{example}\leavevmode
+\begin{itemize}
+    \item $(\mathbb{N}, +)$, $(\mathbb{N}, \cdot)$, $(\mathbb{Z}, +)$, $(\mathbb{Z}, \cdot)$, $(\mathbb{Q}, +)$, $(\mathbb{Q}, \cdot)$, $(\mathbb{R}, +)$, $(\mathbb{R}, \cdot)$, $(\mathbb{C}, +)$, $(\mathbb{C}, \cdot)$.
+    \item $(\mathcal{M}_n(\mathbb{C}), +)$ and $(\mathcal{M}_n(\mathbb{C}), \cdot)$.
+    \item $(\mathcal{P}(M), \cup)$, $(\mathcal{P}(M), \cap)$, $(\mathcal{P}(M), \Delta)$, $(\mathcal{P}(M), \setminus)$.
+\end{itemize}
+\end{example}
+
+\begin{definition}
+A semigroup $(A, \varphi)$ is called a \textbf{monoid} if it has a neutral element (identity element) $e \in A$:
+$$ x \varphi e = e \varphi x = x, \quad (\forall) x \in A $$
+\end{definition}
+
+\begin{remark}
+If the neutral element exists, it is unique.
+\end{remark}
+
+\begin{proof}
+Assume that $e$ and $e'$ are neutral elements. Then: $e = e \varphi e' = e'$.
+\end{proof}
+
+\begin{example}\leavevmode
+\begin{itemize}
+    \item $(\mathbb{N}, +)$ with $e = 0$; $(\mathbb{N}, \cdot)$ with $e = 1$. (Similarly for $\mathbb{Z}, \mathbb{Q}, \mathbb{R}, \mathbb{C}$).
+    \item $(\mathcal{M}_n(\mathbb{C}), +)$ with $e = O_n$ (the zero matrix); $(\mathcal{M}_n(\mathbb{C}), \cdot)$ with $e = I_n$ (the identity matrix).
+    \item $(\mathcal{P}(M), \cup)$ with $e = \emptyset$.
+    \item $(\mathcal{P}(M), \cap)$ with $e = M$.
+    \item $(\mathcal{P}(M), \Delta)$ with $e = \emptyset$.
+    \item $(\mathcal{P}(M), \setminus)$ is not a monoid (it has no neutral element).
+    \item $(A^A, \circ)$, the set of functions from $A$ to $A$ equipped with function composition, has the neutral element $e = 1_A$ (the identity map).
+\end{itemize}
+\end{example}
+
+\begin{definition}
+Let $(A, \varphi)$ be a monoid with a neutral element $e$. An element $x \in A$ is called \textbf{invertible} if there exists an element $x' \in A$ such that:
+$$ x \varphi x' = x' \varphi x = e $$
+\end{definition}
+
+\begin{remark}
+If the operation is written additively ($+$), the invertible element is called the \textbf{opposite} (or additive inverse) and is denoted by $-x$. \\
+If the operation is written multiplicatively ($\cdot$), the invertible element is called the \textbf{inverse} and is denoted by $x^{-1}$.
+\end{remark}
+
+\begin{proposition}
+If $x$ is an invertible element in a monoid, its inverse is unique.
+\end{proposition}
+
+\begin{proof}
+Assume that $x$ has two inverses, $x'$ and $x''$. Then:
+$$ x' = x' \varphi e = x' \varphi (x \varphi x'') = (x' \varphi x) \varphi x'' = e \varphi x'' = x'' $$
+\end{proof}
+
+We denote by $U(A)$ the set of invertible elements (units) in the monoid $A$. Then the pair $(U(A), \varphi)$ forms a group.
+
+\begin{definition}
+A monoid $(G, \varphi)$ in which every element is invertible (meaning $U(G) = G$) is called a \textbf{group}. \\
+A group $(G, \varphi)$ is called \textbf{abelian} (or commutative) if the operation $\varphi$ is commutative:
+$$ x \varphi y = y \varphi x, \quad (\forall) x, y \in G $$
+\end{definition}
+
+\begin{example}\leavevmode
+\begin{itemize}
+    \item $(\mathbb{Z}, +)$, $(\mathbb{Q}, +)$, $(\mathbb{R}, +)$, $(\mathbb{C}, +)$ are abelian groups.
+    \item $(\mathbb{Q}^*, \cdot)$, $(\mathbb{R}^*, \cdot)$, $(\mathbb{C}^*, \cdot)$ are abelian groups.
+    \item $(\mathbb{Z}_n, +)$ where $\mathbb{Z}_n = \{\hat{0}, \hat{1}, \dots, \widehat{n-1}\}$ is an abelian group.
+    \item $GL_n(\mathbb{C}) = \{A \in \mathcal{M}_n(\mathbb{C}) \mid \det A \neq 0\}$ equipped with matrix multiplication forms a non-commutative group (the general linear group).
+    \item $(\mathcal{P}(M), \Delta)$ is an abelian group. Every element coincides with its own opposite, since $X \Delta X = \emptyset = e$.
+\end{itemize}
+\end{example}
+
+\textbf{Example of a non-associative operation:} The vector cross product on the set of vectors in 3D space, $(V_3, \times)$, is not associative.
