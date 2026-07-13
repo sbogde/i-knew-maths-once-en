@@ -87,3 +87,80 @@ $$ x \varphi y = y \varphi x, \quad (\forall) x, y \in G $$
 \end{example}
 
 \textbf{Example of a non-associative operation:} The vector cross product on the set of vectors in 3D space, $(V_3, \times)$, is not associative.
+
+
+
+\subsection*{Subgroups}
+
+\begin{definition}
+Let $(G, \cdot)$ be a group and $H \subseteq G$, $H \neq \emptyset$. The subset $H$ is called a \textbf{subgroup} of $G$ (denoted $H \le G$) if:
+\begin{enumerate}
+    \item $(\forall) x, y \in H \implies x \cdot y \in H$ ($H$ is closed under the operation).
+    \item $(\forall) x \in H \implies x^{-1} \in H$ (the inverse of any element in $H$ belongs to $H$).
+\end{enumerate}
+\end{definition}
+
+\begin{remark}
+Obviously, if $H$ is a subgroup, then the neutral element $e \in H$. \\
+(Since $x \in H$ and $x^{-1} \in H \implies x \cdot x^{-1} \in H \implies e \in H$).
+\end{remark}
+
+\begin{theorem}[Subgroup Characterization Theorem]
+$$ H \le G \iff (\forall) x, y \in H \implies x \cdot y^{-1} \in H $$
+\end{theorem}
+
+\begin{proof}
+``$\implies$'': Obvious (if $y \in H \implies y^{-1} \in H \implies x \cdot y^{-1} \in H$). \\
+``$\impliedby$'': Assume that $x \cdot y^{-1} \in H$ for all $x, y \in H$.
+\begin{itemize}
+    \item Let $x = y \implies x \cdot x^{-1} = e \in H$.
+    \item Since $e \in H$ and $x \in H \implies e \cdot x^{-1} = x^{-1} \in H$.
+    \item From $x, y \in H \implies x \in H$ and $y^{-1} \in H \implies x \cdot (y^{-1})^{-1} \in H \implies x \cdot y \in H$.
+\end{itemize}
+Therefore, both conditions from the definition are met, so $H$ is a subgroup.
+\end{proof}
+
+\begin{example}\leavevmode
+\begin{itemize}
+    \item $(\mathbb{Z}, +) \le (\mathbb{Q}, +) \le (\mathbb{R}, +) \le (\mathbb{C}, +)$.
+    \item If $n \in \mathbb{N}$, the subset $n\mathbb{Z} = \{nk \mid k \in \mathbb{Z}\} \le (\mathbb{Z}, +)$. \\
+    \textit{Proof:} Let $x, y \in n\mathbb{Z} \implies x = nk_1, y = nk_2 \implies x - y = n(k_1 - k_2) \in n\mathbb{Z}$. According to the characterization theorem (additive form), it is a subgroup.
+    \item $U_n = \{z \in \mathbb{C} \mid z^n = 1\} \le (\mathbb{C}^*, \cdot)$. This is the group of the $n$-th complex roots of unity.
+\end{itemize}
+\end{example}
+
+\subsection*{Group Homomorphisms. Isomorphisms}
+
+\begin{definition}
+Let $(G, \cdot)$ and $(G', *)$ be two groups. A map $f: G \rightarrow G'$ is called a \textbf{group homomorphism} if:
+$$ f(x \cdot y) = f(x) * f(y), \quad (\forall) x, y \in G $$
+\end{definition}
+
+\begin{proposition}[Properties]
+If $f: G \rightarrow G'$ is a group homomorphism, then:
+\begin{enumerate}
+    \item $f(e) = e'$ (where $e$ is the neutral element in $G$, and $e'$ is the neutral element in $G'$).
+    \item $f(x^{-1}) = (f(x))^{-1}, \quad (\forall) x \in G$.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+(1) $f(x) = f(x \cdot e) = f(x) * f(e)$. Left-multiplying by $(f(x))^{-1}$ in $G'$, we obtain $e' = f(e)$. \\
+(2) $e' = f(e) = f(x \cdot x^{-1}) = f(x) * f(x^{-1})$. It follows that $f(x^{-1})$ acts as the inverse of $f(x)$ in $G'$, so $f(x^{-1}) = (f(x))^{-1}$.
+\end{proof}
+
+\begin{definition}
+A group homomorphism $f: G \rightarrow G'$ which is a bijective function is called a \textbf{group isomorphism}. \\
+(If an isomorphism exists between $G$ and $G'$, the groups are called isomorphic and we denote this by $G \cong G'$).
+\end{definition}
+
+\begin{example}\leavevmode
+\begin{itemize}
+    \item The map $f: \mathbb{Z} \rightarrow 2\mathbb{Z}$, $f(x) = 2x$ is an isomorphism from $(\mathbb{Z}, +)$ to $(2\mathbb{Z}, +)$. \\
+    \textit{Proof:} $f(x + y) = 2(x + y) = 2x + 2y = f(x) + f(y) \implies$ it is a homomorphism. Since $f$ is obviously bijective, it follows that $(\mathbb{Z}, +) \cong (2\mathbb{Z}, +)$.
+    \item The exponential function $f: (\mathbb{R}, +) \rightarrow ((0, \infty), \cdot)$, $f(x) = e^x$. \\
+    \textit{Proof:} $f(x + y) = e^{x+y} = e^x \cdot e^y = f(x) \cdot f(y) \implies$ it is a homomorphism. Since the exponential function is bijective onto the codomain $(0, \infty)$, it is an isomorphism.
+    \item The logarithmic function $f: ((0, \infty), \cdot) \rightarrow (\mathbb{R}, +)$, $f(x) = \ln x$. \\
+    \textit{Proof:} $f(x \cdot y) = \ln(x \cdot y) = \ln x + \ln y = f(x) + f(y) \implies$ it is a homomorphism. Being a bijective function, it is an isomorphism (it is precisely the inverse isomorphism of the previous one).
+\end{itemize}
+\end{example}
