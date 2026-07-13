@@ -1,215 +1,53 @@
-% \subsection*{Laws of Composition. Groupoid. Semigroup. Monoid. Group (18-Oct-1994)}
+\section{Laws of composition (internal). Subgroup (18-Oct-1994)}
 
-% Change from \subsection*{...} to \section{...}
-\section{Laws of Composition. Groupoid. Semigroup. Monoid. Group (18-Oct-1994)}
-
-\begin{definition}
-An internal \textbf{law of composition} (or algebraic operation) on a set $A \neq \emptyset$ is a map $\varphi: A \times A \rightarrow A$. \\
-(It is generally denoted by $\varphi(x, y) = x \circ y = x * y = x \cdot y = x + y$).
-\end{definition}
-
-\begin{definition}
-A pair $(A, \varphi)$ where $A \neq \emptyset$ and $\varphi$ is an internal law of composition on $A$ is called a \textbf{groupoid}.
-\end{definition}
-
-\begin{definition}
-A groupoid $(A, \varphi)$ in which the law $\varphi$ is associative is called a \textbf{semigroup}.
-\end{definition}
+Let $(S, \varphi)$, with $S \neq \emptyset$ and $\varphi: S \times S \to S$.
 
 \begin{example}\leavevmode
 \begin{itemize}
-    \item $(\mathbb{N}, +)$, $(\mathbb{N}, \cdot)$, $(\mathbb{Z}, +)$, $(\mathbb{Z}, \cdot)$, $(\mathbb{Q}, +)$, $(\mathbb{Q}, \cdot)$, $(\mathbb{R}, +)$, $(\mathbb{R}, \cdot)$, $(\mathbb{C}, +)$, $(\mathbb{C}, \cdot)$.
-    \item $(\mathcal{M}_n(\mathbb{C}), +)$ and $(\mathcal{M}_n(\mathbb{C}), \cdot)$.
-    \item $(\mathcal{P}(M), \cup)$, $(\mathcal{P}(M), \cap)$, $(\mathcal{P}(M), \Delta)$, $(\mathcal{P}(M), \setminus)$.
+    \item $A = \text{given set}$, $(\mathcal{P}(A), \cup)$ or $(\mathcal{P}(A), \cap)$.
+    \item $(\{f \mid f: [a, b] \to \mathbb{R}\}, +)$.
 \end{itemize}
 \end{example}
 
 \begin{definition}
-A semigroup $(A, \varphi)$ is called a \textbf{monoid} if it has a neutral element (identity element) $e \in A$:
-$$ x \varphi e = e \varphi x = x, \quad (\forall) x \in A $$
+If $S$ is a set $S \neq \emptyset$, a map $\varphi: S \times S \to S$ is called an \textbf{internal law of composition} on $S$.
+$$ S \times S \to S $$
+$$ (x, y) \mapsto \varphi(x, y) \text{ is called the composite of } x \text{ with } y $$
 \end{definition}
 
-\begin{remark}
-If the neutral element exists, it is unique.
-\end{remark}
+\textbf{Notations:} $x * y, x + y$ (additive), $x \cdot y$ (multiplicative). \\
+Other notations for $\varphi(x, y)$: $x \circ y$, $x \top y$, $x \bot y$, $x \square y$.
 
-\begin{proof}
-Assume that $e$ and $e'$ are neutral elements. Then: $e = e \varphi e' = e'$.
-\end{proof}
-
-\begin{example}\leavevmode
+\begin{definition}[Properties]
+A law of composition $\varphi$ is:
 \begin{itemize}
-    \item $(\mathbb{N}, +)$ with $e = 0$; $(\mathbb{N}, \cdot)$ with $e = 1$. (Similarly for $\mathbb{Z}, \mathbb{Q}, \mathbb{R}, \mathbb{C}$).
-    \item $(\mathcal{M}_n(\mathbb{C}), +)$ with $e = O_n$ (the zero matrix); $(\mathcal{M}_n(\mathbb{C}), \cdot)$ with $e = I_n$ (the identity matrix).
-    \item $(\mathcal{P}(M), \cup)$ with $e = \emptyset$.
-    \item $(\mathcal{P}(M), \cap)$ with $e = M$.
-    \item $(\mathcal{P}(M), \Delta)$ with $e = \emptyset$.
-    \item $(\mathcal{P}(M), \setminus)$ is not a monoid (it has no neutral element).
-    \item $(A^A, \circ)$, the set of functions from $A$ to $A$ equipped with function composition, has the neutral element $e = 1_A$ (the identity map).
+    \item \textbf{associative} if $\varphi(x, \varphi(y, z)) = \varphi(\varphi(x, y), z)$, $(\forall) x, y, z \in S$.
+    \item \textbf{commutative} if $(\forall) x, y \in S \implies \varphi(x, y) = \varphi(y, x)$.
 \end{itemize}
-\end{example}
+\end{definition}
 
 \begin{definition}
-Let $(A, \varphi)$ be a monoid with a neutral element $e$. An element $x \in A$ is called \textbf{invertible} if there exists an element $x' \in A$ such that:
-$$ x \varphi x' = x' \varphi x = e $$
+An element $e \in S$ is called a \textbf{neutral element} (or identity element) for $\varphi$ if:
+$$ (\forall) x \in S \text{ we have } \varphi(e, x) = \varphi(x, e) = x $$
 \end{definition}
-
-\begin{remark}
-If the operation is written additively ($+$), the invertible element is called the \textbf{opposite} (or additive inverse) and is denoted by $-x$. \\
-If the operation is written multiplicatively ($\cdot$), the invertible element is called the \textbf{inverse} and is denoted by $x^{-1}$.
-\end{remark}
 
 \begin{proposition}
-If $x$ is an invertible element in a monoid, its inverse is unique.
+If a law of composition $\varphi$ admits a neutral element, then it is unique.
 \end{proposition}
-
 \begin{proof}
-Assume that $x$ has two inverses, $x'$ and $x''$. Then:
-$$ x' = x' \varphi e = x' \varphi (x \varphi x'') = (x' \varphi x) \varphi x'' = e \varphi x'' = x'' $$
+Assume there are two neutral elements, $e$ and $e'$.
+\begin{itemize}
+    \item Considering $e$ as the neutral element: $e' \varphi e = e \varphi e' = e'$.
+    \item Considering $e'$ as the neutral element: $e \varphi e' = e' \varphi e = e$.
+\end{itemize}
+Therefore, $e = e'$.
 \end{proof}
 
-We denote by $U(A)$ the set of invertible elements (units) in the monoid $A$. Then the pair $(U(A), \varphi)$ forms a group.
-
-\begin{definition}
-A monoid $(G, \varphi)$ in which every element is invertible (meaning $U(G) = G$) is called a \textbf{group}. \\
-A group $(G, \varphi)$ is called \textbf{abelian} (or commutative) if the operation $\varphi$ is commutative:
-$$ x \varphi y = y \varphi x, \quad (\forall) x, y \in G $$
-\end{definition}
-
-\begin{example}\leavevmode
-\begin{itemize}
-    \item $(\mathbb{Z}, +)$, $(\mathbb{Q}, +)$, $(\mathbb{R}, +)$, $(\mathbb{C}, +)$ are abelian groups.
-    \item $(\mathbb{Q}^*, \cdot)$, $(\mathbb{R}^*, \cdot)$, $(\mathbb{C}^*, \cdot)$ are abelian groups.
-    \item $(\mathbb{Z}_n, +)$ where $\mathbb{Z}_n = \{\hat{0}, \hat{1}, \dots, \widehat{n-1}\}$ is an abelian group.
-    \item $GL_n(\mathbb{C}) = \{A \in \mathcal{M}_n(\mathbb{C}) \mid \det A \neq 0\}$ equipped with matrix multiplication forms a non-commutative group (the general linear group).
-    \item $(\mathcal{P}(M), \Delta)$ is an abelian group. Every element coincides with its own opposite, since $X \Delta X = \emptyset = e$.
-\end{itemize}
-\end{example}
-
-\textbf{Example of a non-associative operation:} The vector cross product on the set of vectors in 3D space, $(V_3, \times)$, is not associative.
-
-
-
-\subsection*{Subgroups}
-
-\begin{definition}
-Let $(G, \cdot)$ be a group and $H \subseteq G$, $H \neq \emptyset$. The subset $H$ is called a \textbf{subgroup} of $G$ (denoted $H \le G$) if:
-\begin{enumerate}
-    \item $(\forall) x, y \in H \implies x \cdot y \in H$ ($H$ is closed under the operation).
-    \item $(\forall) x \in H \implies x^{-1} \in H$ (the inverse of any element in $H$ belongs to $H$).
-\end{enumerate}
-\end{definition}
-
-\begin{remark}
-Obviously, if $H$ is a subgroup, then the neutral element $e \in H$. \\
-(Since $x \in H$ and $x^{-1} \in H \implies x \cdot x^{-1} \in H \implies e \in H$).
-\end{remark}
-
-\begin{theorem}[Subgroup Characterization Theorem]
-$$ H \le G \iff (\forall) x, y \in H \implies x \cdot y^{-1} \in H $$
-\end{theorem}
-
-\begin{proof}
-``$\implies$'': Obvious (if $y \in H \implies y^{-1} \in H \implies x \cdot y^{-1} \in H$). \\
-``$\impliedby$'': Assume that $x \cdot y^{-1} \in H$ for all $x, y \in H$.
-\begin{itemize}
-    \item Let $x = y \implies x \cdot x^{-1} = e \in H$.
-    \item Since $e \in H$ and $x \in H \implies e \cdot x^{-1} = x^{-1} \in H$.
-    \item From $x, y \in H \implies x \in H$ and $y^{-1} \in H \implies x \cdot (y^{-1})^{-1} \in H \implies x \cdot y \in H$.
-\end{itemize}
-Therefore, both conditions from the definition are met, so $H$ is a subgroup.
-\end{proof}
-
-\begin{example}\leavevmode
-\begin{itemize}
-    \item $(\mathbb{Z}, +) \le (\mathbb{Q}, +) \le (\mathbb{R}, +) \le (\mathbb{C}, +)$.
-    \item If $n \in \mathbb{N}$, the subset $n\mathbb{Z} = \{nk \mid k \in \mathbb{Z}\} \le (\mathbb{Z}, +)$. \\
-    \textit{Proof:} Let $x, y \in n\mathbb{Z} \implies x = nk_1, y = nk_2 \implies x - y = n(k_1 - k_2) \in n\mathbb{Z}$. According to the characterization theorem (additive form), it is a subgroup.
-    \item $U_n = \{z \in \mathbb{C} \mid z^n = 1\} \le (\mathbb{C}^*, \cdot)$. This is the group of the $n$-th complex roots of unity.
-\end{itemize}
-\end{example}
-
-\subsection*{Group Homomorphisms. Isomorphisms}
-
-\begin{definition}
-Let $(G, \cdot)$ and $(G', *)$ be two groups. A map $f: G \rightarrow G'$ is called a \textbf{group homomorphism} if:
-$$ f(x \cdot y) = f(x) * f(y), \quad (\forall) x, y \in G $$
-\end{definition}
-
-\begin{proposition}[Properties]
-If $f: G \rightarrow G'$ is a group homomorphism, then:
-\begin{enumerate}
-    \item $f(e) = e'$ (where $e$ is the neutral element in $G$, and $e'$ is the neutral element in $G'$).
-    \item $f(x^{-1}) = (f(x))^{-1}, \quad (\forall) x \in G$.
-\end{enumerate}
-\end{proposition}
-
-\begin{proof}
-(1) $f(x) = f(x \cdot e) = f(x) * f(e)$. Left-multiplying by $(f(x))^{-1}$ in $G'$, we obtain $e' = f(e)$. \\
-(2) $e' = f(e) = f(x \cdot x^{-1}) = f(x) * f(x^{-1})$. It follows that $f(x^{-1})$ acts as the inverse of $f(x)$ in $G'$, so $f(x^{-1}) = (f(x))^{-1}$.
-\end{proof}
-
-\begin{definition}
-A group homomorphism $f: G \rightarrow G'$ which is a bijective function is called a \textbf{group isomorphism}. \\
-(If an isomorphism exists between $G$ and $G'$, the groups are called isomorphic and we denote this by $G \cong G'$).
-\end{definition}
-
-\begin{example}\leavevmode
-\begin{itemize}
-    \item The map $f: \mathbb{Z} \rightarrow 2\mathbb{Z}$, $f(x) = 2x$ is an isomorphism from $(\mathbb{Z}, +)$ to $(2\mathbb{Z}, +)$. \\
-    \textit{Proof:} $f(x + y) = 2(x + y) = 2x + 2y = f(x) + f(y) \implies$ it is a homomorphism. Since $f$ is obviously bijective, it follows that $(\mathbb{Z}, +) \cong (2\mathbb{Z}, +)$.
-    \item The exponential function $f: (\mathbb{R}, +) \rightarrow ((0, \infty), \cdot)$, $f(x) = e^x$. \\
-    \textit{Proof:} $f(x + y) = e^{x+y} = e^x \cdot e^y = f(x) \cdot f(y) \implies$ it is a homomorphism. Since the exponential function is bijective onto the codomain $(0, \infty)$, it is an isomorphism.
-    \item The logarithmic function $f: ((0, \infty), \cdot) \rightarrow (\mathbb{R}, +)$, $f(x) = \ln x$. \\
-    \textit{Proof:} $f(x \cdot y) = \ln(x \cdot y) = \ln x + \ln y = f(x) + f(y) \implies$ it is a homomorphism. Being a bijective function, it is an isomorphism (it is precisely the inverse isomorphism of the previous one).
-\end{itemize}
-\end{example}
-
-
-\subsection*{Rings and Fields}
-
-\begin{definition}
-Let $A \neq \emptyset$ be a set equipped with two internal laws of composition (algebraic operations), usually denoted by $+$ (addition) and $\cdot$ (multiplication). The triplet $(A, +, \cdot)$ is called a \textbf{ring} if:
-\begin{enumerate}
-    \item $(A, +)$ is an abelian group.
-    \item $(A, \cdot)$ is a monoid (the law is associative and admits a neutral element).
-    \item Multiplication is distributive with respect to addition, meaning:
-    $$ x \cdot (y + z) = x \cdot y + x \cdot z, \quad (\forall) x, y, z \in A $$
-    $$ (y + z) \cdot x = y \cdot x + z \cdot x, \quad (\forall) x, y, z \in A $$
-\end{enumerate}
-\end{definition}
-
-\begin{remark}
-\begin{itemize}
-    \item The neutral element for addition is usually denoted by $0$ and is called the \textbf{zero element}.
-    \item The neutral element for multiplication is usually denoted by $1$ and is called the \textbf{identity element} (or unity).
-    \item The symmetric element of $x$ with respect to addition is denoted by $-x$ and is called the \textbf{opposite} of $x$.
-    \item The symmetric element of $x$ with respect to multiplication (if it exists) is denoted by $x^{-1}$ and is called the \textbf{inverse} of $x$. The set of invertible elements in a ring $A$ is usually denoted by $U(A)$, and $(U(A), \cdot)$ forms a group called the group of units of the ring.
-\end{itemize}
-\end{remark}
-
-\begin{definition}
-A ring $(A, +, \cdot)$ is called a \textbf{commutative ring} if the multiplication operation ($\cdot$) is commutative:
-$$ x \cdot y = y \cdot x, \quad (\forall) x, y \in A $$
-\end{definition}
-
-\begin{example}\leavevmode
-\begin{itemize}
-    \item $(\mathbb{Z}, +, \cdot), (\mathbb{Q}, +, \cdot), (\mathbb{R}, +, \cdot), (\mathbb{C}, +, \cdot)$ are commutative rings.
-    \item $(\mathbb{Z}_n, +, \cdot)$ is a commutative ring (the ring of residue classes modulo $n$).
-    \item $(\mathcal{M}_n(\mathbb{C}), +, \cdot)$, where $n \ge 2$, is a non-commutative ring (matrix multiplication is not commutative). The identity element is the identity matrix $I_n$.
-\end{itemize}
+\begin{example}
+$(2\mathbb{N}, \cdot)$ does not have a neutral element. (The neutral element for multiplication would be $1$, but $1 \notin 2\mathbb{N}$).
 \end{example}
 
 \begin{definition}
-A ring $(K, +, \cdot)$ is called a \textbf{field} if $0 \neq 1$ and every non-zero element in $K$ is invertible. (Meaning $U(K) = K \setminus \{0\} = K^*$). \\
-If, in addition, multiplication is commutative, then $K$ is called a \textbf{commutative field}.
+Let $(S, \varphi)$ be a law of composition with a neutral element $e$. An element $x \in S$ is \textbf{invertible} (symmetrizable) with respect to $\varphi \iff (\exists) x' \in S$ such that:
+$$ \varphi(x, x') = \varphi(x', x) = e $$
 \end{definition}
-
-\begin{example}\leavevmode
-\begin{itemize}
-    \item $(\mathbb{Q}, +, \cdot), (\mathbb{R}, +, \cdot), (\mathbb{C}, +, \cdot)$ are commutative fields.
-    \item $(\mathbb{Z}, +, \cdot)$ is \textbf{not} a field, because its non-zero elements (except for $1$ and $-1$) do not have inverses in $\mathbb{Z}$.
-    \item $(\mathbb{Z}_p, +, \cdot)$ is a commutative field if and only if $p$ is a prime number.
-\end{itemize}
-\end{example}
