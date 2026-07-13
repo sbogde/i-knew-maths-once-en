@@ -164,3 +164,52 @@ A group homomorphism $f: G \rightarrow G'$ which is a bijective function is call
     \textit{Proof:} $f(x \cdot y) = \ln(x \cdot y) = \ln x + \ln y = f(x) + f(y) \implies$ it is a homomorphism. Being a bijective function, it is an isomorphism (it is precisely the inverse isomorphism of the previous one).
 \end{itemize}
 \end{example}
+
+
+\subsection*{Rings and Fields}
+
+\begin{definition}
+Let $A \neq \emptyset$ be a set equipped with two internal laws of composition (algebraic operations), usually denoted by $+$ (addition) and $\cdot$ (multiplication). The triplet $(A, +, \cdot)$ is called a \textbf{ring} if:
+\begin{enumerate}
+    \item $(A, +)$ is an abelian group.
+    \item $(A, \cdot)$ is a monoid (the law is associative and admits a neutral element).
+    \item Multiplication is distributive with respect to addition, meaning:
+    $$ x \cdot (y + z) = x \cdot y + x \cdot z, \quad (\forall) x, y, z \in A $$
+    $$ (y + z) \cdot x = y \cdot x + z \cdot x, \quad (\forall) x, y, z \in A $$
+\end{enumerate}
+\end{definition}
+
+\begin{remark}
+\begin{itemize}
+    \item The neutral element for addition is usually denoted by $0$ and is called the \textbf{zero element}.
+    \item The neutral element for multiplication is usually denoted by $1$ and is called the \textbf{identity element} (or unity).
+    \item The symmetric element of $x$ with respect to addition is denoted by $-x$ and is called the \textbf{opposite} of $x$.
+    \item The symmetric element of $x$ with respect to multiplication (if it exists) is denoted by $x^{-1}$ and is called the \textbf{inverse} of $x$. The set of invertible elements in a ring $A$ is usually denoted by $U(A)$, and $(U(A), \cdot)$ forms a group called the group of units of the ring.
+\end{itemize}
+\end{remark}
+
+\begin{definition}
+A ring $(A, +, \cdot)$ is called a \textbf{commutative ring} if the multiplication operation ($\cdot$) is commutative:
+$$ x \cdot y = y \cdot x, \quad (\forall) x, y \in A $$
+\end{definition}
+
+\begin{example}\leavevmode
+\begin{itemize}
+    \item $(\mathbb{Z}, +, \cdot), (\mathbb{Q}, +, \cdot), (\mathbb{R}, +, \cdot), (\mathbb{C}, +, \cdot)$ are commutative rings.
+    \item $(\mathbb{Z}_n, +, \cdot)$ is a commutative ring (the ring of residue classes modulo $n$).
+    \item $(\mathcal{M}_n(\mathbb{C}), +, \cdot)$, where $n \ge 2$, is a non-commutative ring (matrix multiplication is not commutative). The identity element is the identity matrix $I_n$.
+\end{itemize}
+\end{example}
+
+\begin{definition}
+A ring $(K, +, \cdot)$ is called a \textbf{field} if $0 \neq 1$ and every non-zero element in $K$ is invertible. (Meaning $U(K) = K \setminus \{0\} = K^*$). \\
+If, in addition, multiplication is commutative, then $K$ is called a \textbf{commutative field}.
+\end{definition}
+
+\begin{example}\leavevmode
+\begin{itemize}
+    \item $(\mathbb{Q}, +, \cdot), (\mathbb{R}, +, \cdot), (\mathbb{C}, +, \cdot)$ are commutative fields.
+    \item $(\mathbb{Z}, +, \cdot)$ is \textbf{not} a field, because its non-zero elements (except for $1$ and $-1$) do not have inverses in $\mathbb{Z}$.
+    \item $(\mathbb{Z}_p, +, \cdot)$ is a commutative field if and only if $p$ is a prime number.
+\end{itemize}
+\end{example}
