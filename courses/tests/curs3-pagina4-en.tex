@@ -1,0 +1,74 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb,amscd}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+
+\begin{document}
+
+\section*{Lecture 3 -- Page 4}
+
+\noindent Let $(\mathbb{Z},+)$ be a commutative group, $(M,\cdot,e)$ a monoid.
+
+\noindent We have $f : \mathbb{Z} \to M$, $f(k) = a^k$
+
+\[
+f(h+k) = f(h)\cdot f(k),
+\]
+i.e.\ $a^{h+k} = a^h \cdot a^k$.
+
+\[
+\begin{aligned}
+h&=m, & k&=n\\
+h&=-m, & k&=-n
+\end{aligned}
+\qquad m,n\in\mathbb{N}^*.
+\]
+
+\[
+a^{-m}\cdot a^{-n} = (a^{-1})^{m}\cdot(a^{-1})^{n} = (a^{-1})^{m+n} = a^{h+k}
+\]
+\noindent\textit{(last term unclear in the original -- could be $a^{h+k}$ or $a^h\cdot a^k$; please check.)}
+
+\bigskip
+\noindent\underline{\textbf{Composition law induced on a stable subset}} (respectively on a finite set)
+
+\bigskip
+\noindent\textbf{Def.} Let $(S,\varphi)$; $\varphi : S\times S \to S$, $S \neq \varnothing$.
+
+\noindent A subset $T \subseteq S$ is called a \textbf{stable subset} of $S$ with respect to $\varphi$ if $(\forall)\, x,y \in T \Rightarrow \varphi(x,y) \in T$.
+
+\[
+\begin{CD}
+S\times S @>\varphi>> S\\
+@AAA @AAA\\
+T\times T @>\varphi'>> T
+\end{CD}
+\]
+\noindent $(x,y)\in T \Rightarrow \varphi'(x,y) \overset{\text{def}}{=} \varphi(x,y)$
+
+\noindent $\varphi'$ is the operation induced on $T$ by $\varphi$.
+
+\noindent Let $S = M_2(\mathbb{R})$, $(M_2(\mathbb{R}),\cdot)$
+
+\[
+T = \left\{ \begin{pmatrix} 1 & a \\ 0 & 1 \end{pmatrix} \,\middle|\, a\in\mathbb{R} \right\} \subseteq S = M_2(\mathbb{R}).
+\]
+\[
+X_a X_b = X_{a+b}: \qquad \begin{pmatrix}1 & a\\ 0 & 1\end{pmatrix}\begin{pmatrix}1 & b\\ 0 & 1\end{pmatrix} = \begin{pmatrix}1 & a+b\\ 0 & 1\end{pmatrix}
+\]
+
+\bigskip
+\noindent\fbox{Proposition} \ Let $S\neq\varnothing$, $\varphi$ a composition law on $S$.\\
+$T\subseteq S$, $T$ stable with respect to $\varphi$,\\
+$\varphi'$ = the operation induced by $\varphi$ on $T$: $\varphi'(x,y)=\varphi(x,y)\in T$.
+
+\begin{enumerate}
+\item[(1)] If $\varphi$ is associative (resp.\ commutative) $\Rightarrow$ $\varphi'$ is associative (resp.\ commutative).
+\item[(2)] If $\varphi$ admits an identity element $e$ and $e\in T$ $\Rightarrow$ $e$ is also an identity element for $\varphi'$.
+\item[(3)] If an element $x\in T$ is invertible with respect to $\varphi$ ($\varphi$ associative with an identity element) and its inverse $x'$ with respect to $\varphi$ lies in $T$ $\Rightarrow$ $x$ is invertible with respect to $\varphi'$ as well.
+\item[(4)] its inverse (with respect to $\varphi'$) is still $x'$.
+\end{enumerate}
+
+\end{document}

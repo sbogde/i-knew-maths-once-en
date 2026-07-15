@@ -97,147 +97,279 @@ $$ (x_1 \dots x_{m_1})(x_{m_1+1} \dots x_{m_1+m_2}) \dots (x_{n-m_r+1} \dots x_n
 $$ x_{\sigma(1)} x_{\sigma(2)} \dots x_{\sigma(n)} = x_1 x_2 \dots x_n $$
 \end{example}
 
-\begin{example}\leavevmode
-\begin{itemize}
-    \item $(\mathbb{Z}, +), (\mathbb{Q}, +), (\mathbb{R}, +), (\mathbb{C}, +)$.
-    \item $(\mathbb{Z}, \cdot), (\mathbb{Q}, \cdot), (\mathbb{R}, \cdot), (\mathbb{C}, \cdot)$.
-    \item $(\mathcal{P}(A), \cup), (\mathcal{P}(A), \cap), (\mathcal{P}(A), \Delta)$ where $A \Delta B = (A \setminus B) \cup (B \setminus A)$. (The neutral element is $\emptyset$).
-\end{itemize}
-\end{example}
 
-% Crossed-out example in the original manuscript:
-% (\mathcal{P}(A), \setminus) \rightarrow A \setminus B = A \cap \complement_A B.
-% associative ? A \setminus \emptyset = A, \emptyset \setminus A = \emptyset (It is not commutative).
 
-\begin{definition}
-Let $S \neq \emptyset$. A pair $(S, \varphi)$ where $\varphi$ is a law of composition on $S$ is called a \textbf{groupoid}.
-\end{definition}
 
-\begin{example}\leavevmode
-\begin{itemize}
-    \item $(\mathbb{N}, +), (\mathbb{N}, \cdot), (\mathbb{Z}, +)$ etc. are groupoids.
-    \item $(\mathcal{M}_n(\mathbb{C}), +), (\mathcal{M}_n(\mathbb{C}), \cdot)$ are groupoids.
-\end{itemize}
-\end{example}
 
-\begin{definition}
-A groupoid $(S, \varphi)$ is called a \textbf{semigroup} if $\varphi$ is associative.
-\end{definition}
+% page 3 
+\section*{Lecture 3 -- Page 3}
 
-\begin{example}
-All of the above.
-\end{example}
+\noindent\textbf{Definition.} Let $(S,\varphi)$, $\varphi : S \times S \to S$, $S \neq \varnothing$.
 
-\begin{definition}
-A semigroup which admits a neutral element is called a \textbf{monoid}.
-\end{definition}
+\begin{enumerate}
+\item[(1)] If $\varphi$ is associative $\Rightarrow$ $(S,\varphi)$ is called a \textbf{semigroup}.
 
-\begin{example}\leavevmode
-\begin{itemize}
-    \item $(\mathbb{N}, +) \rightarrow e = 0$; $(\mathbb{N}, \cdot) \rightarrow e = 1$ (similarly for $\mathbb{Z}, \mathbb{Q}, \mathbb{R}, \mathbb{C}$).
-    \item $(\mathcal{M}_n(\mathbb{C}), +) \rightarrow e = O_n$; $(\mathcal{M}_n(\mathbb{C}), \cdot) \rightarrow e = I_n$.
-    \item $(\mathcal{P}(A), \cup) \rightarrow e = \emptyset$; $(\mathcal{P}(A), \cap) \rightarrow e = A$; $(\mathcal{P}(A), \Delta) \rightarrow e = \emptyset$.
-    \item $(\mathcal{P}(A), \setminus)$ - no (it does not have a neutral element).
-    \item $(A^A, \circ)$ where $A^A = \{f \mid f: A \rightarrow A\}$, the neutral element is $1_A$.
-\end{itemize}
-\end{example}
+\item[(2)] A pair $(M,\varphi)$, $M \neq \varnothing$, $\varphi : M \times M \to M$.\\
+If $\varphi$ is associative and has an identity element, $M$ is called a \textbf{monoid}.
 
-\vspace{1em}
-\textbf{Calculation rules in a semigroup}
+\item[(3)] A pair $(G,\varphi)$, $G \neq \varnothing$, $\varphi : G \times G \to G$; if $\varphi$ is associative, has an identity element, and every element of $G$ is invertible with respect to $\varphi$ $\Rightarrow$ $G$ is called a \textbf{group}.
+\end{enumerate}
 
-Let $(S, \cdot)$ be a semigroup and $x \in S$.
+\noindent\textbf{Examples:}
 \begin{align*}
-    x^1 &= x \\
-    x^2 &= x \cdot x \\
-    &\dots \\
-    x^n &= \underbrace{x \cdot x \dots x}_{n \text{ times}}
+(\mathbb{N},+,0) &= \text{commutative monoid} \\
+(M_2(\mathbb{R}), \cdot, I_2) &= \text{non-commutative monoid} \\
+(\mathbb{Z},+,0),\ (\mathbb{R},+,0),\ (\mathbb{R}^*,\cdot,1) &= \text{commutative groups} \\
+|A| \geq 2 \Rightarrow (T_A,\circ,1_A) &= \text{non-commutative monoid} \\
+|A| \geq 3 \Rightarrow (S_A,\circ,1_A) &= \text{non-commutative group}
 \end{align*}
-$$ x^n \cdot x^m = x^{n+m} $$
-$$ (x^n)^m = x^{n \cdot m} $$
-If $S$ is a monoid: $x^0 \stackrel{\text{def}}{=} e$ (by convention).
 
-\textit{Additive form:}
-\begin{align*}
-    1 \cdot x &= x \\
-    2x &= x + x \\
-    &\dots \\
-    nx &= \underbrace{x + x \dots x}_{n \text{ times}}
-\end{align*}
-$$ nx + mx = (n+m)x $$
-$$ m(nx) = (mn)x $$
-If $S$ is a monoid: $0 \cdot x = 0$.
+\noindent\textbf{Computation rules in a semigroup/monoid/group}
+
+\noindent\textbf{Def.} Let $S \neq \varnothing$, $(S,\cdot)$, ``$\cdot$'' associative, and $a \in S$, $n \in \mathbb{N}^*$.
+
+\noindent We define
+\[
+a^n \overset{\text{def}}{=} \underbrace{a \cdot a \cdots a}_{n \text{ times}} =
+\begin{cases}
+a, & n=1 \\
+a^{n-1}\cdot a, & n>1
+\end{cases}
+\]
+
+\noindent In additive notation,
+\[
+na = \underbrace{a+a+\cdots+a}_{n \text{ times}} =
+\begin{cases}
+a, & n=1 \\
+(n-1)a+a, & n>1
+\end{cases}
+\]
+
+\noindent\textbf{Proposition.} Let $S \neq \varnothing$, $(S,\cdot)$, ``$\cdot$'' associative. Then:
+\begin{enumerate}
+\item[(1)] If $a \in S$, $m,n \in \mathbb{N}^*$ $\Rightarrow$ $a^m \cdot a^n = a^{m+n}$.
+\item[(2)] If $a,b \in S$ and $ab=ba$ $\Rightarrow$ $(ab)^n = a^n \cdot b^n$, $(\forall)\, n \in \mathbb{N}^*$.
+\end{enumerate}
+
+\noindent\textbf{Proposition.} Let $(M,\cdot,e)$ be a monoid, $a \in M$, $a$ invertible.
+\begin{enumerate}
+\item[(1)] $a^n \cdot a^k = a^{n+k}$, $(\forall)\, n,k \in \mathbb{Z}$.
+\item[(2)] $(a^n)^k = a^{n\cdot k}$, $(\forall)\, n,k \in \mathbb{Z}$.
+\[
+\left[\, a^0 \overset{\text{def}}{=} e, \qquad a^{-n} \overset{\text{def}}{=} (a^{-1})^n \,\right]
+\]
+\item[(3)] If $a\cdot b = b\cdot a$, $a$ and $b$ invertible $\Rightarrow$ $(ab)^k = a^k b^k$.
+\end{enumerate}
+
+
+
 
 % page 4
-\subsection*{Subgroups}
+\section*{Lecture 3 -- Page 4}
 
-\begin{definition}
-Let $(G, \cdot)$ be a group and $H \subseteq G$, $H \neq \emptyset$. The subset $H$ is called a \textbf{subgroup} of $G$ (denoted $H \le G$) if:
+\noindent Let $(\mathbb{Z},+)$ be a commutative group, $(M,\cdot,e)$ a monoid.
+
+\noindent We have $f : \mathbb{Z} \to M$, $f(k) = a^k$
+
+\[
+f(h+k) = f(h)\cdot f(k),
+\]
+i.e.\ $a^{h+k} = a^h \cdot a^k$.
+
+\[
+\begin{aligned}
+h&=m, & k&=n\\
+h&=-m, & k&=-n
+\end{aligned}
+\qquad m,n\in\mathbb{N}^*.
+\]
+
+\[
+a^{-m}\cdot a^{-n} = (a^{-1})^{m}\cdot(a^{-1})^{n} = (a^{-1})^{m+n} = a^{h+k}
+\]
+\noindent\textit{(last term unclear in the original -- could be $a^{h+k}$ or $a^h\cdot a^k$; please check.)}
+
+\bigskip
+\noindent\underline{\textbf{Composition law induced on a stable subset}} (respectively on a finite set)
+
+\bigskip
+\noindent\textbf{Def.} Let $(S,\varphi)$; $\varphi : S\times S \to S$, $S \neq \varnothing$.
+
+\noindent A subset $T \subseteq S$ is called a \textbf{stable subset} of $S$ with respect to $\varphi$ if $(\forall)\, x,y \in T \Rightarrow \varphi(x,y) \in T$.
+
+\[
+\begin{CD}
+S\times S @>\varphi>> S\\
+@AAA @AAA\\
+T\times T @>\varphi'>> T
+\end{CD}
+\]
+\noindent $(x,y)\in T \Rightarrow \varphi'(x,y) \overset{\text{def}}{=} \varphi(x,y)$
+
+\noindent $\varphi'$ is the operation induced on $T$ by $\varphi$.
+
+\noindent Let $S = M_2(\mathbb{R})$, $(M_2(\mathbb{R}),\cdot)$
+
+\[
+T = \left\{ \begin{pmatrix} 1 & a \\ 0 & 1 \end{pmatrix} \,\middle|\, a\in\mathbb{R} \right\} \subseteq S = M_2(\mathbb{R}).
+\]
+\[
+X_a X_b = X_{a+b}: \qquad \begin{pmatrix}1 & a\\ 0 & 1\end{pmatrix}\begin{pmatrix}1 & b\\ 0 & 1\end{pmatrix} = \begin{pmatrix}1 & a+b\\ 0 & 1\end{pmatrix}
+\]
+
+\bigskip
+\noindent\fbox{Proposition} \ Let $S\neq\varnothing$, $\varphi$ a composition law on $S$.\\
+$T\subseteq S$, $T$ stable with respect to $\varphi$,\\
+$\varphi'$ = the operation induced by $\varphi$ on $T$: $\varphi'(x,y)=\varphi(x,y)\in T$.
+
 \begin{enumerate}
-    \item $(\forall) x, y \in H \implies x \cdot y \in H$ ($H$ is closed under $\cdot$).
-    \item $(\forall) x \in H \implies x^{-1} \in H$.
+\item[(1)] If $\varphi$ is associative (resp.\ commutative) $\Rightarrow$ $\varphi'$ is associative (resp.\ commutative).
+\item[(2)] If $\varphi$ admits an identity element $e$ and $e\in T$ $\Rightarrow$ $e$ is also an identity element for $\varphi'$.
+\item[(3)] If an element $x\in T$ is invertible with respect to $\varphi$ ($\varphi$ associative with an identity element) and its inverse $x'$ with respect to $\varphi$ lies in $T$ $\Rightarrow$ $x$ is invertible with respect to $\varphi'$ as well.
+\item[(4)] its inverse (with respect to $\varphi'$) is still $x'$.
 \end{enumerate}
-\end{definition}
 
-\begin{remark}
-Obviously: $e \in H$. $(x \in H, x^{-1} \in H \implies x \cdot x^{-1} \in H \implies e \in H)$.
-\end{remark}
 
-\begin{theorem}[Subgroup characterization]
-$$ H \le G \iff (\forall) x, y \in H \implies x \cdot y^{-1} \in H $$
-\end{theorem}
 
-\begin{proof}
-``$\implies$'': $y \in H \implies y^{-1} \in H \implies x \cdot y^{-1} \in H$. \\
-``$\impliedby$'': Assume that $x \cdot y^{-1} \in H$, $(\forall) x, y \in H$.
-\begin{itemize}
-    \item $\implies$ (for $x=y$) $x \cdot x^{-1} = e \in H$.
-    \item $e \in H, x \in H \implies e \cdot x^{-1} = x^{-1} \in H$ (2).
-    \item from $x, y \in H \implies x \in H$ and $y^{-1} \in H \implies x \cdot (y^{-1})^{-1} \in H \implies x \cdot y \in H$ (1).
-\end{itemize}
-$\implies H \le G$.
-\end{proof}
+% page 5
 
-\begin{example}\leavevmode
-\begin{itemize}
-    \item[(1)] $(\mathbb{Z}, +) \le (\mathbb{Q}, +) \le (\mathbb{R}, +) \le (\mathbb{C}, +)$.
-    \item[(2)] $n \in \mathbb{N}, n\mathbb{Z} = \{nk \mid k \in \mathbb{Z}\} \le (\mathbb{Z}, +)$. \\
-    \textit{Proof:} $x, y \in n\mathbb{Z} \implies x = nk_1, y = nk_2 \implies x - y = n(k_1 - k_2) \in n\mathbb{Z}$.
-    \item[(3)] $U_n = \{z \in \mathbb{C} \mid z^n = 1\} \le (\mathbb{C}^*, \cdot)$.
-\end{itemize}
-\end{example}
+\section*{Lecture 3 -- Page 5}
 
-\subsection*{Group Homomorphisms. Isomorphisms}
+\noindent $(M_2(\mathbb{R}),\cdot)$ -- a monoid.
 
-\begin{definition}
-Let $(G, \cdot)$ and $(G', *)$ be two groups. A map $f: G \rightarrow G'$ is called a \textbf{group homomorphism} if:
-$$ f(x \cdot y) = f(x) * f(y), \quad (\forall) x, y \in G $$
-\end{definition}
+\noindent $H\subseteq G$, $G$ a group.
 
-\begin{proposition}
-If $f: G \rightarrow G'$ is a homomorphism $\implies$
 \begin{enumerate}
-    \item $f(e) = e'$
-    \item $f(x^{-1}) = (f(x))^{-1}, \quad (\forall) x \in G$
+\item[1)] $(\forall)\, x,y\in H \Rightarrow xy\in H$
+\item[2)] $(\forall)\, x\in H \Rightarrow x^{-1}\in H$
 \end{enumerate}
-\end{proposition}
+\hspace{1cm}$\Bigg\} \Rightarrow (H,\cdot)$ is a group.
 
-\begin{proof}
-1) $f(x) = f(x \cdot e) = f(x) * f(e) \implies e' = f(e)$. \\
-2) $e' = f(e) = f(x \cdot x^{-1}) = f(x) * f(x^{-1}) \implies f(x^{-1}) = (f(x))^{-1}$.
-\end{proof}
+\noindent $x\in H \Rightarrow x^{-1}\in H \Rightarrow e\in H$.
 
-\begin{definition}
-A bijective homomorphism is called an \textbf{isomorphism}. ($G \cong G'$).
-\end{definition}
+\bigskip
+\noindent\underline{\textbf{Proof.}} -- evident.
 
-\begin{example}\leavevmode
-\begin{itemize}
-    \item[(1)] $f: \mathbb{Z} \rightarrow 2\mathbb{Z}, f(x) = 2x$. \\
-    \textit{Proof:} $f(x + y) = 2(x + y) = 2x + 2y = f(x) + f(y) \implies$ homomorphism; bijective $\implies$ isomorphism.
-    \item[(2)] $f: (\mathbb{R}, +) \rightarrow ((0, \infty), \cdot), f(x) = e^x$. \\
-    \textit{Proof:} $f(x + y) = e^{x+y} = e^x \cdot e^y = f(x) \cdot f(y) \implies$ homomorphism; bijective $\implies$ isomorphism.
-    \item[(3)] $f: ((0, \infty), \cdot) \rightarrow (\mathbb{R}, +), f(x) = \ln x$. \\
-    \textit{Proof:} $f(x \cdot y) = \ln(x \cdot y) = \ln x + \ln y = f(x) + f(y) \implies$ homomorphism; bijective $\implies$ isomorphism.
-\end{itemize}
-\end{example}
+\bigskip
+\noindent (The composition law induced on a quotient set\footnote{the exact word is unclear in the original -- it may be ``factor'' instead of ``quotient''.}.)
 
+\[
+(S,\varphi,R), \qquad S\neq\varnothing
+\]
+\noindent $\varphi$ = a composition law on $S$.\\
+$R$ = an equivalence relation on $S$.
+
+\[
+\begin{CD}
+S\times S @>\varphi>> S\\
+@V{p\times p}VV @VV{p}V\\
+S/R\times S/R @>\varphi^*>> S/R
+\end{CD}
+\]
+\noindent $p(a) = \hat a$.\footnote{the exact symbol used in the original for the canonical projection is unclear -- $p$ was chosen here.}
+
+\noindent $(p\times p)(a,b) = (\hat a,\hat b)$.
+
+\noindent $\varphi^*(\hat a,\hat b) \overset{\text{def}}{=} \varphi(a,b)$
+
+\noindent by the factorization theorem $\Rightarrow \exists\, \varphi^* \Rightarrow$ it is unique.
+
+\begin{center}
+\begin{tikzpicture}
+\draw (0,0) ellipse (2.2 and 1.4);
+\node at (0,1.7) {$S$};
+\draw (-0.7,-0.2) ellipse (0.7 and 0.5);
+\draw (0.7,-0.3) ellipse (0.6 and 0.45);
+\node at (-0.7,-0.2) {$C'$};
+\node at (0.7,-0.3) {$C''$};
+\end{tikzpicture}
+\end{center}
+
+\noindent $a\in C',\ b\in C'' \Rightarrow \hat a = C',\ \hat b = C''$. \quad $\varphi^*(\hat a,\hat b) = \varphi(a,b)$
+
+\noindent Let $a'\in C'$ and $b'\in C''$ $\Rightarrow$ $\varphi^*(\hat a',\hat b') = \varphi(a',b')$
+
+\bigskip
+\noindent\underline{\textbf{Def:}} Let $S\neq\varnothing$, $(S,\cdot)$. An equivalence relation $R$ on $S$ is called a \textbf{congruence} on $S$ if
+
+\noindent from $aRa'$ and $bRb' \Rightarrow abRa'b'$
+
+\noindent (or $a\sim a'$ and $b\sim b'$) $\Rightarrow$ $(ab\sim a'b')$.
+
+\bigskip
+\noindent\underline{\textbf{Ex:}} $(\mathbb{Z},+,\cdot)$ \qquad $n \mid x-y$
+
+\noindent $(\mathbb{Z}_n,+,\cdot)$.
+
+\noindent $a\equiv a' \pmod n$ and $b\equiv b' \pmod n$ $\Rightarrow$ $ab\equiv a'b' \pmod n$,
+
+\noindent $(a+b\equiv a'+b' \pmod n)$.
+
+\[
+a-a' = un,\qquad b-b'=tn
+\]
+\[
+a+b-(a'+b') = un+tn = (u+t)n
+\]
+\[
+ab = (a'+un)(b'+tn) = a'b' + n(\,ub'+a't+unt\,)
+\]
+\noindent\textit{(this last computation block is reconstructed from very small/cramped digits in the original -- please check the variables $u,t$ and the final expression.)}
+
+
+
+
+
+% page 6
+
+\section*{Lecture 3 -- Page 6}
+
+\noindent\fbox{Theorem 1} \ Let $(S,\varphi)$, $S\neq\varnothing$, and let $R$ be a congruence on $S$.
+
+\bigskip
+\noindent\underline{Then:} \ 1) $\varphi^* : S/R\times S/R \to S/R$ defined by
+\[
+\varphi^*(\hat a,\hat b) = \varphi(a,b)
+\]
+is called the composition law induced on $S/R$ by $\varphi$.
+
+\begin{enumerate}
+\item[(2)] $\varphi$ associative (commutative) $\Rightarrow$ $\varphi^*$ associative (commutative).
+\item[(3)] $e\in S$ the identity element for $\varphi$ $\Rightarrow$ $\hat e$ is the identity element of the operation $\varphi^*$.
+\item[(4)] $a\in S$ is invertible with respect to $\varphi$ $\Leftrightarrow$ $\hat a$ is invertible with respect to $\varphi^*$, and $\hat a^{-1} = \widehat{a^{-1}}$.
+\item[(5)] $(S,\varphi)$ a group $\Rightarrow$ $(S/R,\varphi^*)$ a group.
+\end{enumerate}
+
+\noindent $\big(\mathbb{Z}/n\mathbb{Z} = (\mathbb{Z}_n,+)$ is a group$\big)$
+
+\bigskip
+\noindent\underline{\textbf{Proof}}
+
+\begin{enumerate}
+\item[(1)] Not proved here -- it is well-defined.\footnote{the last word is unclear in the original (looks like ``dif.'' in the manuscript) -- probably ``well-defined''.}
+\item[(2)] $\hat a\hat b = \widehat{ab} = \widehat{ba} = \hat b\hat a$.
+\item[(3)] $\hat e\hat a = \widehat{ea} = \hat a = \widehat{ae} = \hat a\hat e$.
+\item[(4)] $\hat a\hat a' = \widehat{aa'} = \hat e = \widehat{a'a} = \hat a'\hat a$.
+\end{enumerate}
+
+\[
+p : S \to S/R
+\]
+\noindent $(S,\cdot)$ \hspace{2cm} $(S/R,\cdot)$
+
+\[
+p(ab) = p(a)\cdot p(b) \ \Leftrightarrow\ \widehat{ab} = \hat a\hat b.
+\]
+
+\[
+\mathbb{Z} \to \mathbb{Z}_n
+\]
+\noindent $p(a) = \hat a$.
+
+\[
+p(a+b) = p(a)+p(b) \ \Leftrightarrow\ \widehat{a+b} = \hat a+\hat b.
+\]
+\[
+p(ab) = p(a)\cdot p(b) \ \Leftrightarrow\ \widehat{ab} = \hat a\cdot\hat b.
+\]

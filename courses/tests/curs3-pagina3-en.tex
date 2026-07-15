@@ -1,0 +1,70 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+
+\begin{document}
+
+\section*{Lecture 3 -- Page 3}
+
+\noindent\textbf{Definition.} Let $(S,\varphi)$, $\varphi : S \times S \to S$, $S \neq \varnothing$.
+
+\begin{enumerate}
+\item[(1)] If $\varphi$ is associative $\Rightarrow$ $(S,\varphi)$ is called a \textbf{semigroup}.
+
+\item[(2)] A pair $(M,\varphi)$, $M \neq \varnothing$, $\varphi : M \times M \to M$.\\
+If $\varphi$ is associative and has an identity element, $M$ is called a \textbf{monoid}.
+
+\item[(3)] A pair $(G,\varphi)$, $G \neq \varnothing$, $\varphi : G \times G \to G$; if $\varphi$ is associative, has an identity element, and every element of $G$ is invertible with respect to $\varphi$ $\Rightarrow$ $G$ is called a \textbf{group}.
+\end{enumerate}
+
+\noindent\textbf{Examples:}
+\begin{align*}
+(\mathbb{N},+,0) &= \text{commutative monoid} \\
+(M_2(\mathbb{R}), \cdot, I_2) &= \text{non-commutative monoid} \\
+(\mathbb{Z},+,0),\ (\mathbb{R},+,0),\ (\mathbb{R}^*,\cdot,1) &= \text{commutative groups} \\
+|A| \geq 2 \Rightarrow (T_A,\circ,1_A) &= \text{non-commutative monoid} \\
+|A| \geq 3 \Rightarrow (S_A,\circ,1_A) &= \text{non-commutative group}
+\end{align*}
+
+\noindent\textbf{Computation rules in a semigroup/monoid/group}
+
+\noindent\textbf{Def.} Let $S \neq \varnothing$, $(S,\cdot)$, ``$\cdot$'' associative, and $a \in S$, $n \in \mathbb{N}^*$.
+
+\noindent We define
+\[
+a^n \overset{\text{def}}{=} \underbrace{a \cdot a \cdots a}_{n \text{ times}} =
+\begin{cases}
+a, & n=1 \\
+a^{n-1}\cdot a, & n>1
+\end{cases}
+\]
+
+\noindent In additive notation,
+\[
+na = \underbrace{a+a+\cdots+a}_{n \text{ times}} =
+\begin{cases}
+a, & n=1 \\
+(n-1)a+a, & n>1
+\end{cases}
+\]
+
+\noindent\textbf{Proposition.} Let $S \neq \varnothing$, $(S,\cdot)$, ``$\cdot$'' associative. Then:
+\begin{enumerate}
+\item[(1)] If $a \in S$, $m,n \in \mathbb{N}^*$ $\Rightarrow$ $a^m \cdot a^n = a^{m+n}$.
+\item[(2)] If $a,b \in S$ and $ab=ba$ $\Rightarrow$ $(ab)^n = a^n \cdot b^n$, $(\forall)\, n \in \mathbb{N}^*$.
+\end{enumerate}
+
+\noindent\textbf{Proposition.} Let $(M,\cdot,e)$ be a monoid, $a \in M$, $a$ invertible.
+\begin{enumerate}
+\item[(1)] $a^n \cdot a^k = a^{n+k}$, $(\forall)\, n,k \in \mathbb{Z}$.
+\item[(2)] $(a^n)^k = a^{n\cdot k}$, $(\forall)\, n,k \in \mathbb{Z}$.
+\[
+\left[\, a^0 \overset{\text{def}}{=} e, \qquad a^{-n} \overset{\text{def}}{=} (a^{-1})^n \,\right]
+\]
+\item[(3)] If $a\cdot b = b\cdot a$, $a$ and $b$ invertible $\Rightarrow$ $(ab)^k = a^k b^k$.
+\end{enumerate}
+
+\end{document}

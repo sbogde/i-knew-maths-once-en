@@ -1,0 +1,61 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+
+\begin{document}
+
+\section*{Lecture 3 -- Page 6}
+
+\noindent\fbox{Theorem 1} \ Let $(S,\varphi)$, $S\neq\varnothing$, and let $R$ be a congruence on $S$.
+
+\bigskip
+\noindent\underline{Then:} \ 1) $\varphi^* : S/R\times S/R \to S/R$ defined by
+\[
+\varphi^*(\hat a,\hat b) = \varphi(a,b)
+\]
+is called the composition law induced on $S/R$ by $\varphi$.
+
+\begin{enumerate}
+\item[(2)] $\varphi$ associative (commutative) $\Rightarrow$ $\varphi^*$ associative (commutative).
+\item[(3)] $e\in S$ the identity element for $\varphi$ $\Rightarrow$ $\hat e$ is the identity element of the operation $\varphi^*$.
+\item[(4)] $a\in S$ is invertible with respect to $\varphi$ $\Leftrightarrow$ $\hat a$ is invertible with respect to $\varphi^*$, and $\hat a^{-1} = \widehat{a^{-1}}$.
+\item[(5)] $(S,\varphi)$ a group $\Rightarrow$ $(S/R,\varphi^*)$ a group.
+\end{enumerate}
+
+\noindent $\big(\mathbb{Z}/n\mathbb{Z} = (\mathbb{Z}_n,+)$ is a group$\big)$
+
+\bigskip
+\noindent\underline{\textbf{Proof}}
+
+\begin{enumerate}
+\item[(1)] Not proved here -- it is well-defined.\footnote{the last word is unclear in the original (looks like ``dif.'' in the manuscript) -- probably ``well-defined''.}
+\item[(2)] $\hat a\hat b = \widehat{ab} = \widehat{ba} = \hat b\hat a$.
+\item[(3)] $\hat e\hat a = \widehat{ea} = \hat a = \widehat{ae} = \hat a\hat e$.
+\item[(4)] $\hat a\hat a' = \widehat{aa'} = \hat e = \widehat{a'a} = \hat a'\hat a$.
+\end{enumerate}
+
+\[
+p : S \to S/R
+\]
+\noindent $(S,\cdot)$ \hspace{2cm} $(S/R,\cdot)$
+
+\[
+p(ab) = p(a)\cdot p(b) \ \Leftrightarrow\ \widehat{ab} = \hat a\hat b.
+\]
+
+\[
+\mathbb{Z} \to \mathbb{Z}_n
+\]
+\noindent $p(a) = \hat a$.
+
+\[
+p(a+b) = p(a)+p(b) \ \Leftrightarrow\ \widehat{a+b} = \hat a+\hat b.
+\]
+\[
+p(ab) = p(a)\cdot p(b) \ \Leftrightarrow\ \widehat{ab} = \hat a\cdot\hat b.
+\]
+
+\end{document}
