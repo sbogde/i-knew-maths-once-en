@@ -1,0 +1,62 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+
+\begin{document}
+
+\noindent\fbox{Theorem} \ Let $(A,\varphi)$; $\varphi : A\times A \to A$, $I\neq\varnothing$.
+
+\[
+\tilde\varphi : A^I \times A^I \to A^I
+\]
+
+\begin{enumerate}
+\item[(1)] If $\varphi$ is associative (commutative) $\Rightarrow$ $\tilde\varphi$ is associative (commutative).
+\item[(2)] If $e\in A$ is the identity element for $\varphi$ $\Rightarrow$ $\tilde e : I\to A$, $\tilde e(i)=e$, is the identity element for $\tilde\varphi$.
+\item[(3)] $\varphi$ has an identity element and $f(i)$ is invertible with respect to $\varphi$ for every $i$ $\Rightarrow$ $f$ is invertible with respect to $\tilde\varphi$, and an inverse of $f$ is $f'(i) = (f(i))'$.
+\end{enumerate}
+
+\bigskip
+\noindent (1) We denote the law on $A$ by $*$.\footnote{the exact wording is unclear in the original (compressed/hard to read) -- it appears the law $\varphi$ is relabelled $*$ for convenience in the proof.}
+
+\[
+(f*g)(i) \overset{\text{def}}{=} f(i)*g(i) = g(i)*f(i) \overset{\text{def}}{=} (g*f)(i), \quad \text{true.}
+\]
+
+\noindent (2) $(f*\tilde e)(i) = f(i)*\tilde e(i) = f(i)$.
+
+\noindent $f*\tilde e = \tilde e*f = f$.
+
+\noindent (3) $(f*f')(i) = \tilde e(i) = e$.
+
+\noindent $f(i)*f'(i) = f(i)*(f(i))' = e$.
+
+\bigskip
+\noindent\textbf{(4)} Product of two composition laws.
+
+\noindent $(A_1,\varphi_1)$, $(A_2,\varphi_2)$; $A = A_1\times A_2$.
+
+\noindent $\varphi : A\times A \to A$; \quad $\varphi : (A_1\times A_2)\times(A_1\times A_2) \to A_1\times A_2$
+
+\[
+\varphi\big((x_1,x_2),(y_1,y_2)\big) \overset{\text{def}}{=} \big(\varphi_1(x_1,y_1),\varphi_2(x_2,y_2)\big).
+\]
+\[
+(x_1,x_2)+(y_1,y_2) = (x_1+y_1,\,x_2+y_2) \quad \text{-- additive notation.}
+\]
+
+\noindent $(\mathbb{Z},+)$ \qquad $(\mathbb{Z}_6,+)$ \qquad $\mathbb{Z}\times\mathbb{Z}_6$
+
+\bigskip
+\noindent\fbox{Theorem} \ Let $(A_1,\varphi_1)$, $(A_2,\varphi_2)$ and $\varphi = \varphi_1\times\varphi_2$.
+
+\begin{enumerate}
+\item[(1)] If $\varphi_1$ and $\varphi_2$ are associative (commutative) $\Rightarrow$ $\varphi$ is associative (commutative)
+\item[(2)] $e_1,e_2$ the identity elements for $\varphi_1,\varphi_2$ $\Rightarrow$ $(e_1,e_2)$ is the identity element for $\varphi$.
+\item[(3)] $x_1\in A_1$ invertible with respect to $\varphi_1$ and $x_2\in A_2$ invertible with respect to $\varphi_2$ $\Rightarrow$ $(x_1,x_2)$ is invertible with respect to $\varphi$, and $(x_1,x_2)' = (x_1',x_2')$.
+\end{enumerate}
+
+\end{document}

@@ -1,0 +1,129 @@
+\bigskip
+% lecture 4, page 1
+
+\begin{center}
+\fbox{\textbf{ALGEBRA I}}\\[2pt]
+(Lecture 4)
+\end{center}
+\begin{flushright}
+\textit{20 Oct.\ 1994}
+\end{flushright}
+
+\bigskip
+\noindent\textbf{(1)} Composition law induced on a stable subset. $(A,\varphi)$, $\varphi : A\times A \to A$, $A\neq\varnothing$.
+
+\noindent $B\subseteq A$, $B$ a stable subset of $A$ with respect to $\varphi$ if $(\forall)\,x,y\in B \Rightarrow \varphi(x,y)\in B$.
+
+\noindent $\varphi' : B\times B \to B$.
+
+\bigskip
+\noindent\textbf{(2)} Composition law induced on a factor set. $(A,R)$
+
+\noindent $\varphi : A\times A \to A$, \quad $R\subseteq A\times A$
+
+\noindent $R$ compatible with $\varphi$: \quad $xRx'$ and $yRy'$ $\Rightarrow$ $xyRx'y'$ (in multiplicative notation.)
+
+\[
+\frac{A}{R} = \left\{\hat a \mid a\in A\right\} \qquad \varphi^* : \frac{A}{R}\times\frac{A}{R} \to \frac{A}{R} \qquad \varphi^*(\hat a,\hat b) \overset{\text{def}}{=} \widehat{\varphi(a,b)}
+\]
+\[
+\hat a\hat b = \widehat{ab}; \qquad \hat a + \hat b = \widehat{a+b}.
+\]
+
+\bigskip
+\noindent\textbf{(3)} Composition law induced on a set of functions. $(A,\varphi)$, $I\neq\varnothing$.
+
+\noindent $A^I = \{f \mid f:I\to A\}$
+
+\noindent $\tilde\varphi$ = the composition law induced by $\varphi$.
+
+\noindent $(A^I,\tilde\varphi)$ \qquad $(\mathbb{R},+)$; $I=[a,b]$.
+
+\noindent $\mathbb{R}^{[a,b]} = \{f \mid f:[a,b]\to\mathbb{R}\}$; \qquad $\mathbb{R}^{\{1,\ldots,n\}} = \{f \mid f:\{1,\ldots,n\}\to\mathbb{R}\}$.
+
+\medskip
+\noindent $A = a_0,a_1,\ldots,a_n,\ldots$
+
+\noindent $m,n\in\mathbb{N}^*$.
+
+\[
+\mathbb{R}^{\{1,\ldots,m\}\times\{1,\ldots,n\}}
+\]
+\noindent $A : \{1,\ldots,m\}\times\{1,\ldots,n\} \to \mathbb{R}$ \hfill $\mathbb{R}\ni a_{ij} = A(i,j)$
+
+\medskip
+\noindent $(A,\varphi)$, $I\neq\varnothing$
+
+\noindent $f,g\in A^I$
+
+\[
+f*g : I\to A \qquad (f*g)(x) \overset{\text{def}}{=} f(x)*g(x) \in A.
+\]
+\[
+\varphi^* : A^I\times A^I \to A^I \qquad \big(\varphi^*(f,g)\big)(x) \overset{\text{def}}{=} \varphi\big(f(x),g(x)\big).
+\]
+
+\medskip
+\noindent (1) Let $f,g : [a,b]\to\mathbb{R}$; \quad $f+g : [a,b]\to\mathbb{R}$.
+
+\noindent $(\forall)\, x\in[a,b]$ \qquad $(f+g)(x) = f(x)+g(x)$.
+
+\noindent $fg : [a,b]\to\mathbb{R}$ \qquad $(fg)(x) = f(x)g(x)$.
+
+
+
+
+% lecture 4, page 2
+\section*{Lecture 4 - Page 2}
+
+\noindent\fbox{Theorem} \ Let $(A,\varphi)$; $\varphi : A\times A \to A$, $I\neq\varnothing$.
+
+\[
+\tilde\varphi : A^I \times A^I \to A^I
+\]
+
+\begin{enumerate}
+\item[(1)] If $\varphi$ is associative (commutative) $\Rightarrow$ $\tilde\varphi$ is associative (commutative).
+\item[(2)] If $e\in A$ is the identity element for $\varphi$ $\Rightarrow$ $\tilde e : I\to A$, $\tilde e(i)=e$, is the identity element for $\tilde\varphi$.
+\item[(3)] $\varphi$ has an identity element and $f(i)$ is invertible with respect to $\varphi$ for every $i$ $\Rightarrow$ $f$ is invertible with respect to $\tilde\varphi$, and an inverse of $f$ is $f'(i) = (f(i))'$.
+\end{enumerate}
+
+\bigskip
+\noindent (1) We denote the law on $A$ by $*$.\footnote{the exact wording is unclear in the original (compressed/hard to read) -- it appears the law $\varphi$ is relabelled $*$ for convenience in the proof.}
+
+\[
+(f*g)(i) \overset{\text{def}}{=} f(i)*g(i) = g(i)*f(i) \overset{\text{def}}{=} (g*f)(i), \quad \text{true.}
+\]
+
+\noindent (2) $(f*\tilde e)(i) = f(i)*\tilde e(i) = f(i)$.
+
+\noindent $f*\tilde e = \tilde e*f = f$.
+
+\noindent (3) $(f*f')(i) = \tilde e(i) = e$.
+
+\noindent $f(i)*f'(i) = f(i)*(f(i))' = e$.
+
+\bigskip
+\noindent\textbf{(4)} Product of two composition laws.
+
+\noindent $(A_1,\varphi_1)$, $(A_2,\varphi_2)$; $A = A_1\times A_2$.
+
+\noindent $\varphi : A\times A \to A$; \quad $\varphi : (A_1\times A_2)\times(A_1\times A_2) \to A_1\times A_2$
+
+\[
+\varphi\big((x_1,x_2),(y_1,y_2)\big) \overset{\text{def}}{=} \big(\varphi_1(x_1,y_1),\varphi_2(x_2,y_2)\big).
+\]
+\[
+(x_1,x_2)+(y_1,y_2) = (x_1+y_1,\,x_2+y_2) \quad \text{-- additive notation.}
+\]
+
+\noindent $(\mathbb{Z},+)$ \qquad $(\mathbb{Z}_6,+)$ \qquad $\mathbb{Z}\times\mathbb{Z}_6$
+
+\bigskip
+\noindent\fbox{Theorem} \ Let $(A_1,\varphi_1)$, $(A_2,\varphi_2)$ and $\varphi = \varphi_1\times\varphi_2$.
+
+\begin{enumerate}
+\item[(1)] If $\varphi_1$ and $\varphi_2$ are associative (commutative) $\Rightarrow$ $\varphi$ is associative (commutative)
+\item[(2)] $e_1,e_2$ the identity elements for $\varphi_1,\varphi_2$ $\Rightarrow$ $(e_1,e_2)$ is the identity element for $\varphi$.
+\item[(3)] $x_1\in A_1$ invertible with respect to $\varphi_1$ and $x_2\in A_2$ invertible with respect to $\varphi_2$ $\Rightarrow$ $(x_1,x_2)$ is invertible with respect to $\varphi$, and $(x_1,x_2)' = (x_1',x_2')$.
+\end{enumerate}
