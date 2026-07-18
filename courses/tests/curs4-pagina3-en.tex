@@ -1,0 +1,72 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+
+\begin{document}
+
+\noindent\textbf{(5)} Transport of a composition law through a bijection
+
+\[
+(A,\varphi) \qquad A \xrightarrow{f} A'
+\]
+
+\noindent If $x',y'\in A' \Rightarrow \exists!\, x,y\in A$ such that $x'=f(x)$ and $y'=f(y)$
+
+\[
+\varphi' : A'\times A' \to A', \qquad \varphi'(x',y') = f\big(\varphi(x,y)\big) \in A'
+\]
+
+\noindent [notation: $\varphi(x,y)=xy$] \quad $x'y' \overset{\text{def}}{=} f(xy)$\footnote{this line is very compressed in the original; it appears to introduce the multiplicative convention $\varphi(x,y)=xy$, so that the definition of $\varphi'$ becomes $x'y'=f(xy)$.}
+
+\[
+f : A\to A' \qquad f(xy) = f(x)f(y) \quad (\forall)\,x,y\in A.
+\]
+\[
+f^{-1}(x'y') = f^{-1}(x')f^{-1}(y') \quad (\forall)\,x',y'\in A'.
+\]
+
+\bigskip
+\noindent\underline{Theorem:} Let $(A,\varphi)$, $\varphi:A\times A\to A$.
+
+\noindent $f:A\to A'$ and $\varphi':A'\times A'\to A'$.
+
+\begin{enumerate}
+\item[1)] $\varphi$ associative (commutative) $\Leftrightarrow$ $\varphi'$ is associative (commutative).
+\item[2)] $e\in A$ the identity element for $\varphi$ $\Leftrightarrow$ $f(e)$ is the identity element for $\varphi'$.\footnote{the original reads ``for $f$'' / ``for $f'$'' -- corrected here to $\varphi$/$\varphi'$ for consistency with point 1) and the rest of the theorem.}
+\item[3)] $x\in A$ invertible with respect to $\varphi$ $\Leftrightarrow$ $f(x)$ invertible with respect to $\varphi'$.
+\end{enumerate}
+
+\noindent $x',y'\in A'$.
+
+\[
+x'y' = f(x)f(y) = f(xy) = f(yx) = f(y)f(x).
+\]
+
+\bigskip
+\begin{center}
+\fbox{\Large\textbf{GROUPS}}
+\end{center}
+
+\noindent\underline{\textbf{Subgroups. Lagrange's Theorem}}
+
+\bigskip
+\noindent\underline{Def:} Let $G$ be a group. A nonempty subset $H$ of $G$ is called a \textbf{subgroup} of the group $G$ if:
+
+\begin{enumerate}
+\item[(1)] $(\forall)\,x,y\in H \Rightarrow xy\in H$
+\item[(2)] $(\forall)\,x\in H \Rightarrow x^{-1}\in H$
+\end{enumerate}
+
+\bigskip
+\noindent\underline{Problem:} Given a group $G$, determine all congruences on $G$.
+
+\noindent An equivalence relation on $G$ compatible with the group operation:
+
+\[
+xRy \Rightarrow zxRzy.
+\]
+
+\end{document}
