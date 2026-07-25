@@ -86,3 +86,83 @@ B @>t>> B
 \noindent $(\mathbb{N},+,\cdot)$ is an algebraic structure.
 
 \noindent $(\mathbb{N},\leq)$ is an order structure.
+
+
+
+% lecture 6, page 2
+\section*{Lecture 6 - Page 2}
+
+\noindent $m<n$ if $\exists\, k\neq 0$ such that $m+k=n$.
+
+\noindent $m\leq n \Longleftrightarrow m<n$ or $m=n$.
+
+\noindent reflexive, antisymmetric, transitive.
+
+\bigskip
+\noindent $(\forall)\,m,n\in\mathbb{N}$, exactly one of the following holds:
+
+\begin{enumerate}
+\item[(1)] $m<n$
+\item[(2)] $m=n$
+\item[(3)] $m>n$.
+\end{enumerate}
+
+\bigskip
+\noindent\fbox{T} \ $(\mathbb{N},\leq)$ is a well-ordered set.
+
+\noindent $(\forall)\,P\subseteq\mathbb{N}$, $P\neq\varnothing$, $\exists!\,a\in P$ such that $a\leq x$ $(\forall)\,x\in P$.
+
+\[
+(\mathbb{N},+,\cdot,\leq)
+\]
+
+\bigskip
+\noindent\fbox{T} \ ``$\leq$'' is compatible with the algebraic structure.
+
+\[
+m\leq n \Rightarrow
+\begin{cases}
+m+p\leq n+p, & (\forall)\,p\in\mathbb{N}.\\
+mp\leq np, & (\forall)\,p\in\mathbb{N}^*.
+\end{cases}
+\]
+
+\bigskip
+\noindent\fbox{T} \ $(\forall)\,a,b\in\mathbb{N}$, $b\neq 0$, $\exists!\,q,r\in\mathbb{N}$ such that $a=bq+r$, $r<b$.
+
+\noindent (Euclidean division (with remainder)).
+
+\bigskip
+\noindent $(\mathbb{N},\mid)$ ; \ ``$\mid$'' the divisibility relation. \hfill $1\leq a\leq b$
+
+\noindent If $a,b\in\mathbb{N}$, $a\mid b \Leftrightarrow \exists\,q\in\mathbb{N}$ such that $b=aq$.
+
+\bigskip
+\noindent $p>1$ is called \underline{prime} if $p\mid ab \Rightarrow p\mid a$ or $p\mid b$.
+
+\noindent (likewise) \underline{irreducible} (indecomposable) if $d\mid p \Rightarrow d=1$ or $d=p$.
+
+\bigskip
+\noindent\fbox{T} \ Prime $\Leftrightarrow$ irreducible
+
+\bigskip
+\noindent\underline{Proof}: \ ``$\Rightarrow$''
+
+\noindent Suppose $p$ is prime and $d\mid p \Rightarrow \exists\,q\in\mathbb{N}$ such that $p=dq$.
+
+\[
+\Rightarrow p\mid dq \Rightarrow p\mid d \text{ or } p\mid q \Rightarrow \underline{d=p\cdot q_1}
+\]
+\[
+\Rightarrow qq_1=1 \Rightarrow d=1 \text{ or } d=p.
+\]
+
+\bigskip
+\noindent\underline{Def}: If $a,b\in\mathbb{N}$, a natural number $d$ is called a \underline{g.c.d.\ of}
+
+\noindent $a,b$ if:
+
+\begin{enumerate}
+\item[(1)] $d\mid a$ and $d\mid b$.
+\item[(2)] $c\mid a$ and $c\mid b \Rightarrow c\mid d$.
+\end{enumerate}
