@@ -601,3 +601,84 @@ a^{i+j}=a^{qn+r}=a^r\in H.
 \[
 x^{\text{ord}\,G} = x^{p\cdot\text{ord}\,x} = e.
 \]
+
+
+
+% lecture 5, page 9
+\section*{Lecture 5 - Page 9}
+
+\begin{center}
+\fbox{\textbf{Theorem (Cauchy)}}
+\end{center}
+
+\bigskip
+\noindent If $G$ is a finite abelian group and $p\mid$ ord $G$, $p$ prime
+
+\noindent Then $\exists\, a\in G$, ord $a=p$.
+
+\bigskip
+\noindent\underline{Proof}:
+
+\noindent Let $n=$ ord $G$, $n\geq p$.
+
+\noindent Induction on $n$.
+
+\bigskip
+\noindent $n=p=$ ord $G$.
+
+\noindent $p$ prime $\Rightarrow p>1 \Rightarrow \exists\, a\neq e$. \ ord $a\mid$ ord $G=p$.
+
+\noindent $a\neq e \Rightarrow$ ord $a>1$
+
+\noindent $p$ prime
+
+\noindent $\Rightarrow$ ord $a=p$.
+
+\bigskip
+\noindent\big(ord $G=p$ prime $\Rightarrow (\forall)\,a\in G\setminus\{e\}$ we have ord$(a)=p$\big).
+
+\bigskip
+\noindent suppose $n>p$, $p\mid n$, and that the statement holds for groups of order $<n$.
+
+\bigskip
+\noindent\underline{Case I}: \ $\exists\, a\in G$ such that $p\mid$ ord$(a)$. \ $\Rightarrow$ ord$(a)=p\cdot l$.\footnote{the exact symbol used for this exponent is unclear in the original -- by the mathematics it must be $l=\text{ord}(a)/p$.}
+
+\noindent And $b=a^l \Rightarrow$ ord $b=p$.
+
+\bigskip
+\noindent\underline{Case II}: \ $\nexists\, a\in G$ such that $p\mid$ ord$(a)$.
+
+\bigskip
+\noindent Let $a\in G$, $a\neq e$. \ suppose ord$(a)=m \Rightarrow p\nmid m$
+
+\noindent Let $H=\{e,\ldots,a^{m-1}\}\trianglelefteq G$ \ (since $G$ is abelian).
+
+\noindent Let $\dfrac{G}{H}$. \ $\Rightarrow \left|\dfrac{G}{H}\right| = [G:H] < n$ \ (by Lagrange)
+
+\bigskip
+\noindent ord $G = n = m\cdot[G:H]$.
+
+\[
+p\mid n = m\cdot[G:H]
+\]
+\[
+p\nmid m
+\]
+\[
+\Rightarrow p\mid [G:H] = \left|\dfrac{G}{H}\right| < n.
+\]
+
+\bigskip
+\noindent\underline{induction hyp.} $\Rightarrow \exists\, \hat b\in \dfrac{G}{H}$ such that ord $\hat b=p$; \ $b\in G$, $G$ finite
+
+\[
+\Rightarrow \text{ord } b<\infty.
+\]
+\[
+b^t=e
+\]
+\[
+\hat e=\widehat{b^t}=\hat b^t \Rightarrow p\mid t.
+\]
+
+\noindent\textit{using the hypothesis from Case II.}\footnote{the mark at the end of the page looks more like a ``q.e.d.''-style marker than a contradiction: $p\mid t=\text{ord}(b)$ is exactly the fact that closes Case II, reducing it to the technique already established in Case I (the element $b^{t/p}$ would have order $p$).}
