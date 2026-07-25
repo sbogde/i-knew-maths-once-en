@@ -1,0 +1,91 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb,amscd}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+
+\begin{document}
+
+\begin{center}
+\fbox{\textbf{LECTURE 6}}\\[2pt]
+\underline{(ALGEBRA)}
+\end{center}
+\begin{flushright}
+\textit{8-XI-94}
+\end{flushright}
+
+\bigskip
+\noindent\underline{\textbf{The order of an element}}
+
+\bigskip
+\noindent\underline{Appendix I}: -- Elements of arithmetic in $\mathbb{N}$.
+
+\bigskip
+\noindent\underline{Peano system}: $(A,a,s)$ ; $a\in A$; $s:A\to A$,\footnote{the original reads ``$s:A\to B$''; corrected here to $A\to A$, as required by the definition of a Peano system.} $A\neq\varnothing$
+
+\begin{enumerate}
+\item[1)] $s(x)\neq a$ $(\forall)\,x\in A$, \ $\big(s(A)=A\setminus\{a\}\big)$.
+\item[2)] $s$ is injective.
+\item[3)] If $M\subseteq A$ has the property $\begin{cases} a\in M \\ x\in M \Rightarrow s(x)\in M \end{cases} \Rightarrow M=A$.
+\end{enumerate}
+
+\bigskip
+\noindent\fbox{T1}. \ If $(A,a,s)$, $(B,b,t)$ are Peano systems $\Rightarrow$
+
+\noindent $\exists!\, f:A\to B$ such that $f(a)=b$, $f\circ s = t\circ f$.
+
+\noindent Moreover,\footnote{the exact phrase is unclear in the original.} $f$ is bijective.
+
+\[
+\begin{CD}
+A @>s>> A\\
+@VfVV @VVfV\\
+B @>t>> B
+\end{CD}
+\]
+
+\bigskip
+\noindent Let $(\mathbb{N},0,s)$; \ $s:\mathbb{N}\to\mathbb{N}$.
+
+\noindent the successor function.
+
+\noindent $s(x)=x'$ -- the successor of $x$.
+
+\bigskip
+\noindent N.\ Becheanu -- Algebra for Teacher Training\footnote{bibliographic reference; the exact title is reconstructed from a compressed form.}
+
+\bigskip
+\noindent\fbox{T2}: $\exists!\, e:\mathbb{N}\times\mathbb{N}\to\mathbb{N}$ \ denoted $e=+$
+
+\noindent $A_1$: $e(m,0)=m$ $(\forall)\,m\in\mathbb{N}$.
+
+\noindent $A_2$: $e(m,n')=e(m,n)'$ $(\forall)\,m,n\in\mathbb{N}$ \quad $m+n'=(m+n)'$.
+
+\bigskip
+\noindent It follows that $m+p=m+n \Rightarrow p=n$.
+
+\[
+(\mathbb{N},+,0) = \text{a commutative monoid with cancellation.}
+\]
+
+\bigskip
+\noindent\fbox{T}: $\exists!\, \psi:\mathbb{N}\times\mathbb{N}\to\mathbb{N}$ such that
+
+\noindent $\psi(m,0)=0$\footnote{the original appears to read ``$=m$''; corrected to $0$, as required by the standard definition of multiplication (the adjacent shorthand ``$m\cdot 0$'' is likewise $0$, not $m$).} $(\forall)\,m\in\mathbb{N}$: \quad $m\cdot 0=0$
+
+\noindent $\psi(m,n')=\psi(m,n)+m$ $(\forall)\,m,n\in\mathbb{N}$ \quad $mn'=mn+m$.
+
+\bigskip
+\noindent $(\mathbb{N},\cdot,1)$ is a commutative monoid with cancellation.
+
+\noindent $mn=mp \Rightarrow n=p$.
+
+\noindent $m(n+p)=mn+mp$.
+
+\bigskip
+\noindent $(\mathbb{N},+,\cdot)$ is an algebraic structure.
+
+\noindent $(\mathbb{N},\leq)$ is an order structure.
+
+\end{document}

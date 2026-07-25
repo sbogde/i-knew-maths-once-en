@@ -1,0 +1,67 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+
+\begin{document}
+
+\noindent ($\Leftarrow$)\footnote{the exact symbol at the start of this line is unclear in the original -- it appears to mark the other implication of the equivalence begun on the previous page.} \ $(a,n)=1 \Rightarrow \exists\,b,q$ such that $ab+nq=1$.
+
+\[
+\Rightarrow 1\equiv ab \pmod n \Rightarrow \hat 1=\widehat{ab}=\hat a\hat b \Rightarrow \hat a\in U(\mathbb{Z}_n).
+\]
+
+\bigskip
+\noindent $\Rightarrow$ ord $U(\mathbb{Z}_n) = \varphi(n) \Rightarrow (\hat a)^{\varphi(n)} = \hat 1.$
+
+\[
+\Rightarrow a^{\varphi(n)} \equiv 1 \pmod n
+\]
+\[
+a^{\varphi(p)} \equiv 1 \pmod p.
+\]
+
+\bigskip
+\noindent\underline{Proof of Fermat's Theorem}: \ $(p,a)=1 \Rightarrow a^{\varphi(p)}\equiv 1 \pmod p$
+
+\noindent $p$ prime $\Rightarrow \varphi(p)=p-1 \Rightarrow a^{p-1}\equiv 1 \pmod p$.
+
+\bigskip
+\noindent\underline{Ex}:
+
+\noindent The group $U(\mathbb{Z}_p)$, $p$ prime, is cyclic.
+
+\bigskip
+\noindent $p$ prime $\Rightarrow U(\mathbb{Z}_p) = \mathbb{Z}_p\setminus\{\hat 0\}$.
+
+\noindent $\Rightarrow$ ord$\big(U(\mathbb{Z}_p)\big)=p-1$.
+
+\bigskip
+\noindent Let $n=\exp\big(U(\mathbb{Z}_p)\big) \mid p-1$,
+
+\noindent \big(the largest order attained by an element of the group\big).
+
+\[
+\hat a^n = \hat 1 \quad (\forall)\,\hat a\in\mathbb{Z}_p\setminus\{\hat 0\}.
+\]
+
+\noindent $X^n-1\in\mathbb{Z}_p[X]$ -- all $p-1$ elements are roots of this polynomial.
+
+\[
+\Rightarrow \exp\big(U(\mathbb{Z}_p)\big) = p-1 \ \Rightarrow \ \exists\,\hat a\in\mathbb{Z}_p, \ \text{ord}(\hat a)=p-1.
+\]
+
+\noindent $\Rightarrow U(\mathbb{Z}_p)$ is cyclic.
+
+\bigskip
+\noindent\underline{Ex}: \ (1) $(\forall)\,n\in\mathbb{N}^*$ \ $\exists!\,H\leq\mathbb{C}^*$ of order $n$.
+
+\noindent (2) Every finite subgroup of $\mathbb{C}^*$ is cyclic.
+
+\[
+U_n = \{z\in\mathbb{C}^* \mid z^n=1\} \leq \mathbb{C}^*
+\]
+
+\end{document}

@@ -1,0 +1,74 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+
+\begin{document}
+
+\noindent\underline{\textbf{The Fundamental Theorem of Arithmetic}}
+
+\bigskip
+\noindent $(\forall)\,a\in\mathbb{N}$, $a>1$, $\Rightarrow a=p_1\cdots p_n$
+
+\noindent [is represented uniquely as a product of prime numbers]
+
+\bigskip
+\noindent\underline{Lemma}: $(\forall)\,a\in\mathbb{N}$, $a>1$ \ $\exists\,p$ prime, $p\mid a$.
+
+\bigskip
+\noindent $P=\{d \mid d\mid a \text{ and } d\neq 1\}$
+
+\bigskip
+\noindent Let $p\in P$ be the smallest number in $P$.
+
+\noindent\underline{$p$ is prime}.
+
+\bigskip
+\noindent Suppose, for contradiction, $p\neq$prime $\ \exists\,d_1$ such that $d_1\mid p$, $d_1\neq 1$ and $d_1\neq p$.
+
+\[
+\left.\begin{aligned} d_1&\mid p\\ p&\mid a\end{aligned}\right\} \Rightarrow d_1\mid a
+\]
+\[
+\left.\begin{aligned} &\Rightarrow d_1\in P\\ &d_1<p\end{aligned}\right\} \Rightarrow p\text{ is prime.} \quad \times
+\]
+
+\bigskip
+\noindent\underline{Proof of the theorem}:
+
+\noindent Suppose it is not true.
+
+\noindent Denote $P=\big\{$the set of natural numbers (greater than 1)\footnote{the abbreviation in the original (``not.\ core'') is unclear -- reconstructed here as a ``$>1$'' condition, matching the statement of the theorem.} that cannot be represented as
+
+\noindent a finite product of prime numbers$\big\} \neq \varnothing$.
+
+\bigskip
+\noindent Let $a$ be the smallest number in $P$.
+
+\noindent $\Rightarrow a$ is not prime
+
+\bigskip
+\noindent Let $a=bc$.
+
+\noindent $b,c\notin P$
+
+\[
+\Rightarrow b=p_1\cdots p_j
+\]
+\[
+c=p_1'\cdots p_i'
+\]
+\[
+\Rightarrow a = p_1\cdots p_j\cdot p_1'\cdots p_i'.
+\]
+
+\bigskip
+\noindent\underline{Uniqueness}: \ $a = p_1\cdots p_n = p_1'\cdots p_m'$.
+
+\[
+\overset{(5)}{\Longrightarrow} p_1\mid p_1'\cdots p_m' \Rightarrow \exists\, i \text{ such that } p_1\mid p_i' \Rightarrow p_1=p_i'
+\]
+
+\end{document}
