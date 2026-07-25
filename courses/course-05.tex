@@ -451,3 +451,88 @@ j-i=k>0
 
 \noindent $|H|=\infty$ and all of its elements are
 
+
+
+% lecture 5, page 7
+\section*{Lecture 5 - Page 7}
+
+\noindent\textit{[unclear fragment at the top of the page: $(\mathbb{N},+,\cdot,\leq,1)$ -- its relation to the rest of the page is unclear; possibly the tail end of an unfinished thought from the previous page.]}
+
+\bigskip
+\noindent\underline{Lemma}. Let $(G,\cdot,e)$ be a group, $a\in G$, $n\in\mathbb{N}^*$
+
+\noindent We show the following are equivalent:
+
+\begin{enumerate}
+\item[(1)] ord $a=n$.
+\item[(2)] (i) $a^n=e$,
+
+\noindent (ii) $a^h=e$, $h\in\mathbb{Z} \Rightarrow n\mid h$
+\end{enumerate}
+
+\bigskip
+\noindent (1)$\Rightarrow$(2). \ evident.
+
+\bigskip
+\noindent (2)$\Rightarrow$(1) \quad $h=qn+r$ \quad $0\leq r<n$.
+
+\[
+a^h = a^{qn+r} = a^{qn}\cdot a^r = (a^n)^q\cdot a^r = a^r
+\]
+\[
+a^h=e
+\]
+\[
+\Rightarrow a^r=e
+\]
+
+\noindent\footnote{in the original, a line of the form ``if $r>0$, $a^r=e\Rightarrow r=0$'' appears crossed out here, replaced by the argument below.}
+
+\bigskip
+\begin{center}
+$\big(a^n=e$ and $0<t<n \Rightarrow a^t\neq e\big)$
+\end{center}
+
+\noindent suppose $a^t=e=a^n \Rightarrow a^{n-t}=e \overset{\text{Lemma}}{\Longrightarrow} n\mid n-t$ \ impossible.
+
+\begin{center}
+\begin{tikzpicture}[scale=1]
+\draw (0,0) -- (4,0);
+\draw (0,-0.1) -- (0,0.1) node[above] {};
+\draw (0,0) node[below] {$0$};
+\draw (1.5,-0.15) -- (1.5,0.15);
+\draw (1.5,0) node[below] {$t$};
+\draw (3,-0.15) -- (3,0.15);
+\draw (3,0) node[below] {$n$};
+\draw (1.5,0.15) -- (3,0.15);
+\end{tikzpicture}
+\end{center}
+
+\bigskip
+\noindent\underline{Prop}: Let $(G,\cdot)$ be a group, $a\in G$, ord$(a)=n$.
+
+\noindent $h\in\mathbb{Z}$. Then ord $a^h = \dfrac{n}{(n,h)}$.
+
+\bigskip
+\noindent In particular ord $a^h=n \Leftrightarrow (n,h)=1$.
+
+\bigskip
+\noindent\underline{Proof}: Let $d=(h,n)$ = gcd.
+
+\[
+h=dh_1, \quad n=dn_1
+\]
+
+\noindent\underline{Lemma}: ord $a^h = n_1$ \qquad $b=a^h$.
+
+\[
+b^{n_1} = a^{hn_1} = a^{dh_1n_1} = a^{nh_1} = (a^n)^{h_1} = e.
+\]
+
+\noindent suppose $b^t=e=a^{ht} \Rightarrow n\mid ht \Rightarrow n_1d\mid dh_1t \Rightarrow n_1\mid h_1t$
+
+\noindent but $(h_1,n_1)=1 \Rightarrow n_1\mid t$
+
+\[
+\Rightarrow \text{ord } b=n_1 \Leftrightarrow \text{ord } a^h = \frac{n}{(n,h)}
+\]
