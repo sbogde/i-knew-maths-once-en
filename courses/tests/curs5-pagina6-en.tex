@@ -1,0 +1,78 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+
+\begin{document}
+
+\noindent\underline{\textbf{The order of an element in a group.}}
+
+\bigskip
+\noindent\underline{Def}: Let $G$ be a group, $a\in G$. We say $a$ is an element
+
+\noindent of finite order (a torsion element of the group $G$) if $\exists\, k\in\mathbb{N}^*$
+
+\noindent such that $a^k=e$.
+
+\bigskip
+\noindent In this case $n=\min\{k \mid k\in\mathbb{N}^*, a^k=e\}$ is called the \underline{order of $a$}
+
+\noindent denoted ord $a$
+
+\bigskip
+\noindent if $\nexists\, k\in\mathbb{N}^*$ such that $a^k=e$ \quad $a$ has \underline{infinite} order
+
+\bigskip
+\noindent $(\mathbb{C}^*,\cdot,1)$ \quad $z\in\mathbb{C}^*$ \quad $z=\cos 2\pi r + i\sin 2\pi r$, $r\in\mathbb{Q}$.
+
+\noindent an element of finite order.
+
+\[
+r=\frac{m}{n} \quad m,n\in\mathbb{Z}, n>0. \qquad z^n = \cos 2\pi m + i\sin 2\pi m = 1.
+\]
+
+\noindent Ex: every element of finite order in $\mathbb{C}^*$ has the form $\cos 2\pi r+i\sin 2\pi r$.
+
+\bigskip
+\noindent \textit{[side note -- partly unclear in the original: appears to solve the equation $nt=2k\pi$, concluding $nt=\dfrac{\pi}{2}+k\pi=\dfrac{\pi(2k+1)}{2}$.]}\footnote{this side fragment is too compressed/unclear for a confident transcription; it has been paraphrased here rather than reconstructed line by line.}
+
+\bigskip
+\noindent\underline{Lemma 1}: Let $G$ be a group, $a\in G$.
+
+\noindent We show the following are equivalent:
+
+\begin{enumerate}
+\item[(1)] ord$(a)<\infty$.
+\item[(2)] $f:\mathbb{Z}\to G$ \quad $f(k)=a^k$ is not injective.
+\end{enumerate}
+
+\bigskip
+\noindent\underline{Proof}: $(1)\Rightarrow(2)$. \ Suppose ord$(a)=r \overset{\text{def}}{=} r\in\mathbb{N}^*$.
+
+\[
+\Rightarrow a^0=a^r=e, \ r\neq 0 \ \Rightarrow \ f \text{ is not injective.}
+\]
+
+\bigskip
+\noindent $(2)\Rightarrow(1)$. \ $f$ not injective $\Rightarrow \exists\, i\neq j\in\mathbb{Z}$ such that $f(i)=f(j)$.
+
+\noindent $(i<j)$.
+
+\[
+a^i=a^j \Rightarrow a^{j-i}=e.
+\]
+\[
+j-i=k>0
+\]
+
+\bigskip
+\noindent\underline{Consequence}: ord$(G)<+\infty \Rightarrow$ ord$(a)<\infty$ $(\forall)\,a\in G$.
+
+\bigskip
+\noindent $H=\{\cos 2\pi r+i\sin 2\pi r \mid r\in\mathbb{Q}\} \leq (\mathbb{C}^*,\cdot)$.
+
+\noindent $|H|=\infty$ and all of its elements are
+
+\end{document}

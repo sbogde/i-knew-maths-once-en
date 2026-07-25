@@ -1,0 +1,76 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+
+\begin{document}
+
+\noindent\underline{\textbf{Normal subgroup.\ Factor (quotient) group.}}
+
+\bigskip
+\noindent How many left transversals of $H$ in $S_n$ are there? \ $=\big((n-1)!\big)^n$.\footnote{the word here (,,det.'') is unclear in the original.}
+
+\bigskip
+\noindent\underline{Lemma 1.} Let $G$ be a group, $N\leq G$.
+
+\noindent\underline{We show the following are equivalent}:
+
+\begin{enumerate}
+\item[(1)] $(\forall)\, a\in G, (\forall)\, x\in N \Rightarrow axa^{-1}\in N$.
+\item[(2)] $(\forall)\, a\in G \Rightarrow aN=Na$
+\item[(3)] $R_N^L = R_N^R$ (denoted $R_N$).
+\end{enumerate}
+
+\noindent A subgroup with these properties is called a \underline{normal subgroup} of $G$
+
+\noindent (\underline{normal divisor}).
+
+\bigskip
+\noindent\underline{Proof}: $\big[G$ abelian $\Rightarrow$ every subgroup is normal$\big]$
+
+\bigskip
+\begin{center}
+(2) $\Rightarrow$ (1) $\Rightarrow$ (3) $\Rightarrow$ (2)\footnote{in the original this cycle of implications is drawn as a triangular diagram with arrows, not linearly.}
+\end{center}
+
+\bigskip
+\noindent\underline{(2) $\Rightarrow$ (1)}, \ $x\in N$.
+
+\[
+ax\in aN=Na
+\]
+\[
+\Rightarrow \exists\, x_1\in N \text{ such that } ax=x_1a \ \Rightarrow \ axa^{-1}=x_1
+\]
+\[
+\Rightarrow axa^{-1}\in N.
+\]
+
+\bigskip
+\noindent\underline{(3) $\Rightarrow$ (2)}
+
+\[
+aN = [a]_{R_N^L} = [a]_{R_N^R} = Na
+\]
+
+\bigskip
+\noindent\underline{(1) $\Rightarrow$ (3)}
+
+\noindent\footnote{the introductory fragment here is unclear in the original.} $(x,y)\in R_N^L \Leftrightarrow x^{-1}y\in N \Leftrightarrow y^{-1}x\in N$
+
+\[
+= x(y^{-1}x)x^{-1} \overset{(1)}{\Longrightarrow} xy^{-1}\in N \Rightarrow (x,y)\in R_N^R
+\]
+
+\bigskip
+\noindent\underline{Ex}: (normal) Factor group.
+
+\noindent (1) $(\mathbb{Z},+,0)$, $H=n\mathbb{Z}$, $n\geq 0$.
+
+\noindent $H$ normal in $\mathbb{Z}$, \ $H\trianglelefteq\mathbb{Z}$.
+
+\noindent (2) $(S_3,\circ)$. \quad $\sigma = \begin{pmatrix}1&2&3\\2&3&1\end{pmatrix}$ \quad $\sigma^2=\begin{pmatrix}1&2&3\\3&1&2\end{pmatrix}$, \ $\sigma^3=\begin{pmatrix}1&2&3\\1&2&3\end{pmatrix}$.
+
+\end{document}

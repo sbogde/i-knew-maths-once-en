@@ -1,0 +1,73 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+
+\begin{document}
+
+\noindent\underline{Lemma 4}: Let $(G,\cdot,e)$ be a finite abelian group.
+
+\[
+S=\{\text{ord } a \mid a\in G\} \subseteq \mathbb{N}^*.
+\]
+
+\bigskip
+\noindent Then:
+
+\begin{enumerate}
+\item[(1)] if $m\in S$ and $d\mid m$, $d\in\mathbb{N} \Rightarrow d\in S$.
+\item[(2)] $m,n\in S$. \ if $(m,n)=1 \Rightarrow mn\in S$.
+\item[(3)] $m,n\in S \Rightarrow [m,n]\in S$.
+\end{enumerate}
+
+\bigskip
+\noindent\textit{[side note, cited as a general fact]}\footnote{the label in the original (``infinit / abelian'') is unclear -- it appears to note that the fact below holds generally for commuting elements, not just in this particular case.}: \ if $a,b\in G$, with ord$(a)$, ord$(b)$, $ab=ba$, and $\big(\text{ord } a,\text{ord } b\big)=1 \Rightarrow \text{ord}(ab)=\text{ord}(a)\cdot\text{ord}(b)$.
+
+\bigskip
+\noindent\big($GL_2(\mathbb{Z})$: 2 matrices of finite order whose product
+
+\noindent has order $\infty$.\big)
+
+\bigskip
+\noindent\underline{Proof}:
+
+\bigskip
+\noindent (2) \ $\exists\, a,b\in G$ \ ord $a=m$
+
+\noindent ord $b=n$
+
+\[
+(ab)^{mn} = (a^m)^n(b^n)^m = e.
+\]
+
+\noindent suppose $(ab)^h=e \overset{?}{\Longrightarrow} mn\mid h$.
+
+\[
+a^{hn}=b^{-hn}=e
+\]
+\[
+m\mid hn
+\]
+\[
+(m,n)=1
+\]
+\[
+\Rightarrow m\mid h
+\]
+
+\noindent similarly $n\mid h$
+
+\[
+(m,n)=1 \Rightarrow mn\mid h
+\]
+
+\bigskip
+\noindent (3)
+
+\noindent $o(a)=m$
+
+\noindent $o(b)=n$
+
+\end{document}
