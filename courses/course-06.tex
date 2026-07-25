@@ -218,3 +218,68 @@ r_{k-2}=r_{k-1}q_k+r_k.
 \[
 (ca,cb)=c(a,b)
 \]
+
+
+
+
+% lecture 6, page 4
+\section*{Lecture 6 - Page 4}
+
+\noindent The following are true properties:
+
+\begin{enumerate}
+\item[1.] $\big(a,(b,c)\big) = \big((a,b),c\big)$
+\item[2.] $(ca,cb) = c(a,b)$.
+\item[3.] if $(a,b)=1$ and $(a,c)=1 \Rightarrow (a,bc)=1$.
+
+\noindent generalization
+
+\[
+(a,b_i)=1,\ i=\overline{1,n} \ \Rightarrow \ (a,\,b_1b_2\cdots b_n)=1.
+\]
+
+\item[4.] $a\mid bc$, $(a,b)=1 \ \Rightarrow \ a\mid c$
+
+\item[5.] $\left.\begin{aligned} a&\mid c\\ b&\mid c\\ (a,b)&=1\end{aligned}\right\} \Rightarrow ab\mid c$
+
+\noindent generalization: \quad $m_i\mid c$, \ $(m_i,m_j)=1 \ \Rightarrow \ m_1m_2\cdots m_n\mid c$
+
+\item[6.] $(a,b)=1 \Rightarrow$ [continuation unclear in the original: the visible fragment reads ``$c,ab$''.]\footnote{property 6 is incomplete/unclear in the original -- it possibly involves $(ab,c)$, but the exact statement is not certain.}
+\end{enumerate}
+
+\bigskip
+\noindent (1) evident.
+
+\noindent $(b,c)=d$.\footnote{the exact role of this notation in the proof is unclear in the original.}
+
+\bigskip
+\noindent (3). \ $1=(a,b)=(a,c)$
+
+\bigskip
+\noindent (4) \ $a\mid bc \Rightarrow (a,bc)=a$
+
+\[
+(a,c) \overset{?}{=} \big((a,bc),c\big) = \big(a,(bc,c)\big)
+\]
+\[
+\Rightarrow (a,c)=a \ \Rightarrow \ a\mid c
+\]
+\noindent\footnote{the middle algebraic step is very compressed in the original and cannot be reconstructed with full certainty -- please check it.}
+
+\bigskip
+\noindent (5). \ $(ab,c)=$ \ [the page breaks off here.]
+
+\bigskip
+\noindent Let $p$ be an irreducible natural number $\Rightarrow p$ is prime
+
+\noindent\underline{Proof}: By contradiction: \ $p$ not prime $\Rightarrow \exists\,a,b\in\mathbb{N}$ such that
+
+\[
+p\mid ab,\quad p\nmid a,\quad p\nmid b
+\]
+\[
+\Rightarrow (p,a)=1 \text{ and } (p,b)=1 \overset{(3)}{\Longrightarrow} (p,ab)=1
+\]
+\[
+\Rightarrow p=1 \quad \times.
+\]
