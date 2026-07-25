@@ -483,3 +483,75 @@ f_i=\max\{\alpha_i,\beta_i\}
 \begin{enumerate}
 \item[(a)] ord$(a)\mid m$ $(\forall)\,a\in G$.
 \end{enumerate}
+
+
+
+% lecture 6, page 8
+\section*{Lecture 6 - Page 8}
+
+\noindent Suppose, for contradiction: $\exists\,a\in G$ such that ord$\,a\nmid m$.
+
+\noindent $\Rightarrow \big[\text{ord}\,a,\,m\big] > m$ \quad since $m=\max S$.
+
+\bigskip
+\noindent $\Rightarrow (\forall)\,a\in G \Rightarrow$ ord$\,a\mid m$.
+
+\[
+a^m = \big(a^{\text{ord}\,a}\big)^{q_a} = e \ \Rightarrow \ (\forall)\,a\in G,\ a^m=e.
+\]
+
+\bigskip
+\noindent b) $m\mid$ ord$\,G$. $\Rightarrow$ every prime divisor of $m$ is a divisor of ord$\,G$.
+
+\noindent Conversely, if $p$ is a prime divisor of ord$\,G \overset{\text{Cauchy}}{\Longrightarrow} \exists\,a\in G$ such that
+
+\noindent ord$(a)=p$.
+
+\bigskip
+\noindent (c) evident
+
+\bigskip
+\noindent\fbox{Euler's Theorem}: \ If $n\in\mathbb{N}$, $a\in\mathbb{Z}$. Then.
+
+\[
+a^{\varphi(n)} \equiv 1 \pmod n, \quad \big(\Leftrightarrow n\mid a^{\varphi(n)}-1\big).
+\]
+\[
+\varphi(n) = \big|\{k\in\{1,\ldots,n\} \mid (k,n)=1\}\big|.
+\]
+
+\bigskip
+\noindent\fbox{Fermat's Theorem}: \ $p$ prime, $a\in\mathbb{Z}$, $p\nmid a$
+
+\noindent $\Rightarrow a^{p-1}\equiv 1 \pmod p$.
+
+\bigskip
+\noindent\underline{Proof}: $\bar E$.\footnote{the exact label here is unclear in the original.}
+
+\noindent Let $(M,\cdot)$ be a monoid. \ $U(M)$ = the set of invertible elements.
+
+\bigskip
+\noindent $U(M)\neq\varnothing$ \ $(e\in U(M))$.
+
+\noindent $U(M)$ is stable with respect to $\cdot$
+
+\noindent (a boxed note in the original: invertible element.)
+
+\bigskip
+\noindent $\Rightarrow (U(M),\cdot)$ = the group of units of the monoid $M$.
+
+\bigskip
+\noindent Take $(\mathbb{Z}_n,\cdot)$ a monoid.\footnote{the original reads $(\mathbb{Z}_n^*,\cdot)$; corrected here to $\mathbb{Z}_n$, since $U(\mathbb{Z}_n)$ (the set of units) is what is being determined, not the starting point.}
+
+\bigskip
+\noindent $\hat x$ is a unit $\Leftrightarrow (x,n)=1$
+
+\bigskip
+\noindent ($\Rightarrow$) \ $\hat a\in U(\mathbb{Z}_n) \Rightarrow \exists\,\hat b$ such that $\hat a\hat b=\hat 1 \Rightarrow \widehat{ab}=\hat 1$
+
+\[
+\Rightarrow ab\equiv 1 \pmod n \Rightarrow n\mid 1-ab \Rightarrow 1-ab=nq.
+\]
+\[
+1=ab+nq \Rightarrow (a,n)=1.
+\]
