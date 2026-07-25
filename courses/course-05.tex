@@ -97,3 +97,82 @@ S_n = \{\sigma : \{1,2,\ldots,n\}\to\{1,2,\ldots,n\} \mid \sigma \text{ is bijec
 \[
 \sigma = \begin{pmatrix} 1 & 2 & \cdots & n \\ \sigma(1) & \sigma(2) & \cdots & \sigma(n) \end{pmatrix}
 \]
+
+
+
+
+% lecture 5, page 2
+\section*{Lecture 5 - Page 2}
+
+\noindent Induction on $n$.
+
+\bigskip
+\noindent $n=1$. \quad ord $S_1=1$.
+
+\bigskip
+\noindent Suppose ord $S_{n-1}=(n-1)!$.
+
+\noindent\underline{ord $S_n=n!$}
+
+\bigskip
+\noindent Let $\sigma_i\in S_n$ be such that $\sigma_i(n)=i$, $(\forall)\, i=\overline{1,n}$.
+
+\bigskip
+\noindent $H=\{\sigma\in S_n \mid \sigma(n)=n\}$. \quad 1) \underline{$H\leq S_n$}, [ord $\underline{H=(n-1)!}$]
+
+\bigskip
+\noindent (3) $\{\sigma_1,\sigma_2,\ldots,\sigma_n\}$ is a left (and right) transversal of $H$ in $S_n$.
+
+\bigskip
+\noindent (1) $\sigma,\bar\alpha\in H$, $H\neq\varnothing$,
+
+\[
+\sigma(\bar\alpha(n))=\sigma(n)=n \ \Rightarrow \ \sigma\circ\bar\alpha\in H \ \Rightarrow \ H \text{ is a stable subset.}
+\]
+
+\noindent $\sigma\in H \Rightarrow \sigma(n)=n \ \Rightarrow \ \sigma^{-1}(\sigma(n))=\sigma^{-1}(n) \ \Rightarrow \ n=\sigma^{-1}(n) \ \Rightarrow$
+
+\[
+\Rightarrow \ \sigma^{-1}\in H \ \Rightarrow \ \underline{H\leq S_n}.
+\]
+
+\bigskip
+\noindent (2) \quad $S_{n-1} \xrightarrow{\ f\ } S_n$
+
+\[
+\alpha = \begin{pmatrix} 1 & 2 & \cdots & n-1 \\ \alpha(1) & \alpha(2) & \cdots & \alpha(n-1) \end{pmatrix}
+\]
+\[
+f(\alpha) = \begin{pmatrix} 1 & 2 & \cdots & n-1 & n \\ \alpha(1) & \alpha(2) & \cdots & \alpha(n-1) & n \end{pmatrix} \in H.
+\]
+
+\noindent $f$ is a bijection between $S_{n-1}$ and $H$ -- evident.
+
+\[
+\Rightarrow S_{n-1}\cong H \overset{\text{induction hyp.}}{\Longrightarrow} \text{ord } H=(n-1)!.
+\]
+
+\bigskip
+\noindent (3) \quad $\big[i\neq j \Rightarrow \sigma_i \not\equiv_L \sigma_j \pmod H\big]$.
+
+\noindent $\big[(\forall)\, \sigma\in S_n \ \exists!\, i \text{ such that } \sigma\equiv_L \sigma_i \pmod H\big]$.
+
+\bigskip
+\noindent Suppose $\sigma_i\equiv_L\sigma_j \pmod H \Rightarrow \sigma_i^{-1}\circ\sigma_j\in H$
+
+\noindent $\Rightarrow \sigma_i^{-1}(\sigma_j(n))=n. \Rightarrow \sigma_j(n)=\sigma_i(n) \Rightarrow j=i$
+
+\bigskip
+\noindent Let $i=\sigma(n)$. We claim $\sigma\equiv_L\sigma_i \pmod H \Leftrightarrow \sigma^{-1}\sigma_i\in H$.
+
+\[
+\sigma^{-1}(\sigma_i(n))=n \Leftrightarrow \underbrace{\sigma_i(n)}_{i} = \underbrace{\sigma(n)}_{i} \quad \text{true.}
+\]
+
+\bigskip
+\noindent\underline{Lagrange} $\Rightarrow$ ord $S_n$ = ord $H\cdot[S_n:H]$ = ord $H\cdot$ord$\{\sigma_1,\ldots,\sigma_n\}$
+
+\[
+= (n-1)!\cdot n.
+\]
+
