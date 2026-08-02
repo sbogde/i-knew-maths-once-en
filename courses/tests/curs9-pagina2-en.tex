@@ -1,0 +1,94 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+
+\begin{document}
+
+\begin{center}
+\textit{-- 2 --}
+\end{center}
+
+\noindent\underline{\textbf{The commutator (derived) group of a group.}}
+
+\bigskip
+\noindent Let $(G,\cdot,e)$ be a group.
+
+\noindent $a,b\in G$ \quad $[a,b] \overset{\text{def}}{=} aba^{-1}b^{-1}\in G$
+
+\noindent is called the \underline{commutator} (the commutator
+
+\noindent of the pair of elements $a,b$)
+
+\bigskip
+\noindent $[a,b]\,ba = ab$
+
+\noindent $c\in G \Rightarrow ab=cba$
+
+\bigskip
+\noindent\fbox{$G' = \big\langle aba^{-1}b^{-1} \mid a,b\in G\big\rangle$} \quad (the set of all commutators)
+
+\bigskip
+\noindent Note that $[a,b]^{-1} = (aba^{-1}b^{-1})^{-1} = bab^{-1}a^{-1} = [b,a]$
+
+\noindent Hence $G' = \{$finite products of commutators$\}$
+
+\bigskip
+\noindent If $a,b,c\in G \Rightarrow a[b,c]a^{-1} = abcb^{-1}c^{-1}a^{-1} =$
+
+\[
+= aba^{-1}\cdot aca^{-1}\cdot ab^{-1}a^{-1}\cdot ac^{-1}a^{-1} = \big[aba^{-1},\,aca^{-1}\big]
+\]
+
+\noindent $\Rightarrow G'\trianglelefteq G$
+
+\bigskip
+\noindent I show that $axa^{-1}\in G'$ $(\forall)\,a\in G$, $(\forall)\,x\in G'$
+
+\[
+x=[b_1,c_1]\cdots[b_n,c_n]
+\]
+\[
+\Rightarrow axa^{-1} = \big[ab_1a^{-1},ac_1a^{-1}\big]\cdots\big[ab_na^{-1},ac_na^{-1}\big]
+\]
+
+\noindent (products of the form $a^{-1}a$ are inserted)
+
+\bigskip
+\noindent\underline{Remark}/ \quad \fbox{$\dfrac{G}{G'}$ is an abelian group}
+
+\bigskip
+\noindent If $\hat a,\hat b\in \dfrac{G}{G'}$ I show that $\hat a\hat b=\hat b\hat a$
+
+\[
+\Leftrightarrow ab\equiv_{R} ba \pmod{G'} \ \Leftrightarrow \ ab(ba)^{-1}\in G'
+\]
+\[
+aba^{-1}b^{-1}\in G' \ \Leftrightarrow \ [a,b]\in G' \quad (\forall)\text{ commutator}\in G'
+\]
+
+\noindent true \ $\Rightarrow \hat a\hat b=\hat b\hat a$
+
+\noindent $\Rightarrow \dfrac{G}{G'}$ abelian
+
+\bigskip
+\noindent\underline{Prop.}: \ \fbox{If $N\trianglelefteq G$ such that $\dfrac{G}{N}$ is abelian $\Rightarrow G'\subseteq N$}\footnote{in the original the first letter of this proposition looks like ``$H$'' rather than ``$N$''; corrected here to $N$ for consistency with the rest of the proof, which uses $N$ exclusively.}
+
+\bigskip
+\noindent\underline{Proof} \ Let $a,b\in G$. Then $\hat a\hat b=\hat b\hat a$ where $\hat a=aN$
+
+\noindent $\hat b=bN$
+
+\[
+\Leftrightarrow ab\equiv_{R} ba \pmod{N} \ \Leftrightarrow \ ab(ba)^{-1}\in N
+\]
+\[
+[a,b]\in N \ \Rightarrow \ (\forall)\text{ commutator}\in N \ \Rightarrow \ G'\subseteq N
+\]
+
+\bigskip
+\noindent $\dfrac{G}{G'} = G^{ab}$ \ the abelianization of $G$.
+
+\end{document}

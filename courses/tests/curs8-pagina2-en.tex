@@ -1,0 +1,97 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+
+\begin{document}
+
+\noindent $\tau \overset{\text{def}}{=} (i,j)$
+
+\noindent $\pi \overset{\text{def}}{=} \sigma\circ\tau$
+
+\[
+\pi(j) = \sigma\big(\tau(j)\big) = \sigma(i) = j
+\]
+
+\bigskip
+\noindent If $\sigma(k)=k \Rightarrow \pi(k)=k \Rightarrow k\neq i, k\neq j \ \Rightarrow d_\pi<d_\sigma.$
+
+\[
+\pi(k) = \sigma\big(\tau(k)\big) = \sigma(k) = k.
+\]
+
+\noindent $\pi = \sigma\circ\tau \ \big| \ \tau.$
+
+\bigskip
+\noindent $\pi = \tau_1\circ\cdots\circ\tau_s$ \ (induction hyp.) \ $\big|\tau \ \Rightarrow \ \tau_1\circ\cdots\circ\tau_s\circ\tau=\sigma.$
+
+\bigskip
+\noindent If $\sigma\in S_n$ \ inv$(\sigma) \overset{\text{not}}{=} \text{card}\{(i,j) \mid 1\leq i<j\leq n,\ \sigma(i)>\sigma(j)\}.$
+
+\noindent (= the number of inversions of $\sigma$.)
+
+\[
+\sigma = \begin{pmatrix}1&2&\cdots&i&=&j&\cdots&n\\ \sigma(1)&\sigma(2)&\cdots&\sigma(i)&\cdots&\sigma(j)&\cdots&\sigma(n)\end{pmatrix} \quad C_n^2.
+\]
+
+\noindent inv$(e)=0$.
+
+\bigskip
+\noindent\fbox{Def}: \ The number $\varepsilon(\sigma) = (-1)^{\text{inv}(\sigma)}$ is called the \underline{signature}.
+
+\bigskip
+\noindent $\sigma$ is even if $\varepsilon(\sigma)=1$.
+
+\noindent \phantom{$\sigma$ is }odd if $\varepsilon(\sigma)=-1$.
+
+\bigskip
+\noindent\fbox{T} \ If $\sigma\in S_n$ and $\sigma=\tau_1\circ\tau_2\circ\cdots\circ\tau_m \Rightarrow$ the number $m$ and inv$(\sigma)$ have the same
+
+\noindent parity.
+
+\bigskip
+\noindent\fbox{Lemma} \ (a) \ Let $\tau,\sigma\in S_n$, $\tau$ a transposition
+
+\noindent Then inv$(\sigma)$ and inv$(\sigma\circ\tau)$ have different parities.
+
+\noindent (b) Every transposition is an odd permutation.
+
+\bigskip
+\noindent\fbox{Proof of Lemma} \ $\tau=(i,j)$ \quad $1\leq i<j\leq n$ and $r=j-i\in\mathbb{N}^*$.
+
+\bigskip
+\noindent If $r=1$
+
+\[
+\sigma = \begin{pmatrix}1&\cdots&i&i+1&\cdots&n\\ \sigma(1)&\cdots&\sigma(i)&\sigma(i+1)&\cdots&\sigma(n)\end{pmatrix}
+= \begin{pmatrix}1&\cdots&i&j&\cdots&n\\ \sigma(1)&\cdots&\sigma(i)&\sigma(j)&\cdots&\sigma(n)\end{pmatrix}
+\]
+
+\[
+\pi=\sigma\circ\tau = \begin{pmatrix}1&\cdots&i&j&\cdots&n\\ \sigma(1)&\cdots&\sigma(j)&\sigma(i)&\cdots&\sigma(n)\end{pmatrix}
+= \begin{pmatrix}1&\cdots&i&i+1&\cdots&n\\ \sigma(1)&\cdots&\sigma(i+1)&\sigma(i)&\cdots&\sigma(n)\end{pmatrix}
+\]
+
+\bigskip
+\noindent $r=1 \Rightarrow$ inv$(\sigma\circ\tau) =
+\begin{cases}
+\text{inv}(\sigma)+1, & \text{if } \sigma(i)<\sigma(i+1)\\
+\text{inv}(\sigma)-1, & \text{if } \sigma(i)>\sigma(i+1)
+\end{cases}$
+
+\bigskip
+\noindent\underline{General case}: \ $\tau=(i,j) \Rightarrow j-i=r$, $r>1$.
+
+\noindent $\pi$ is obtained from $\sigma$ by exchanging $\sigma(i)$ with $\sigma(j)$, achieved through a sequence of transpositions of adjacent positions.\footnote{this paragraph of the proof is very compressed in the original; the exact step (``$d_\pi$ ... exchange ...'') could not be reconstructed with full certainty, but the standard argument is the one given here.}
+
+\[
+2r-1 \text{ steps}
+\]
+
+\noindent each step changes the parity of inv (the case $r=1$) $\Rightarrow$ after $2r-1$ steps (an odd number)
+
+\noindent the parity of inv$(\sigma)$ changes. \hfill different parities \quad Q.E.D.
+
+\end{document}

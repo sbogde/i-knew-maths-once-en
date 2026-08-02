@@ -1,0 +1,86 @@
+\bigskip
+
+% lecture 8, page 1
+% \section*{Lecture 8 - Page 1}
+
+\begin{center}
+\fbox{\textbf{ALGEBRA}}\\[2pt]
+\fbox{\textbf{LECTURE 8}}
+\end{center}
+\begin{flushright}
+\fbox{\textit{22-XI-1994}}
+\end{flushright}
+
+\bigskip
+\noindent\underline{\textbf{The group $S_n$}}
+
+\bigskip
+\noindent $A=\{1,2,\ldots,n\}$ \quad $S_n \ni \sigma: A\to A$ \quad $\sigma = \begin{pmatrix}1&2&\cdots&n\\ \sigma(1)&\sigma(2)&\cdots&\sigma(n)\end{pmatrix}$
+
+\noindent $|S_n|=n!$ \qquad $A\xrightarrow{\ \pi\ }A\xrightarrow{\ \sigma\ }A.$
+
+\bigskip
+\noindent $(S_n,\circ,e)$ is a group.
+
+\bigskip
+\noindent\fbox{Def}: \ Let $p\in\mathbb{N}$, $1<p\leq n$. \ A permutation $\alpha\in S_n$ is called a \underline{cyclic permutation}
+
+\noindent if $\exists\,i_1,\ldots,i_p\in\{1,2,\ldots,n\}$ distinct, with
+
+\[
+\alpha(i_1)=i_2, \ \alpha(i_2)=i_3, \ \ldots, \ \alpha(i_{p-1})=i_p, \ \alpha(i_p)=i_1
+\]
+
+\bigskip
+\noindent A 2-cycle is called a \underline{transposition}.
+
+\bigskip
+\noindent\fbox{Prop} \ If $\alpha\in S_n$ is a $p$-cycle, then ord$(\alpha)=p \ \Leftrightarrow \ \begin{cases}\alpha^p=e\\ \alpha^i\neq e \ (\forall)\,i=\overline{1,p-1}\end{cases}$
+
+\bigskip
+\noindent In particular, $\tau\in S_n$, $\tau=(i,j) \Rightarrow o(\tau)=2$.
+
+\bigskip
+\noindent\underline{Proof}:
+
+\[
+\tau\big(\tau(k)\big)=
+\begin{cases}
+j, & k=i\\
+i, & k=j\\
+k, & k\neq i,\ k\neq j
+\end{cases}
+\qquad k\in\{1,2,\ldots,n\}
+\]
+
+\bigskip
+\noindent $(\alpha^p)(i_1) = \underbrace{\alpha\big(\alpha(\cdots\alpha(i_1))\big)}_{p \text{ times}} = e.$
+
+\bigskip
+\noindent\underline{Remark}: \ In $S_n$ there are $n!$ permutations and $C_n^2$ transpositions,
+
+\bigskip
+\noindent\fbox{T} \ $(\forall)\,\sigma\in S_n$ \ $(n>1) \Rightarrow \exists\,\tau_1,\ldots,\tau_m\in S_n$ such that $\sigma=\tau_1\circ\cdots\circ\tau_m$.
+
+\bigskip
+\noindent\fbox{Proof} \ Given $\sigma\in S_n$, \ $d_\sigma := \text{card}\{i \mid 0<i\leq n,\ \sigma(i)\neq i\}$
+
+\[
+0\leq d_\sigma\leq n.
+\]
+
+\bigskip
+\noindent If $d_\sigma=0 \Rightarrow \sigma=1=e=\tau\circ\tau=\tau\circ\tau\circ\tau\circ\tau=\tau'\circ\tau'\circ\tau''\circ\tau''\circ\tau'''\circ\tau'''$
+
+\bigskip
+\noindent Induction on $d_\sigma$.
+
+\noindent Induction hypothesis\footnote{the exact label on this line (``1o.'' in the original) is unclear.} $d_\sigma>0$.
+
+\bigskip
+\noindent Claim: it holds for $\pi\in S_n$ with $d_\pi<d_\sigma$.
+
+\noindent We show that $\sigma$ can be written as a finite product of transpositions.
+
+\noindent $d_\sigma>0$ (by hypothesis) $\Rightarrow \exists\,i\in\{1,\ldots,n\}$ such that $\sigma(i)\neq i$
+

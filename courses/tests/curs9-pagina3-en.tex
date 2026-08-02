@@ -1,0 +1,96 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb,tikz-cd,tikz}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+
+\begin{document}
+
+\begin{center}
+\textit{--3--}
+\end{center}
+
+\noindent\underline{Ex}/ \quad 1) Compute $S_n$ \ $(S_n')$
+
+\bigskip
+\noindent 2) If $G\xrightarrow{f}\Gamma$, \ $\dfrac{G}{G'}=G^{ab}$
+
+\[
+\begin{tikzcd}
+G \arrow[rr,"f"] \arrow[dr,"\varphi"'] & & \Gamma \\
+& G^{ab} \arrow[ur, dashed,"f^*"'] &
+\end{tikzcd}
+\]
+
+\noindent $(\exists!)\,f^*$ a morphism such that $f=f^*\circ\varphi$
+
+\noindent $\Gamma$ an abelian group.
+
+\bigskip
+\noindent $\varphi$ the canonical morphism
+
+\noindent $f$ a group morphism
+
+\bigskip
+\bigskip
+\noindent\underline{\textbf{The dihedral group $\Delta_n$, $n\geq 3$}}
+
+\bigskip
+\noindent $x' = R\cos(t+\alpha)$ \hfill $R = \sqrt{x^2+y^2} = \sqrt{x'^2+y'^2}$
+
+\noindent $y' = R\sin(t+\alpha)$
+
+\begin{center}
+\begin{tikzpicture}[scale=1.1]
+\draw[->] (-0.5,0) -- (4.5,0) node[right] {$x$};
+\draw[->] (0,-2) -- (0,3) node[above] {$y$};
+\draw (0,0) -- (3,1) node[midway,below]{};
+\draw (0,0) -- (2.2,2.6);
+\draw (3,1) arc (18:50:0.6);
+\node at (0.9,0.55) {\scriptsize $\alpha$};
+\draw (0,0) -- (3.6,0) arc (0:18:0.9);
+\node at (1.1,0.12) {\scriptsize $t$};
+\node at (0.5,-0.28) {\scriptsize $t+\alpha$};
+\node[right] at (3,1) {$P(x,y)$};
+\node[above right] at (2.2,2.6) {$P'(x',y')$};
+\draw[dashed] (3,1) -- (3,-1.6);
+\node[below] at (3,-1.6) {$P''(x,-y)$};
+\node at (1.5,0.35) {\scriptsize $R$};
+\end{tikzpicture}
+\end{center}
+
+\bigskip
+\noindent $\begin{pmatrix}x'\\y'\end{pmatrix} = \underbrace{\begin{pmatrix}\cos\alpha & -\sin\alpha\\ \sin\alpha & \cos\alpha\end{pmatrix}}_{R_\alpha\,\in\, M_2(\mathbb{R})}\begin{pmatrix}x\\y\end{pmatrix}$
+
+\bigskip
+\noindent $\begin{pmatrix}x\\-y\end{pmatrix} = \underbrace{\begin{pmatrix}1&0\\0&-1\end{pmatrix}}_{S\,\in\, M_2(\mathbb{R})}\begin{pmatrix}x\\y\end{pmatrix}$
+
+\bigskip
+\noindent\underline{Def}: \ Let $GL_2(\mathbb{R}) = \{A \mid A\in M_2(\mathbb{R})$ with $\det A\neq 0\} =$
+
+\noindent = the general linear group of degree 2 over $\mathbb{R}$
+
+\bigskip
+\noindent $R_{\frac{2\pi}{n}} = \begin{pmatrix}\cos\dfrac{2\pi}{n} & -\sin\dfrac{2\pi}{n}\\[6pt] \sin\dfrac{2\pi}{n} & \cos\dfrac{2\pi}{n}\end{pmatrix}$ \hfill $S=\begin{pmatrix}1&0\\0&-1\end{pmatrix}$
+
+\bigskip
+\noindent $\big\langle R_{\frac{2\pi}{n}},\,S\big\rangle = D_n$ is called the \underline{dihedral group $D_{n,\,n\geq 3}$}
+
+\bigskip
+\noindent\underline{Prop.} \ $D_n$ is a group with $2n$ elements; \ ord $R=n$ \ $\big(R=R_{\frac{2\pi}{n}}\big)$
+
+\noindent ord $S=2$ and $SR=R^{n-1}S$
+
+\bigskip
+\bigskip
+\noindent\underline{Theorem}: \ Let $G$ be a group such that $\exists\,a,b\in G$ with the properties
+
+\begin{enumerate}
+\item[1)] $\langle a,b\rangle = G$
+\item[2)] ord $a=n$, $n\geq 3$, ord $b=2$ and $ba=a^{n-1}b$
+\end{enumerate}
+
+\noindent Then $G\cong D_n$ and ord $G=2n$
+
+\end{document}
