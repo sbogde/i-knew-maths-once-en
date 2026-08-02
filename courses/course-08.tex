@@ -175,3 +175,94 @@ k, & k\neq i,\ k\neq j
 \noindent each step changes the parity of inv (the case $r=1$) $\Rightarrow$ after $2r-1$ steps (an odd number)
 
 \noindent the parity of inv$(\sigma)$ changes. \hfill different parities \quad Q.E.D.
+
+
+
+% lecture 8, page 3
+\section*{Lecture 8 - Page 3}
+
+\noindent\fbox{Proof of the Theorem} \ $\sigma=\tau_1\circ\tau_2\circ\cdots\circ\tau_m$ \ $\big|\tau_m \ \Rightarrow \ \sigma\circ\tau_m = \tau_1\circ\cdots\circ\tau_{m-1}.$
+
+\bigskip
+\noindent $\sigma\circ\tau_m\circ\tau_{m-1} = \tau_1\circ\tau_2\circ\cdots\circ\tau_{m-2}$
+
+\[
+\vdots
+\]
+
+\noindent $\sigma\circ\tau_m\circ\tau_{m-1}\circ\cdots\circ\tau_2 = \tau_1$. \quad $m-1$ steps
+
+\bigskip
+\noindent $\sigma\circ\tau_m\circ\cdots\circ\tau_1 = e$ (even) \quad $\Rightarrow$ \quad
+$\begin{cases} \text{even}, & m \text{ even}\\ \text{odd}, & m \text{ odd} \end{cases}$
+
+\bigskip
+\noindent\fbox{T}. \ If $n\geq 1$ the map $\varepsilon: S_n \to (\{-1,1\},\cdot,1)$
+
+\[
+\sigma \xrightarrow{\ \varepsilon\ } \varepsilon(\sigma) = (-1)^{\text{inv}(\sigma)}
+\]
+
+\noindent $n>1 \Rightarrow \exists\,\tau\in S_n$ such that $\varepsilon(\tau)=-1$.
+
+\bigskip
+\noindent $\varepsilon$ -- a surjective group morphism,
+
+\[
+\varepsilon(\sigma\circ\pi) = \varepsilon(\sigma)\cdot\varepsilon(\pi).
+\]
+
+\bigskip
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline
+$\sigma$ & $\pi$ & $\sigma\circ\pi$ & $\varepsilon(\sigma)$ & $\varepsilon(\pi)$ & $\varepsilon(\sigma\circ\pi)$ & $\varepsilon(\sigma)\cdot\varepsilon(\pi)$ \\
+\hline
+E & E & E & $1$ & $1$ & $1$ & $1$ \\
+\hline
+O & E & O & $-1$ & $1$ & $-1$ & $-1$ \\
+\hline
+E & O & O & $1$ & $-1$ & $-1$ & $-1$ \\
+\hline
+O & O & E & $-1$ & $-1$ & $1$ & $1$ \\
+\hline
+\end{tabular}
+\end{center}
+
+\bigskip
+\noindent\underline{Consequence}: \ The set $A_n \overset{\text{def}}{=} \ker\varepsilon \trianglelefteq S_n$ and $|A_n| = \dfrac{n!}{2}$
+
+\noindent (the set of even permutations in $S_n$.)
+
+\noindent $A_n$ is called the \underline{alternating group of order $n$}
+
+\bigskip
+\noindent F.I.T.\ $\Rightarrow \{-1,1\} = \text{Im}\,\varepsilon \cong \dfrac{S_n}{\ker\varepsilon} = \dfrac{S_n}{A_n} \ \Rightarrow \ [S_n:A_n]=2.$
+
+\bigskip
+\noindent Lagrange's Th.\ $\Rightarrow |S_n| = |A_n|\cdot[S_n:A_n] \ \Rightarrow \ |A_n| = \dfrac{n!}{2}$
+
+\[
+\underbrace{|S_n|}_{n!} = |A_n|\cdot\underbrace{[S_n:A_n]}_{2}
+\]
+
+\bigskip
+\noindent $I_n$= the set of odd permutations.
+
+\noindent $A_n\cap I_n=\varnothing$, \quad $S_n = A_n\cup I_n$.
+
+\bigskip
+\noindent $\sigma\in S_n$ a transposition. \qquad $A_n \underset{g}{\overset{f}{\rightleftarrows}} I_n$.
+
+\[
+f(\tau) = \tau\circ\sigma.
+\]
+\[
+g(\pi) = \pi\circ\sigma
+\]
+\[
+g\circ f = 1_{A_n}; \quad f\circ g = 1_{I_n}.
+\]
+\[
+(g\circ f)(\tau) = g\big(f(\tau)\big) = g(\tau\circ\sigma) = \tau\circ\sigma\circ\sigma = \tau.
+\]
