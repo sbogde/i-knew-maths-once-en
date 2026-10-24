@@ -254,3 +254,84 @@ G \arrow[rr,"f"] \arrow[dr,"\varphi"'] & & \Gamma \\
 \end{enumerate}
 
 \noindent Then $G\cong D_n$ and ord $G=2n$
+
+
+
+
+% lecture 9, page 4
+\section*{Lecture 9 - Page 4}
+
+
+\noindent\fbox{Proof of Prop.} \quad $\begin{pmatrix}\cos\alpha & -\sin\alpha\\ \sin\alpha & \cos\alpha\end{pmatrix}^{\!n} = \begin{pmatrix}\cos n\alpha & -\sin n\alpha\\ \sin n\alpha & \cos n\alpha\end{pmatrix}$, \quad ord $R_{\frac{2\pi}{n}} = n$
+
+\bigskip
+\noindent $S\neq I_2$ and $S^2=I_2 \Rightarrow$ ord $S=2$ \hfill direct verification
+
+\bigskip
+\bigskip
+\noindent I show that $\langle R,S\rangle$ has $2n$ elements.
+
+\noindent Let $H=\langle R\rangle = \{I_2,R,\ldots,R^{n-1}\}$
+
+\noindent $S\notin H$ (otherwise $S=R^i$)
+
+\noindent $\det S = -1 = (\det R)^i = 1^i = 1$ \quad $\times$)
+
+\bigskip
+\noindent $HS = \{R^iS \mid i=\overline{0,n-1}\} \Rightarrow H\cap HS=\varnothing$
+
+\noindent Hence $H\cup HS \subseteq D_n \Rightarrow$ ord.\ $D_n\geq 2n$
+
+\bigskip
+\noindent\underline{Remark} \ If $G$ is a group, $H\subseteq G$, $H$ finite and stable
+
+\noindent under multiplication ``$\cdot$'' $\Rightarrow H\leq G$.
+
+\bigskip
+\noindent\underline{Proof} \ Let $a\in H$ and consider $aH \overset{\text{def}}{=} \{ax \mid x\in H\}$
+
+\noindent Then we have $aH=H$.
+
+\noindent ``$\subseteq$'' evident.
+
+\bigskip
+\noindent But $\left.\begin{aligned} H&\to aH\\ x&\mapsto ax \end{aligned}\right\}$ injective\ $\Rightarrow aH=H$.
+
+\bigskip
+\noindent $\Rightarrow ax=a \Rightarrow x=e\in H.$
+
+\noindent But $e=ab \Rightarrow ba=b \Rightarrow b=a^{-1}\in H.$
+
+\bigskip
+\noindent\underline{Remark.} that $H\cup HS \ni R,S \Rightarrow \langle R,S\rangle \subseteq H\cup HS$
+
+\noindent $R^iS\cdot R^jS = R^{i-j}S$ etc.\footnote{this verification that $H\cup HS$ is closed under multiplication is very compressed in the original; the exact exponents could not be reconstructed with full certainty.}
+
+\bigskip
+\bigskip
+\noindent\underline{Ex}: \quad $\Delta_6$
+
+\begin{center}
+\begin{tikzpicture}[scale=1.1]
+\draw[->] (0,-2.3) -- (0,2.3) node[above] {$y$};
+\draw[->] (-3,0) -- (3,0) node[right] {$x$};
+\coordinate (v1) at (1.7,1);
+\coordinate (v2) at (0,2);
+\coordinate (v3) at (-1.7,1);
+\coordinate (v4) at (-1.7,-1);
+\coordinate (v5) at (0,-2);
+\coordinate (v6) at (1.7,-1);
+\draw (v1) -- (v2) -- (v3) -- (v4) -- (v5) -- (v6) -- cycle;
+\node[above right] at (v1) {$1$};
+\node[above] at (v2) {$2$};
+\node[above left] at (v3) {$3$};
+\node[below left] at (v4) {$4$};
+\node[below] at (v5) {$5$};
+\node[below right] at (v6) {$6$};
+\draw[->] (0.9,0.6) arc (30:80:1.1);
+\end{tikzpicture}
+\end{center}
+
+\noindent $R_{\frac{2\pi}{6}} = R$
+
+\noindent $R^2, R^3,\ldots,R^5$
