@@ -335,3 +335,95 @@ G \arrow[rr,"f"] \arrow[dr,"\varphi"'] & & \Gamma \\
 \noindent $R_{\frac{2\pi}{6}} = R$
 
 \noindent $R^2, R^3,\ldots,R^5$
+
+
+
+
+
+
+% lecture 9, page 5
+\section*{Lecture 9 - Page 5}
+
+\noindent We denote by $H=\langle a\rangle$ the subgroup of order $n$:
+\[
+H=\{e,a,\ldots,a^{n-1}\}.
+\]
+
+\noindent $b\notin H$.
+
+\noindent Otherwise $b=a^i$. We use the fact that $ba=a^{n-1}b$:
+\[
+a^{i+1}=a^{n+i-1}\ \big|\ \cdot a^{-i-1}
+\quad\Longrightarrow\quad a^{n-2}=e\qquad\times
+\]
+
+\bigskip
+\noindent $H\cap Hb=\varnothing\ \Longrightarrow\ \underbrace{H\cup Hb}_{2n\ \text{elements}}\subseteq G$.
+
+\bigskip
+\noindent We prove that $H\cup Hb=G$, that is,
+\[
+G=\{e,a,a^2,\ldots,a^{n-1},\ b,ab,a^2b,\ldots,a^{n-1}b\}.
+\]
+
+\noindent I show that $H\cup Hb$ is closed under the operation. Since it is finite,
+it follows that it is a subgroup.
+
+\[
+a^i b\cdot a^s b=a^i a^{s(n-1)}b^2\in\langle a\rangle=H.
+\]
+
+\bigskip
+\noindent If $x\in G$, then there exist unique $i,j$ such that
+\[
+0\leq i<n,\qquad 0\leq j<2,
+\]
+\noindent and $x=a^i b^j$. Let $y=a^s b^t$.\footnote{The exponents in the following second case are overwritten and difficult to decipher in the manuscript. The reading $b^0$ is provisional and has been preserved without mathematical correction, pending confirmation against the original.}
+
+\[
+\begin{aligned}
+xy&=a^i b^j a^s b^t\\
+  &=\begin{cases}
+      a^{i+s}b^t, & j=0,\\[2pt]
+      a^{i+s(n-1)}b^0, & j=1.
+    \end{cases}
+\end{aligned}
+\]
+\bigskip
+\noindent $f:G\longrightarrow\Delta_n$,\quad
+$f(x)=R^iS^j\ \Longleftrightarrow\ x=a^i b^j$,
+\[
+0\leq i<n,\qquad 0\leq j<2.
+\]
+\noindent $f$ is bijective.
+
+\noindent I show that $f(xy)=f(x)f(y)$.
+
+\bigskip
+\noindent\underline{\textbf{Action of a group on a set (a $G$-set)}}
+
+\bigskip
+\noindent $(G,A,\psi)$,\quad $\psi:G\times A\longrightarrow A$ --- an external
+law of composition on $A$ with operators in $G$.
+
+\noindent $G$ --- a group;\quad $A$ --- a non-empty set.
+
+\[
+\left\{\begin{aligned}
+(1)\quad &\psi(a,\psi(b,u))=\psi(ab,u), && a,b\in G,\ u\in A,\\
+(2)\quad &\psi(e,u)=u.
+\end{aligned}\right.
+\]
+
+\noindent Equivalently, writing $\psi(a,u)=au$:
+\[
+\left\{\begin{aligned}
+(1)\quad &a(bu)=(ab)u,\\
+(2)\quad &eu=u.
+\end{aligned}\right.
+\]
+
+\bigskip
+\noindent\underline{Def.}\ Let $G$ be a group and $A$ a set. A map
+$\psi:G\times A\longrightarrow A$ is called an \underline{action of the group $G$} on the set $A$
+if conditions (1) and (2) are satisfied.
