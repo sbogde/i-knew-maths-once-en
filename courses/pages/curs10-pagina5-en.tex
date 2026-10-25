@@ -1,0 +1,98 @@
+% Lecture 10 - Page 5 (6-XII-1994).
+% Fragment for \input{courses/pages/curs10-pagina5-en}.
+% No preamble and no forced page break.
+
+\subsection*{Lecture 10 - Page 5}
+
+\noindent\underline{Application}: $G$ a finite group, $p\mid\operatorname{ord}(G)=n$.
+
+\bigskip
+\noindent\underline{Notation}
+\[
+A=\bigl\{(x_1,\ldots,x_p)\in
+\underbrace{G\times\cdots\times G}_{p\text{ factors}}
+\mid x_1x_2\cdots x_p=e\bigr\}.
+\]
+
+\noindent Then $|A|=n^{p-1}$:
+\[
+(x_1,\ldots,x_{p-1},
+\bigl(\prod_{i=1}^{p-1}x_i\bigr)^{-1}).
+\]
+
+\medskip
+\noindent Consider $\alpha=(1,2,\ldots,p)\in S_p$.
+
+\medskip
+\noindent Let $H=\langle\alpha\rangle$, $\operatorname{ord}(\alpha)=p$.
+
+\[
+\Longrightarrow\quad H=\{e,\alpha,\ldots,\alpha^{p-1}\}.
+\]
+% In the manuscript the letter at the left appears to be A rather than H;
+% H is used here for the subgroup just defined.
+
+\noindent But $(x_1,\ldots,x_p)\in A$ implies:
+\[
+\left\{\begin{aligned}
+&(x_2,x_3,\ldots,x_p,x_1)\in A,\\
+&(x_3,x_4,\ldots,x_p,x_1,x_2)\in A,\\
+&\quad\vdots\\
+&(x_p,x_1,\ldots,x_{p-1})\in A.
+\end{aligned}\right.
+\]
+
+\noindent $x_1x_2\cdots x_p=e$ and
+\[
+x_1x_2\cdots x_px_1=x_1
+\quad\Longrightarrow\quad x_2\cdots x_px_1=e.
+\]
+
+\[
+x_{\alpha(1)}x_{\alpha(2)}\cdots x_{\alpha(p)}=e,
+\]
+\[
+x_{\alpha^{p-1}(1)}x_{\alpha^{p-1}(2)}
+\cdots x_{\alpha^{p-1}(p)}=e.
+\]
+
+\bigskip
+\noindent Let $H=\langle\alpha\rangle$. Apply Lemma 1.
+
+\[
+\Longrightarrow\quad |A|\equiv |A_0|\pmod p.
+\]
+
+\noindent Since $|A|=n^{p-1}$ and $p\mid n$,
+\[
+p\mid |A|\quad\Longrightarrow\quad p\mid |A_0|.
+\]
+
+\noindent $|A_0|\geq 1$.
+
+\medskip
+\noindent\underline{Ex.}:
+\[
+(x_1,\ldots,x_p)\in A_0
+\quad\Longleftrightarrow\quad
+x_1=\cdots=x_p=a
+\quad\Longrightarrow\quad a^p=e.
+\]
+
+\[
+\Longrightarrow\quad
+A_0=\bigl\{(\underbrace{a,\ldots,a}_{p\text{ times}})
+\mid a\in G,\ a^p=e\bigr\}.
+\]
+
+\[
+\Longrightarrow\quad |A_0|\geq p
+\quad\Longrightarrow\quad
+\text{at least }p\text{ elements satisfy }a^p=e.
+\]
+
+\[
+\Longrightarrow\quad (\exists)\,a\neq 1
+\ \text{such that}\ a^p=e
+\qquad (\operatorname{ord}(a)=p).
+\]
