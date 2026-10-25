@@ -1,0 +1,101 @@
+% Lecture 10 - Page 4 (6-XII-1994).
+% Fragment for \input{courses/pages/curs10-pagina4-en}.
+% Continuation of the class equation from Page 3; no document preamble or forced page break.
+
+\subsection*{Lecture 10 - Page 4}
+
+\noindent\underline{Application}
+
+\medskip
+\noindent\underline{Cauchy's Theorem}: $G$ a finite group and $|G|=n$;
+$p\mid |G|$, where $p$ is prime.
+
+\medskip
+\noindent Then $(\exists)\,a\in G$ such that $\operatorname{ord}(a)=p$.
+
+\bigskip
+\noindent\underline{Proof}:
+\begin{align*}
+\text{Case 1:}\quad & p\mid\operatorname{ord}(Z_G),\\
+\text{Case 2:}\quad & p\nmid\operatorname{ord}(Z_G).
+\end{align*}
+
+\noindent\underline{Case 1}: $\Longrightarrow (\exists)\,a\in Z_G$
+such that $\operatorname{ord}(a)=p$ (since $Z_G$ is an abelian group).
+
+\medskip
+\noindent\underline{Case 2}: $(\exists)\,z_j\in T$, $z_j\notin Z_G$
+such that $p\nmid [G:C_G(z_j)]$.
+
+\[
+\Longrightarrow\quad p\mid\operatorname{ord}(C_G(z_j))
+\quad\bigl(\operatorname{ord}(G)
+=\operatorname{ord}(C_G(z_j))\,[G:C_G(z_j)]\bigr).
+\]
+
+\noindent But $\operatorname{ord}(C_G(z_j))<\operatorname{ord}(G)$.
+
+\medskip
+\noindent By induction on $n$:
+\[
+<n\ \longrightarrow\ n.
+\]
+% The induction step is indicated only schematically in the manuscript.
+% A separate justification of the abelian case is not supplied here.
+
+\bigskip
+\hrule
+\bigskip
+
+\noindent\underline{Lemma 1}: Let $G$ be a $p$-group, $|G|=p^n$,
+$n\geq 1$, and let $A$ be a finite $G$-set.
+
+\medskip
+\noindent Let
+\[
+A_0=\{x\in A\mid ax=x,\ (\forall)\,a\in G\}
+   =\{x\in A\mid \operatorname{Stab}_G(x)=G\}.
+\]
+
+\noindent Then
+\[
+|A|\equiv |A_0|\pmod p.
+\]
+
+\bigskip
+\noindent\underline{Particular case}: $A=G$, $|G|=p^n$
+and the action by conjugation.
+\[
+\Longrightarrow\quad |G|\equiv |Z_G|\pmod p.
+\]
+
+\bigskip
+\noindent\underline{Proof}: Let $T=\{z_1,\ldots,z_q\}$
+be a transversal for the equivalence relation associated with the action of $G$ on $A$.
+
+\[
+A_0\subseteq T,\qquad
+x\in A_0\ \Longrightarrow\
+|\widehat{x}|=[G:\operatorname{Stab}_G(x)]=1
+=|\operatorname{Orb}_G(x)|.
+\]
+
+\[
+|A|=|A_0|+
+\sum_{\substack{z_i\in T\\z_i\notin A_0}}
+[G:\operatorname{Stab}_G(z_i)].
+\]
+
+\noindent For $z_i\notin A_0$:
+\[
+[G:\operatorname{Stab}_G(z_i)]\mid |G|,
+\qquad [G:\operatorname{Stab}_G(z_i)]>1.
+\]
+\[
+\Longrightarrow\quad p\mid[G:\operatorname{Stab}_G(z_i)].
+\]
+
+\noindent Hence
+\[
+p\mid\bigl(|A|-|A_0|\bigr).
+\]
