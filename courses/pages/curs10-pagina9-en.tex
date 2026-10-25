@@ -1,0 +1,112 @@
+% Lecture 10 - Page 9 (6-XII-1994).
+% Fragment for \input{courses/pages/curs10-pagina9-en}.
+% No preamble and no forced page break.
+% Continuation of the proof of Sylow's First Theorem from Page 8.
+% Editorial notes flag doubtful readings rather than silently correcting them.
+
+\subsection*{Lecture 10 - Page 9}
+
+\noindent $\varphi(K)=\dfrac{K}{H}=K'.$
+
+\medskip
+\noindent Also $H\trianglelefteq K$, since $H\trianglelefteq N_G(H)$.
+
+\medskip
+\noindent Apply Lagrange's theorem:
+\[
+|K|=|H|\cdot[K:H]=|H|\cdot[\,\ldots\,]
+\quad\Longrightarrow\quad p\mid|K'|.
+\]
+% In the manuscript, the final index in square brackets is omitted/unclear.
+% The last symbols appear to read "p | |K'|"; mathematically the aim
+% is to establish |K|=p^{i+1}. The apparent reading has not been replaced.
+
+\bigskip
+\noindent\fbox{\textbf{Proof of Sylow's Second Theorem}}
+
+\medskip
+\noindent Let $P\in\operatorname{Syl}_p(G)$. Let
+\[
+A=\{aP\mid a\in G\}.
+\]
+
+\noindent $H\times A\longrightarrow A$,
+\[
+(h,aP)\longmapsto(ha)P\in A,
+\]
+\noindent an action by translation.
+
+\noindent Verify that this is an action.
+
+\medskip
+\noindent Consider the corresponding $A_0$:
+\[
+A_0=\{aP\mid haP=aP,\ (\forall)\,h\in H\}.
+\]
+
+\noindent $A_0\neq\varnothing$, since $p\nmid[G:P]$ and
+$|P|=p^t$.
+
+\medskip
+\noindent By Lemma 2 $\Longrightarrow$
+\[
+p\nmid[N_G(P):P].
+\]
+% The text appears to show "[N_G(P):P]", but when Lemma 2 is
+% applied to H acting on G/P, the immediate conclusion concerns |A_0|.
+% This apparent inconsistency is retained for manuscript review.
+
+% The line "Apply Lemma 2" is crossed out in the manuscript.
+\medskip
+\noindent
+\[
+|A_0|\equiv|A|\pmod p
+\quad\Longrightarrow\quad p\nmid|A_0|
+\quad\Longrightarrow\quad A_0\neq\varnothing.
+\]
+\noindent $|A|=m$ and $p\nmid m$.
+
+\medskip
+\noindent There exists $aP\in A_0$. Then
+\[
+haP=aP,\quad(\forall)\,h\in H
+\quad\Longleftrightarrow\quad
+ a^{-1}haP=P,\quad(\forall)\,h\in H.
+\]
+\[
+\Longleftrightarrow\quad a^{-1}Ha\leq P
+\quad\Longrightarrow\quad H\leq aPa^{-1}.
+\]
+
+\medskip
+\noindent Let $Q\in\operatorname{Syl}_p(G)$. Then
+\[
+aQa^{-1}\leq P.
+\]
+\noindent But
+\[
+|P|=p^t,\qquad |Q|=p^t
+\quad\Longrightarrow\quad |aQa^{-1}|=p^t
+\quad\Longrightarrow\quad aQa^{-1}=P.
+\]
+
+\bigskip
+\noindent\underline{Application}: $|G|=pq$, $p>q$, $q\nmid(p-1)$.
+
+\medskip
+\noindent By Cauchy's theorem, there exist $a,b\in G$ with
+$o(a)=p$, $o(b)=q$.
+
+\noindent $P=\langle a\rangle$, $Q=\langle b\rangle$.
+
+\noindent By Sylow's Third Theorem:
+\[
+|\operatorname{Syl}_p(G)|\mid pq,
+\qquad |\operatorname{Syl}_p(G)|\equiv1\pmod p
+\quad\Longrightarrow\quad |\operatorname{Syl}_p(G)|=1.
+\]
+
+\noindent $P\in\operatorname{Syl}_p(G)\ \ni Q$.%
+% The final reading "\ni Q" is uncertain. If interpreted as
+% containment Q<=P, it conflicts with |Q|=q and |P|=p.
+% The manuscript page ends here; no additional proof is supplied.
