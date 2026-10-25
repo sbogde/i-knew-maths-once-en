@@ -1,0 +1,78 @@
+% Lecture 10 - Page 6 (6-XII-1994).
+% Fragment for \input{courses/pages/curs10-pagina6-en}.
+% No preamble and no forced page break.
+
+\subsection*{Lecture 10 - Page 6}
+
+\noindent\underline{Def.}: A group $G$ is called a \textbf{$p$-group},
+$p$ prime, if:
+\[
+(\forall)\,a\in G,\qquad o(a)=p^t,\quad t\geq 0.
+\]
+% In the manuscript, the term "p-group" in the opening sentence is crossed out,
+% although it is the term defined by the condition that follows.
+
+\medskip
+\noindent\underline{Remark}: If $G$ is a finite group, then
+\[
+\boxed{G\text{ is a }p\text{-group}\quad\Longleftrightarrow\quad
+\operatorname{ord}(G)=p^n}.
+\]
+
+\noindent\underline{Proof}: ``$\Leftarrow$'' evident.
+
+\noindent ``$\Rightarrow$'': By contradiction, suppose
+$\operatorname{ord}(G)\neq p^n$.
+Then there is a prime $q\neq p$ such that $q\mid\operatorname{ord}(G)$.
+
+\noindent By Cauchy's theorem, $(\exists)\,a\in G$ with $o(a)=q$;
+since $G$ is a $p$-group, this gives $p=q$, a contradiction.
+
+\bigskip
+\noindent-- Let
+\[
+U_{p^n}=\{z\in\mathbb{C}\mid z^{p^n}=1\},
+\qquad U_{p^n}\leq(\mathbb{C}^{*},\cdot).
+\]
+\noindent Also $\operatorname{ord}(U_{p^n})=p^n$.
+
+\[
+\bigcup_{n\geq 1}U_{p^n}\ \leq\ (\mathbb{C}^{*},\cdot).
+\]
+\noindent This is an infinite $p$-group.
+
+\bigskip
+\noindent\underline{Def.}: Let $G$ be a group and $H\leq G$.
+$H$ is a \underline{$p$-subgroup} of $G$ if and only if
+$(H,\cdot)$ is a $p$-group.
+
+\bigskip
+\noindent\fbox{\textbf{Sylow's First Theorem}}.
+Let $G$ be a finite group with $\operatorname{ord}(G)=p^t m$,
+$t\geq 1$ and $p\nmid m$.
+
+\medskip
+\noindent Then for every $i=\overline{1,t}$ there exists $H\leq G$
+with $|H|=p^i$.
+
+\medskip
+\noindent Moreover, if $1\leq i<t$, there exists $H\leq G$,
+$|H|=p^i$, which is normal in a subgroup of $G$
+of order $p^{i+1}$.
+
+\bigskip
+\noindent\underline{Proof}: For $i=1$, O.K. by Cauchy's theorem.
+
+\medskip
+\noindent Under the same hypotheses, a $p$-subgroup of $G$
+of order $p^t$ is called a \underline{Sylow $p$-subgroup} of $G$.
+\quad (Notation: $A=\operatorname{Syl}_p(G)$.)
+
+\bigskip
+\noindent\underline{Remark}: On $A=\operatorname{Syl}_p(G)$,
+$G\times A\longrightarrow A$ acts by conjugation:
+\[
+P\in A,\ a\in G,\qquad
+(a,P)\longmapsto aPa^{-1}
+\quad\text{(the conjugate of $P$ by $a$)}.
+\]
