@@ -1,0 +1,85 @@
+% Lecture 10, page 1 -- manuscript dated 6-XII-1994.
+% Crossed-out intermediate calculations in the manuscript are omitted.
+
+\clearpage
+\section*{Lecture 10 - Page 1}
+
+\begin{center}
+\underline{\textbf{ALGEBRA}}\\[2pt]
+\textit{(LECTURE 10)}
+\end{center}
+\begin{flushright}
+\textit{6-Dec-1994}
+\end{flushright}
+
+\bigskip
+\noindent\underline{\textbf{Action of a group on a set. Sylow's Theorems 1, 2, 3.}}
+
+\bigskip
+\noindent\underline{Def.} Let $(G,\cdot)$ be a group, and let $A\neq\varnothing$ be a set.
+
+\noindent A map $G\times A\xrightarrow{\ \psi\ } A$,
+\quad $(a,x)\overset{\psi}{\longmapsto}a\cdot x\in A$, with the properties:
+
+\bigskip
+\noindent (1)\quad $a\cdot(b\cdot x)=(a\cdot b)\cdot x$,
+\quad $(\forall)\,a,b\in G$, \quad $(\forall)\,x\in A$.
+
+\medskip
+\noindent (2)\quad $e\cdot x=x$.
+
+\bigskip
+\noindent\underline{Ex.} \textbf{1)} Let $G$ be an arbitrary group, $A=G$,
+\quad $G\times G\xrightarrow{\ \psi\ }G$.
+
+\noindent $(a,x)\overset{\psi}{\longmapsto}a\cdot x=axa^{-1}$
+(the conjugate of $x$ by $a$).
+
+\bigskip
+\noindent (1)\quad $a\cdot(b\cdot x)=a(bxb^{-1})a^{-1}=abxb^{-1}a^{-1}$.
+
+\medskip
+\begin{center}
+\fbox{$\begin{aligned}
+ a\cdot(b\cdot x)&=(ab)\cdot x,\\
+ e\cdot x&=x.
+\end{aligned}$}
+\end{center}
+
+\noindent $\psi$ -- the action by conjugation.
+
+\bigskip
+\noindent\textbf{2)} $G$ a group, \quad $A=\{H\mid H\leq G\}$.
+
+\noindent Define $G\times A\xrightarrow{\ \psi\ }A$,
+\quad $(g,H)\overset{\psi}{\longmapsto}g\cdot H=gHg^{-1}\in A$.
+
+\bigskip
+\noindent $f_a:G\longrightarrow G$, \quad $f_a(x)=axa^{-1}$,
+\quad $f_a\in\operatorname{Aut}(G)$.
+
+\bigskip
+\noindent $f_a(xy)=axya^{-1}$.
+
+\noindent $f_a(x)\cdot f_a(y)=axa^{-1}aya^{-1}=axya^{-1}$.
+
+\bigskip
+\noindent $f_a(x_1)=f_a(x_2)\ \Longrightarrow\ ax_1a^{-1}=ax_2a^{-1}
+\ \Longrightarrow\ x_1=x_2$.
+
+\noindent $\Longrightarrow f_a$ is injective.
+
+\medskip
+\noindent $(\forall)\,y\in G$, $(\exists)\,x\in G$ such that $f_a(x)=y$;
+\quad $x=a^{-1}ya$ $\Longrightarrow f_a$ is surjective.
+
+\bigskip
+\noindent $\Longrightarrow f_a\in\operatorname{Aut}(G)$.
+\quad $f_a$ is called an \underline{inner automorphism} of $G$.
+
+\bigskip
+\noindent $aHa^{-1}=f_a(H)\in A$.
+
+\bigskip
+\noindent $\psi$ satisfies (1) and (2). $\psi$ is called
+\underline{the conjugation action} of $G$ on the set of its subgroups.
