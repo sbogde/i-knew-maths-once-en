@@ -1,0 +1,82 @@
+% Lecture 9, page 7 of 8 — English translation of the 1994 manuscript.
+% Fragment intended for appending after page 6 in courses/course-09.tex.
+% An orbit formula struck through in the manuscript has been omitted;
+% the author's subsequent uncancelled formulations are retained.
+% Neither original Overleaf nor GitHub project has been modified.
+
+\section*{Lecture 9 - Page 7}
+
+\noindent\underline{Prop.} Let $G$ be a group and $A$ a $G$-set. The binary relation on $A$
+\[
+x\sim_G y\ \overset{\mathrm{def}}{\Longleftrightarrow}
+(\exists)\,a\in G\text{ such that }a x=y,\qquad x,y\in A
+\]
+\noindent (an equivalence relation).
+
+\bigskip
+\noindent The equivalence classes of this relation are called the
+\underline{orbits of the action of $G$ on $A$}.
+
+\bigskip
+\noindent\underline{Proof.} We show that:
+\begin{align*}
+&x\sim_G x,\qquad (\forall)\,x\in A,\\
+&x\sim_G y\ \Longrightarrow\ y\sim_G x,\\
+&x\sim_G y\text{ and }y\sim_G z\ \Longrightarrow\ x\sim_G z.
+\end{align*}
+\noindent Reflexivity follows from (2) (in the definition of a $G$-set).
+
+\bigskip
+\noindent $(\exists)\,a\in G$ such that $a x=y$ $\Longrightarrow$
+\[
+x=e x=(a^{-1}a)x=a^{-1}(a x)=a^{-1}y.
+\]
+
+\bigskip
+\noindent $(\exists)\,a,b\in G$ such that
+\[
+\left.\begin{aligned}
+ a x&=y,\\
+ b y&=z
+\end{aligned}\right\}
+\quad\Longrightarrow\quad z=b(a x)=(ba)x.
+\]
+
+\bigskip
+\noindent\underline{Remark.} If $x\in A$, $\operatorname{Orb}(x)=\operatorname{Orb}_G(x)$
+(the orbit of $x$ under the action of $G$).
+\[
+\operatorname{Orb}(x)=\{a x\mid a\in G\}=Gx.
+\]
+\[
+\operatorname{Orb}(x)=\widehat{x}
+=\{y\in A\mid y\sim_G x\}.
+\]
+
+\bigskip
+\noindent\underline{Def.} If $A$ is a $G$-set and $x\in A$,
+\[
+\operatorname{Stab}_G(x)\ \overset{\mathrm{def}}{=}
+\{a\in G\mid a\cdot x=x\}
+\]
+\noindent is the stabiliser of $x$ (in $G$).
+
+\noindent Clearly $e\in\operatorname{Stab}_G(x)$.
+
+\bigskip
+\noindent\fbox{T} If $A$ is a $G$-set and $x\in A$, then:
+\begin{enumerate}
+\item[(1)] $\operatorname{Stab}_G(x)\leq G$.
+\item[(2)] $\operatorname{card}(\operatorname{Orb}(x))
+=[G:\operatorname{Stab}_G(x)]$.
+\item[(3)] If $G$ is finite, then
+$\operatorname{card}(\operatorname{Orb}(x))\mid\operatorname{ord}G$.
+\end{enumerate}
+
+\bigskip
+\noindent $S_n\times A\longrightarrow A$, \qquad $A=\{1,2,\ldots,n\}$,
+\[
+\operatorname{Stab}_{S_n}(n)
+=\{\sigma\in S_n\mid\sigma(n)=n\}.
+\]
+\noindent $\sigma\cdot n=\sigma(n)\in A$.
