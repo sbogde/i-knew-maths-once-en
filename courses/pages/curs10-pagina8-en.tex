@@ -1,0 +1,86 @@
+% Lecture 10 - Page 8 (6-XII-1994).
+% Fragment for \input{courses/pages/curs10-pagina8-en}.
+% No preamble and no forced page break.
+% Continuation of the proof of Lemma 2 from Page 7.
+% Faithful transcription note: the manuscript appears to say "a in A_0",
+% although A_0 consists of cosets aH. The apparent reading is retained.
+\bigskip
+
+\subsection*{Lecture 10 - Page 8}
+
+\noindent $a\in A_0\ \Longleftrightarrow\ haH=aH$, for all $h\in H$
+\[
+\Longleftrightarrow\ a^{-1}haH=H,\quad(\forall)\,h\in H
+\]
+\[
+\Longleftrightarrow\ a^{-1}Ha=H
+\Longleftrightarrow\ H=aHa^{-1}
+\Longleftrightarrow\ a\in N_G(H).
+\]
+
+\noindent Hence
+\[
+|A_0|=\left|\frac{N_G(H)}{H}\right|=[N_G(H):H],
+\]
+\noindent while $|A|=[G:H]$.
+
+\bigskip
+\noindent\underline{Corollary}. Under the same hypotheses as Lemma 2,
+if $p\mid[G:H]$, then
+\[
+H\subsetneq N_G(H).
+\]
+
+\bigskip
+\noindent\fbox{\textbf{Proof of Sylow's First Theorem}}\quad
+$p^i\mid |G|$.
+
+\medskip
+\noindent Induction on $i$.
+
+\noindent $i=1$: follows from Cauchy's theorem.
+
+\medskip
+\noindent Assume $1\leq i<t$ and that there exists $H\leq G$
+such that $|H|=p^i$.
+
+\noindent We show that there exists $K\leq G$ with
+$|K|=p^{i+1}$ and $H\trianglelefteq K$.
+
+\medskip
+\noindent $p\mid[G:H]$, since
+\[
+|G|=p^t m=[G:H]\,|H|=[G:H]p^i.
+\]
+\noindent $i<t\ \Longrightarrow\ p^{t-i}\mid[G:H]
+\ \Longrightarrow\ p\mid[G:H]$.
+
+\medskip
+\noindent By the corollary, $H\subsetneq N_G(H)$.
+Consider $N_G(H)/H$.
+
+\medskip
+\noindent I claim that
+\[
+p\mid\left|\frac{N_G(H)}{H}\right|=[N_G(H):H],
+\]
+\noindent since $p\mid[G:H]$ and
+\[
+[N_G(H):H]\equiv[G:H]\pmod p.
+\]
+
+\noindent By Cauchy's theorem, there exists
+$\hat a\in N_G(H)/H$ such that $\operatorname{ord}(\hat a)=p$.
+
+\medskip
+\noindent Let $K'\leq N_G(H)/H$, $K'=\langle\hat a\rangle$,
+$|K'|=p$.
+
+\[
+\varphi:N_G(H)\longrightarrow\frac{N_G(H)}{H},
+\qquad \varphi(a)=\hat a.
+\]
+\[
+\varphi\bigl(\varphi^{-1}(K')\bigr)=K'.
+\]
+% The proof continues on the next manuscript page.
