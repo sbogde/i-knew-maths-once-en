@@ -1,0 +1,93 @@
+% Lecture 10 - Page 3 (6-XII-1994).
+% Independent fragment for \input{courses/pages/curs10-pagina3-en}.
+% Continuation of the proof begun on page 2.
+
+\subsection*{Lecture 10 - Page 3}
+
+\noindent (2) \quad
+$N\trianglelefteq G\ \Longleftrightarrow\ axa^{-1}\in N$,
+\quad $(\forall)\,a\in G$, $(\forall)\,x\in N$.
+
+\medskip
+\noindent By the definition of $N_G(H)$,
+\[
+axa^{-1}\in H, \qquad
+(\forall)\,a\in N_G(H),\quad (\forall)\,x\in H.
+\]
+\noindent $\Longrightarrow\ H\trianglelefteq N_G(H)$.
+We may consider the group $N_G(H)/H$.
+
+\bigskip
+% An isolated/cancelled mark precedes the dividing line in the manuscript.
+\hrule
+\bigskip
+
+\noindent Consider an arbitrary set $A$, $|A|<\infty$.
+
+\medskip
+\noindent Let $z_1,\ldots,z_q\in A$ be a transversal of the equivalence
+relation associated with the action of $G$ on $A$, ``$\sim_G$''.
+
+\[
+\left\{\begin{aligned}
+&i\neq j\ \Longrightarrow\ z_i\not\sim_G z_j,\\
+&(\forall)\,x\in A,\ (\exists)\,i\ \text{such that}\ x\sim_G z_i.
+\end{aligned}\right.
+\]
+
+\noindent Under these conditions we have:
+\[
+A=\operatorname{Orb}(z_1)\cup\operatorname{Orb}(z_2)
+\cup\cdots\cup\operatorname{Orb}(z_q)
+\qquad (\text{disjoint union}).
+\]
+
+\[
+\Longrightarrow\quad
+|A|=\sum_{i=1}^{q}[G:\operatorname{Stab}_G(z_i)].
+\]
+\noindent \underline{Class equation for the action of $G$ on $A$}.
+
+\bigskip
+\noindent In particular, if $A=G$, considering the action by conjugation
+of $G$ on itself ($G$ a finite group),
+\[
+\Longrightarrow\quad
+\operatorname{ord}(G)=\sum_{i=1}^{q}[G:C_G(z_i)]
+\]
+\noindent - the class equation for conjugacy classes of elements.
+
+\bigskip
+\noindent Let $x\in G$ be such that
+\[
+C_G(x)=G\quad\Longleftrightarrow\quad
+|\operatorname{orb}_G(x)|=1,
+\]
+\noindent i.e. $ax=xa$, $(\forall)\,a\in G$.
+
+\bigskip
+\noindent We denote:
+\[
+Z_G:=\{x\in G\mid ax=xa,\ (\forall)\,a\in G\}.
+\]
+
+\noindent $Z_G\trianglelefteq G$.
+\quad $Z_G$ is called \underline{the centre of the group $G$}.
+
+\medskip
+\noindent $x,y\in Z_G\ \stackrel{?}{\Longrightarrow}\ xy^{-1}\in Z_G$;
+\quad and if $x\in Z_G$, $a\in G$,
+\[
+\stackrel{?}{\Longrightarrow}\ axa^{-1}\in Z_G
+\qquad (axa^{-1}=xaa^{-1}=x).
+\]
+
+\bigskip
+\noindent $Z_G$ is contained in every transversal; in particular,
+$Z_G\subseteq\{z_1,\ldots,z_q\}=T$.
+
+\[
+\operatorname{ord}(G)=\operatorname{ord}(Z_G)
++\sum_{\substack{z_i\in T\\z_i\notin Z_G}}[G:C_G(z_i)].
+\]
+% For central z_i, [G:C_G(z_i)]=1 (handwritten annotation "1").
