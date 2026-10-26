@@ -1,0 +1,82 @@
+% Lecture 11 - Page 5 (13-Dec-1994).
+% Fragment for \input{courses/pages/curs11-pagina5-en}.
+% No preamble or forced page break.
+% The manuscript sequence is preserved; uncertain readings are noted below.
+
+\subsection*{Lecture 11 - Page 5}
+
+\[
+q=\frac{\displaystyle\sum_{T\in D_6}|\operatorname{Fix}T|}
+        {|D_6|},\qquad |D_6|=12.
+\]
+% A compact calculation following an equals sign near the numerator
+% is too faint to transcribe reliably from the manuscript.
+
+\noindent Let $T=R$ (a rotation through $60^\circ$).
+\[
+|\operatorname{Fix}R|=2.
+\]
+\noindent $T=R^2$.
+% The manuscript does not continue the calculation for R^2 here.
+
+\bigskip
+\noindent\underline{(2) Isomorphism Theorems}
+
+\medskip
+\noindent\fbox{First Isomorphism Theorem}
+
+\bigskip
+\noindent Let $G$ be a group, $H\leq G$, $N\trianglelefteq G$.
+\[
+\text{Then}\qquad \boxed{\frac{HN}{N}\cong\frac{H}{H\cap N}}.
+\]
+
+\noindent (Then $HN=NH$, $HN\leq G$, $N\trianglelefteq HN$,
+$H\cap N\trianglelefteq H$, and \ldots)
+% The final part of the parenthetical comment is abbreviated in the original.
+
+\medskip
+\noindent $(G,+)\ \Rightarrow\ \dfrac{H+N}{N}\cong\dfrac{H}{H\cap N}$.
+
+\bigskip
+\noindent\underline{Proof.}
+Let $xy\in HN$, $x\in H$, $y\in N$.
+% Several intermediate attempts to rearrange xy are crossed out in the original.
+\[
+xy=(xyx^{-1})x\in NH,
+\qquad
+\underbrace{xyx^{-1}}_{\in N}\ \underbrace{x}_{\in H}.
+\]
+\noindent Analogously, $NH\subseteq HN$; hence $HN=NH$.
+
+\bigskip
+\noindent Let $x_1y_1,\,x_2y_2\in HN=NH$, with
+$x_1,x_2\in H$, $y_1,y_2\in N$.
+\[
+\begin{aligned}
+x_1y_1x_2y_2
+ &=\underbrace{x_1x_2}_{\in H}
+   \underbrace{(x_2^{-1}y_1x_2)y_2}_{\in N}
+   \in HN.
+\end{aligned}
+\]
+
+\[
+(x_1y_1)^{-1}=y_1^{-1}x_1^{-1}\in NH=HN.
+\]
+
+\noindent Clearly, $H,N\subseteq HN$.
+
+\[
+\left.\begin{gathered}
+N\trianglelefteq G,\\
+HN\leq G,\\
+N\subseteq HN
+\end{gathered}\right\}
+\ \Longrightarrow\ N\trianglelefteq HN.
+\]
+
+\noindent $H\cap N\trianglelefteq H$
+(it will appear as the kernel of a group homomorphism).
+% A word between "as" and "the kernel" is crossed out in the original.
+% The proof of the isomorphism does not conclude on this page.

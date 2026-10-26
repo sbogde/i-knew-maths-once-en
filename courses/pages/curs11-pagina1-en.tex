@@ -1,0 +1,101 @@
+% Lecture 11 - Page 1 (13-Dec-1994).
+% Fragment for \input{courses/pages/curs11-pagina1-en}.
+% No preamble. The first page of a new lecture starts on a fresh page.
+% Preserve the manuscript's order; uncertain readings are identified in comments.
+
+\clearpage
+\subsection*{Lecture 11}
+
+\begin{center}
+% \fbox{\textbf{LECTURE 11}}
+\end{center}
+\begin{flushright}
+\textit{13-Dec-1994}
+\end{flushright}
+
+\begin{enumerate}
+    \item Sylow's theorems + applications.
+    \item Isomorphism theorems + 1 application.
+    \item Burnside's theorem + applications.
+    \item Table of contents - guide for preparing the algebra examination.
+\end{enumerate}
+
+\medskip
+\noindent $G$ a group, $|G|=n=p^t m$, $t\geq 1$ and $p\nmid m$.
+% In the original, the sign before "p | m" is overwritten/crossed out;
+% p\nmid m is the most likely reading and matches the Sylow hypothesis.
+
+\bigskip
+\noindent\underline{T$_1$ - Sylow I.}\quad
+For every $i$, $1\leq i\leq t$, there exists $H\leq G$ with $|H|=p^i$.
+
+\medskip
+\noindent $\operatorname{Syl}_p(G)$ - the set of Sylow $p$-subgroups of $G$,
+$\operatorname{Syl}_p(G)\neq\varnothing$.
+
+\bigskip
+\noindent\underline{Sylow II.}
+\[
+G\times\operatorname{Syl}_p(G)\longrightarrow\operatorname{Syl}_p(G),
+\qquad (a,P)\longmapsto aPa^{-1}\in\operatorname{Syl}_p(G).
+\]
+\noindent $\varphi_a(P)=aPa^{-1}$.
+% The function symbol written below the mapping appears to be "phi_a(P)".
+
+\medskip
+\noindent The action is transitive $\Longleftrightarrow$ it has a single orbit.
+
+\[
+\Longleftrightarrow\quad
+(\forall)\,P,Q\in\operatorname{Syl}_p(G),\ (\exists)\,a\in G
+\text{ such that }aPa^{-1}=Q,
+\quad \operatorname{Orb}_G(P)=\operatorname{Syl}_p(G).
+\]
+
+\bigskip
+\noindent\fbox{Sylow III.}\quad
+$|\operatorname{Syl}_p(G)|\mid\operatorname{ord}(G)$ and
+\[
+|\operatorname{Syl}_p(G)|=pk+1\equiv1\pmod p.
+\]
+
+\bigskip
+\noindent\fbox{Lemma III.}\quad
+Let $P\in\operatorname{Syl}_p(G)$.
+\[
+\operatorname{Orb}_G(P)=\operatorname{Syl}_p(G).
+\]
+\[
+|\operatorname{Syl}_p(G)|=|\operatorname{Orb}_G(P)|
+=[G:\operatorname{Stab}_G(P)]
+\overset{\text{Lagrange}}{\Longrightarrow}
+|\operatorname{Syl}_p(G)|\mid|G|.
+\]
+
+\medskip
+\noindent Let $P\in\operatorname{Syl}_p(G)$. Consider the map
+(action by conjugation):
+\[
+P\times\operatorname{Syl}_p(G)\longrightarrow\operatorname{Syl}_p(G),
+\qquad (a,Q)\longmapsto aQa^{-1}\in\operatorname{Syl}_p(G).
+\]
+
+\noindent Let $A=\operatorname{Syl}_p(G)$.
+
+\medskip
+\noindent\underline{Lemma 1.}\quad
+$G$ a $p$-group, $|G|=p^a$, $A$ a finite $G$-set,
+\[
+A_0=\{x\in A\mid ax=x,\ (\forall)\,a\in G\}.
+\]
+\noindent Then $|A|\equiv|A_0|\pmod p$.
+
+\medskip
+\noindent
+\[
+A_0=\{Q\in A\mid aQa^{-1}=Q,\ (\forall)\,a\in P\}.
+\]
+\noindent $A_0\neq\varnothing$, since $P\in A_0$
+$(aPa^{-1}=P\ \Longleftarrow\ a\in P)$.
+% A one-way implication seems to be present in the manuscript.
+% The page ends here; the remainder of the argument is not supplied.
