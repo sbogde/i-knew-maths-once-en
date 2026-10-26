@@ -1,0 +1,67 @@
+% Lecture 11 - Page 7 (13-Dec-1994).
+% Fragment for \input{courses/pages/curs11-pagina7-en}.
+% Faithful translation of the manuscript; no preamble or forced page break.
+
+\subsection*{Lecture 11 - Page 7}
+
+\noindent\underline{Lemma:} Let $m,n,q\in\mathbb N^*$, $n=mq\Rightarrow n\mathbb Z\subseteq m\mathbb Z$.
+
+\[
+\frac{m\mathbb Z}{n\mathbb Z}\cong\mathbb Z_q.
+\]
+
+\noindent Define $f$ by the composition
+\[
+\begin{tikzcd}[column sep=large]
+m\mathbb Z \arrow[r] \arrow[rr,bend left=30,"f"] &
+\mathbb Z \arrow[r,"\mathrm{can}"] &
+\mathbb Z/q\mathbb Z=\mathbb Z_q .
+\end{tikzcd}
+\]
+\[
+mk\longmapsto k\longmapsto \widehat{k}=k+q\mathbb Z.
+\]
+\[
+m(h+k)\longmapsto h+k\longmapsto\widehat h+\widehat k.
+\]
+
+\noindent $f$ is a surjective homomorphism $\Rightarrow \operatorname{Im}f=\mathbb Z_q$.
+\[
+\mathbb Z_q\cong \frac{m\mathbb Z}{\ker f}.
+\]
+
+\noindent $x\in\ker f\Rightarrow f(x)=\widehat 0$.
+\[
+x\in m\mathbb Z,\quad x=mk\ \stackrel{f}{\longmapsto}\ \widehat k=\widehat 0
+\iff q\mid k\iff k=qk_1.
+\]
+\[
+\Rightarrow x=mqk_1=nk_1\quad\Rightarrow\quad\ker f=n\mathbb Z.
+\]
+
+\bigskip
+\begin{center}
+\fbox{\textbf{TABLE OF CONTENTS}}\qquad 2 theorems + 5 exercises
+\end{center}
+% The handwritten note appears to read "2 teorii + 5 exercitii".
+% Number (5) is written twice / partly revised in the manuscript.
+% The original numbering is preserved rather than silently regularised.
+
+\begin{enumerate}
+\item[(1)] Composition of mappings between sets. Properties.
+\item[(2)] Equivalence relations, classes, transversals, quotient sets.
+\item[(3)] Factorisation theorems for set maps.
+\item[(4)] Internal laws of composition; associativity, commutativity, identity element.
+\item[(5)] Composition law induced on a stable subset and on a quotient set.
+\item[(5)] Monoid, group, subgroup: definitions, examples.
+\item[(6)] Congruences on groups. Lagrange's theorem.
+\item[(7)] Normal subgroup, quotient group.
+\item[(8)] Order of an element, properties, examples.
+\item[(9)] Group homomorphisms, examples, properties.
+\item[(10)] Factorisation theorem for group homomorphisms, T.~F-I.
+% "T. F-I" is the original abbreviation, probably referring to
+% the fundamental isomorphism theorem; not expanded silently.
+\item[(11)] The symmetric group $S_n$, transpositions, cycles; decomposition of a
+permutation into a product of transpositions (cycles).
+% Item (11) continues at the beginning of Page 8.
+\end{enumerate}
