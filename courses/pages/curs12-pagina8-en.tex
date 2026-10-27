@@ -1,0 +1,90 @@
+% Lecture 12 - Page 8 (3-Jan-1995).
+% Fragment for \input{courses/pages/curs12-pagina8-en}.
+% No preamble or forced page break.
+% EDITORIAL NOTES:
+% - This page continues the free-group construction from Page 7.
+% - In the universal property, the target of zeta appears to be G^*
+%   in the handwriting, while the group in the diagram is G. The
+%   apparent G^* reading has been retained without silent correction.
+% - The second diagram and its connecting text are heavily abbreviated.
+%   Zeta_1 is read as the extension of zeta to A union A'.
+% - In f o zeta_{A union A'} = zeta_1, the letter f is a contextual,
+%   provisional reading of the notation used in the argument.
+% - The manuscript explicitly has (xx',1) in R and f(xx')=f(1).
+% - The final faint words appear to say "nu totdeauna" (not always)
+%   in response to the word-problem question.
+
+\subsection*{Lecture 12 - Page 8}
+
+\noindent\fbox{T}
+\begin{enumerate}
+\item[(1)] $\mathrm{FG}[A]$ is a group.
+\item[(2)] The map $\zeta_A:A\longrightarrow\mathrm{FG}[A]$
+is injective.
+\end{enumerate}
+
+\medskip
+\noindent For every group $(G,\cdot,e)$ and every map
+$\zeta:A\longrightarrow G^*$,
+\[
+\exists!\,g:\mathrm{FG}[A]\longrightarrow G
+\quad\text{such that}\quad g\circ\zeta_A=\zeta.
+\]
+
+\[
+\begin{tikzcd}[column sep=large, row sep=large]
+A \arrow[r,"\zeta_A"] \arrow[dr,"\zeta"']
+  & \mathrm{FG}[A] \arrow[d,dashed,"g"]\\
+& G
+\end{tikzcd}
+\]
+
+\medskip
+\noindent $A\subseteq A\cup A'$,
+\[
+A\cup A'\xrightarrow{\ \zeta_{A\cup A'}\ }(A\cup A')^*
+\xrightarrow{\ \rho\ }
+\frac{(A\cup A')^*}{R^*}
+=\langle\overline{A}\cup\overline{A'}\rangle.
+\]
+
+\[
+\begin{tikzcd}[column sep=large, row sep=large]
+A\cup A' \arrow[r,"\zeta_{A\cup A'}"] \arrow[dr,"\zeta_1"']
+  & (A\cup A')^* \arrow[r,"\rho"] \arrow[d,dashed,"f"]
+  & \mathrm{FG}[A] \arrow[dl,dashed,"g"]\\
+& G &
+\end{tikzcd}
+\]
+
+\noindent
+\[
+\zeta_1(x)=\zeta(x)\quad(\forall)\,x\in A,
+\qquad
+\zeta_1(x')=\zeta(x)^{-1}\quad(\forall)\,x'\in A'.
+\]
+
+\noindent $f\circ\zeta_{A\cup A'}=\zeta_1$,
+\qquad $R^*\subseteq R_f$.
+
+\medskip
+\noindent $(xx',1)\in R\subseteq R_f$.
+\[
+f(xx')=f(x)f(x')=e=f(1),
+\]
+\noindent where $f(x)=\zeta_1(x)=\zeta(x)$ and
+$f(x')=\zeta_1(x')=\zeta(x)^{-1}$.
+
+\bigskip
+\noindent\underline{\textit{``Word problem''}}
+\[
+R\subseteq A^*\times A^*,\qquad
+R^*\subseteq A^*\times A^*,\qquad
+u,v\in A^*,\quad u\,R^*\,v.
+\]
+
+\noindent Is there an algorithm such that $v$ is obtained from $u$
+in a finite number of steps?
+
+\medskip
+\noindent\textit{Not always.}

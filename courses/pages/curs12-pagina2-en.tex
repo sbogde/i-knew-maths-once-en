@@ -1,0 +1,93 @@
+% Lecture 12 - Page 2 (3-Jan-1995).
+% Fragment for \input{courses/pages/curs12-pagina2-en}.
+% Faithful translation, retaining manuscript sequence and notation.
+% No preamble or forced page break.
+
+\subsection*{Lecture 12 - Page 2}
+
+\noindent\underline{Example.}\quad
+$(\mathbb{Z},\cdot,1)\xrightarrow{\ f\ }(\mathbb{Z}_n,\cdot,\hat 1)$.
+
+\noindent $f(e)=\hat e$.
+
+\bigskip
+\noindent
+$(M_2(\mathbb{Z}),\cdot,I_2)\longrightarrow(\mathbb{Z},\cdot,1)$,
+\qquad $A\longmapsto\det A$.
+% The manuscript initially writes R in M_2(R) and in the codomain,
+% with Z written underneath both symbols (an apparent correction to Z).
+% Z is used here provisionally; verify against the original photograph.
+
+\bigskip
+\noindent\underline{Remark.}\quad
+There also exist functions satisfying (1) but not (2)!
+% The manuscript says, abbreviated: "(exists) si fct. care au (1) dar nu au (2)!".
+
+\bigskip
+\noindent $\ker f=R_f=\{(x,y)\in M\times M\mid f(x)=f(y)\}$.
+
+\noindent $R_f$ is a congruence on $M$.
+
+\bigskip
+\noindent\underline{Proof.}\quad $R_f$ is an equivalence relation $\sim$.
+
+\medskip
+\noindent $x\,R_f\,y\ \Longrightarrow$
+\[
+\begin{cases}
+ zx\,R_f\,zy,\\
+ xz\,R_f\,yz,
+\end{cases}
+\qquad (\forall)\ z\in M.
+\]
+
+\noindent
+$f(xz)=f(x)f(z)=f(y)f(z)=f(yz)\ \Longrightarrow\ xz\,R_f\,yz$.
+
+\medskip
+\noindent $\Longrightarrow R_f$ is compatible with ``$\cdot$''.
+% The manuscript explicitly verifies right compatibility and states
+% left compatibility, without a separate calculation for the latter.
+
+\bigskip
+\noindent\fbox{T.}\quad
+\underline{Factorisation theorem for monoid homomorphisms}
+
+\noindent (Fundamental isomorphism theorem for monoid homomorphisms.)
+
+\bigskip
+\noindent Let $f:M\longrightarrow M'$ be a monoid homomorphism.
+
+\noindent $R\subseteq M\times M$ is a congruence on $M$ such that $R\subseteq R_f$.
+
+\bigskip
+\noindent\textbf{(1)}
+\[
+\begin{tikzcd}[column sep=large,row sep=large]
+M \arrow[r,"f"] \arrow[d,"\varphi_R"'] & M' \\
+M/R \arrow[ur,dashed,"f^{*}"'] &
+\end{tikzcd}
+\]
+\noindent $\Longrightarrow\ (\exists!)\ f^{*}:M/R\longrightarrow M'$ such that
+$f^{*}\circ\varphi_R=f$.
+% The quotient-map label is difficult to distinguish (f_R or phi_R)
+% in the original; \varphi_R is used as a provisional reading.
+
+\bigskip
+\noindent\textbf{(2)}\quad $f^{*}$ injective $\Longleftrightarrow R=R_f$.
+
+\medskip
+\noindent\textbf{(3)}\quad $f^{*}$ surjective $\Longleftrightarrow f$ surjective.
+
+\medskip
+\noindent $f^{*}$ bijective $\Longleftrightarrow$\,\footnote{In the manuscript, a curved arrow connects this equivalence to conditions (2) and (3), without writing out the right-hand side again.}
+
+\bigskip
+\noindent\fbox{T.}\quad (Fundamental isomorphism theorem).\quad
+$f:M\longrightarrow M'$ a monoid homomorphism
+\[
+\Longrightarrow\quad \operatorname{Im} f\cong\frac{M}{R_f}.
+\]
+\noindent\hfill $f(M)\leq M'$.
+% "f(M) <= M'" appears beneath "Im f" in the manuscript.
+% The page ends here.

@@ -1,0 +1,83 @@
+% Lecture 12 - Page 7 (3-Jan-1995).
+% Fragment for \input{courses/pages/curs12-pagina7-en}.
+% No preamble or forced page break; source order is preserved.
+% EDITORIAL NOTES:
+% - The opening lines continue the proof of the universal property of
+%   the free commutative monoid from Page 6.
+% - Faint writing in the middle about the free group and A' appears to
+%   be an earlier, erased or abandoned draft, so it is not presented as
+%   active manuscript text. The clearly written example is retained.
+% - A'={a' | a in A} is a contextual reading of the faint original;
+%   A' is clearly used in the subsequent example.
+% - The symbol 1 in R denotes the empty word / monoid identity.
+% - The final diagram's arrow names are provisionally read as zeta
+%   (inclusion into the free monoid) and rho (quotient projection).
+
+\subsection*{Lecture 12 - Page 7}
+
+\noindent $(\mathbb{N}^{(A)},+,0)$, where
+$f:A\longrightarrow\mathbb{N}$ has finite support.
+
+\medskip
+\noindent $f+g\quad\Longrightarrow\quad$ commutative monoid.
+
+\bigskip
+\noindent $x\in A$, \quad $e_x:A\longrightarrow\mathbb{N}$,
+\[
+e_x(y)=
+\begin{cases}
+1, & y=x,\\
+0, & y\neq x.
+\end{cases}
+\]
+
+\[
+\begin{tikzcd}[column sep=huge, row sep=large]
+A \arrow[r,"\eta_A"] \arrow[d,"\eta"']
+  & \dfrac{A^*}{R^*} \arrow[dl,dashed,"{\exists\,g}"]\\
+\mathbb{N}^{(A)} &
+\end{tikzcd}
+\qquad g\circ\eta_A=\eta.
+\]
+
+\noindent $\eta(x)=e_x$.
+\[
+\eta\text{ injective}\quad\Longrightarrow\quad
+\eta_A\text{ injective}.
+\]
+
+\medskip
+\noindent\underline{Exercise}
+\[
+\frac{A^*}{R^*}\cong(\mathbb{N}^{(A)},+,0).
+\]
+
+\bigskip
+\noindent\underline{Ex.}\quad Let $a\in A$,
+$A'=\{a'\mid a\in A\}$.
+
+\medskip
+\noindent Consider the free monoid $(A\cup A')^*$
+and the relation
+\[
+\begin{aligned}
+R={}&\{(aa',1)\mid a\in A\}
+  \cup\{(a'a,1)\mid a\in A\}\\
+&\subseteq (A\cup A')^*\times(A\cup A')^*.
+\end{aligned}
+\]
+
+\[
+\mathrm{FG}[A]=\frac{(A\cup A')^*}{R^*}.
+\]
+\noindent\textit{Free group}.
+
+\medskip
+\[
+\begin{tikzcd}[column sep=large, row sep=large]
+A \arrow[r,hook] \arrow[rrr,bend right=30,"\zeta_A"']
+& A\cup A' \arrow[r,"\zeta_{A\cup A'}"]
+& (A\cup A')^* \arrow[r,"\rho"]
+& \dfrac{(A\cup A')^*}{R^*}
+\end{tikzcd}
+\]
