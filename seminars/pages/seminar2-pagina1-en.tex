@@ -1,0 +1,82 @@
+% Seminar 2, page 1 - manuscript dated 10-Oct-1994.
+% The final digit of the year is partly hidden by the damaged corner;
+% 1994 is inferred from the chronology of the notes.
+% Fragment for \input: no preamble and no forced page break.
+\subsection*{Seminar 2 - Page 1}
+
+\begin{center}
+\underline{\textbf{ALGEBRA}}\\[2pt]
+\textit{(Seminar 2)}
+\end{center}
+\begin{flushright}
+\textit{10-Oct-1994}
+\end{flushright}
+
+\noindent Monday:\quad algebra seminar, 3 hours;\quad geometry seminar, 3 hours.
+
+\bigskip
+\noindent\fbox{1}\quad Let $n\in\mathbb{N}^{*}$. Compute
+\[
+ d(n)=\left|\left\{
+ f:\{1,2,\ldots,n\}\longrightarrow\{e_1,e_2,-e_1,-e_2\}
+ \ \middle|\ \sum_{k=1}^{n}f(k)=0
+ \right\}\right|,
+\]
+\noindent where $e_1=(1,0)$, $e_2=(0,1)$.
+
+\medskip
+\noindent\underline{Solution:}
+\[
+ d(n)=\begin{cases}
+ 0, & n\text{ odd},\\[2pt]
+ \text{to be calculated}, & n\text{ even}.
+ \end{cases}
+\]
+
+\noindent Let $n=2m$. Then
+\[
+ d(2m)=\sum_{j=0}^{m}
+ \binom{2m}{j}\binom{2m-j}{j}\binom{2m-2j}{m-j}.
+\]
+\[
+\begin{aligned}
+ d(2m)
+ &=\sum_{j=0}^{m}
+ \frac{(2m)!}{j!(2m-j)!}\,
+ \frac{(2m-j)!}{j!(2m-2j)!}\,
+ \frac{(2m-2j)!}{(m-j)!(m-j)!}\\[4pt]
+ &=\sum_{j=0}^{m}\frac{(2m)!}{(m!)^2}
+ \left(\frac{m!}{j!(m-j)!}\right)^2\\[4pt]
+ &=\frac{(2m)!}{(m!)^2}\sum_{j=0}^{m}\binom{m}{j}^{2}\\[4pt]
+ &=\frac{(2m)!}{(m!)^2}\binom{2m}{m}\\[4pt]
+ &=\frac{(2m)!}{(m!)^2}\cdot\frac{(2m)!}{m!\,m!}
+ =\frac{(n!)^2}{\left[\left(\frac n2\right)!\right]^4}.
+\end{aligned}
+\]
+% The manuscript has a small counting sketch beside the first sum,
+% labelled j and 2m-2j; the corresponding combinatorial formula is retained.
+
+\bigskip
+\noindent\fbox{2}\quad\underline{(Characterisation of injective functions)}
+
+\noindent Let $f:A\longrightarrow B$. Show that the following are equivalent:
+\begin{enumerate}
+\item[a)] $f$ is injective.
+\item[b)] $f$ has a retraction, i.e. there exists $r:B\longrightarrow A$
+ such that $r\circ f=1_A$.
+\item[c)] $f$ is a monomorphism: for every set $X$ and
+ $f_1,f_2:X\longrightarrow A$,
+ \[
+ f\circ f_1=f\circ f_2\ \Longrightarrow\ f_1=f_2.
+ \]
+ \[
+ \begin{tikzcd}[column sep=large]
+ X \arrow[r, shift left=.55ex, "f_1"]
+   \arrow[r, shift right=.55ex, "f_2"']
+ & A \arrow[r, "f"] & B
+ \end{tikzcd}
+ \]
+\end{enumerate}
+% A marginal arrow links (a) and (c) graphically, not as a separate proof.
+% The equivalence (a) <=> (b) presupposes A is nonempty (or a suitable
+% convention for empty sets); the manuscript does not state this condition.

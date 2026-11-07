@@ -1,0 +1,105 @@
+% Seminar 2 - Page 3. Fragment for \input{seminars/pages/seminar2-pagina3-en}.
+% No preamble and no forced page break.
+% EDITORIAL NOTES:
+% - The photograph is numbered 3 at bottom right, despite the request
+%   saying Page 2. This file therefore represents Page 3.
+% - Some quantifier symbols in the image/preimage definitions are overwritten.
+% - The example on the right, f:Z->{0,1}, has hard-to-read interval notation.
+%   The readings [-1,0] and [1,2] are provisional. Results 1 and 0
+%   reflect the manuscript literally, rather than singleton-set notation.
+% - Several steps in part (b) are crossed out and have been omitted.
+%   Part (a) also implicitly identifies preimages of the same f(x),
+%   which need not coincide for a non-injective function.
+% - Equality in (b) for an empty indexed family would additionally
+%   require f(A)=B; the manuscript does not discuss this exception.
+%   Strictly, f(x) in f(intersection) does not force the same x to belong
+%   to every X_i without injectivity; a suitable witness is required.
+% - The proof ends at the label (c), so no continuation has been supplied.
+
+\subsection*{Seminar 2 - Page 3}
+
+\noindent\fbox{4}\quad Let $f:A\longrightarrow B$, $X\subseteq A$, $Y\subseteq B$.
+\[
+ f(X)=\{f(x)\mid x\in X\}, \qquad
+ f^{-1}(Y)=\{a\in A\mid f(a)\in Y\}.
+\]
+\noindent (The preimage of $Y$; the fibre of $Y$.)
+
+\medskip
+\noindent Let $f:A\longrightarrow B$,
+$(X_i)_{i\in I}\subseteq\mathcal{P}(A)$,
+$(Y_j)_{j\in J}\subseteq\mathcal{P}(B)$.
+\begin{enumerate}
+\item[a)]
+\[
+ f\left(\bigcup_{i\in I}X_i\right)
+  =\bigcup_{i\in I}f(X_i).
+\]
+\item[b)]
+\[
+ f\left(\bigcap_{i\in I}X_i\right)
+  \subseteq\bigcap_{i\in I}f(X_i).
+\]
+\noindent If $f$ is injective, equality holds.
+\item[c)]
+\[
+ f^{-1}\left(\bigcup_{j\in J}Y_j\right)
+  =\bigcup_{j\in J}f^{-1}(Y_j).
+\]
+\item[d)]
+\[
+ f^{-1}\left(\bigcap_{j\in J}Y_j\right)
+  =\bigcap_{j\in J}f^{-1}(Y_j).
+\]
+\end{enumerate}
+
+% Example from the right-hand margin (provisional reading).
+\noindent\underline{Ex.} $f:\mathbb Z\longrightarrow\{0,1\}$,
+\[
+ f(x)=\begin{cases}
+  0, & x>0,\\
+  1, & x\leq 0.
+ \end{cases}
+ \qquad
+ f([-1,0])=1,\quad f([1,2])=0.
+\]
+
+\medskip
+\noindent\underline{Solution}
+
+\noindent $a)$ Suppose
+$f(x)\in f\left(\bigcup_{i\in I}X_i\right)$.
+Then $x\in\bigcup_{i\in I}X_i$, so there is some $i_1\in I$
+with $x\in X_{i_1}$. Hence
+\[
+ f(x)\in f(X_{i_1})\subseteq\bigcup_{i\in I}f(X_i).
+\]
+\noindent This gives the inclusion $\subseteq$.
+
+\smallskip
+\noindent Conversely, if
+$f(x)\in\bigcup_{i\in I}f(X_i)$, then there is some $i_1\in I$
+such that $f(x)\in f(X_{i_1})$. Therefore
+\[
+ x\in X_{i_1}\subseteq\bigcup_{i\in I}X_i
+ \quad\Longrightarrow\quad
+ f(x)\in f\left(\bigcup_{i\in I}X_i\right).
+\]
+
+\medskip
+\noindent $b)$ If
+$f(x)\in f\left(\bigcap_{i\in I}X_i\right)$, then
+$x\in X_i$ for all $i\in I$, and hence
+\[
+ f(x)\in f(X_i)\quad(\forall i\in I)
+ \quad\Longrightarrow\quad
+ f(x)\in\bigcap_{i\in I}f(X_i).
+\]
+\noindent If $f$ is injective, then
+$f(x)\in\bigcap_{i\in I}f(X_i)$ implies
+$f(x)\in f(X_i)$ for every $i$, hence
+$x\in\bigcap_{i\in I}X_i$.
+
+\medskip
+\noindent $c)$
+% The proof of (c) resumes on the next manuscript page.

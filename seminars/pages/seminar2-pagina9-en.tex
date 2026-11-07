@@ -1,0 +1,113 @@
+% Seminar 2 - Page 9. Fragment for \input{seminars/pages/seminar2-pagina9-en}.
+% No preamble and no forced page break.
+% EDITORIAL NOTES:
+% - The opening continues Problem 11 from Page 8. The handwritten
+%   penultimate sign appears as (-1)^{n-2} C_n^{n-1}, whereas the
+%   general summation on the same page requires (-1)^{n-1}. The visible
+%   exponent has been retained rather than silently corrected.
+% - The derangements question is numbered 12, the Hom correspondences
+%   appear to be numbered 13, and the final derangements working is
+%   again numbered 12. The visible numbering is preserved.
+% - The n=3 example includes a crossed-out further permutation;
+%   only the two uncancelled, legible examples are typeset.
+% - In part (a) an initial Hom(X,Y x Z) expression is cancelled and
+%   replaced by Hom(X x Y,Z). The uncancelled expression is used.
+% - The final derangements sum appears to end at n-1. The usual complete
+%   expression also has the term k=n. The manuscript's limit is kept.
+% - The handwritten side sketches describe product projections. The
+%   TikZ diagram includes the legible relationships, without adding proof.
+
+\subsection*{Seminar 2 - Page 9}
+
+\noindent\underline{Continuation - Problem 11.} If $n<m$, then
+\[
+\begin{aligned}
+ s(m,n)={}&n^m-\binom{n}{1}(n-1)^m
+          +\binom{n}{2}(n-2)^m-\binom{n}{3}(n-3)^m+\cdots\\
+         &+(-1)^{n-2}\binom{n}{n-1}
+          =\boxed{\displaystyle\sum_{k=0}^{n-1}(-1)^k\binom{n}{k}(n-k)^m}.
+\end{aligned}
+\]
+
+\noindent\underline{Consequence:} for $m=n$,
+\[
+ \boxed{\displaystyle n!=\sum_{k=0}^{n}(-1)^k\binom{n}{k}(n-k)^n}.
+\]
+
+\bigskip
+\noindent\fbox{12}\quad A permutation $\sigma\in S_n$ is called a
+ \underline{derangement} if $\sigma(i)\neq i$ for every
+ $i=\overline{1,n}$.
+
+\noindent $\delta(n)$ - the number of derangements. Compute $\delta(n)$.
+
+\noindent\underline{Example} ($n=3$):
+\[
+ \begin{pmatrix}1&2&3\\3&1&2\end{pmatrix},\qquad
+ \begin{pmatrix}1&2&3\\2&3&1\end{pmatrix}.
+\]
+
+\medskip
+\noindent\fbox{HOMEWORK}
+
+\medskip
+\noindent\fbox{13}\quad Let $X,Y,Z$ be three sets. Then:
+\[
+ \text{a)}\quad
+ \operatorname{Hom}(X\times Y,Z)
+ \overset{\alpha}{\cong}
+ \operatorname{Hom}\bigl(X,\operatorname{Hom}(Y,Z)\bigr),
+\]
+\[
+ \text{b)}\quad
+ \operatorname{Hom}(X,Y\times Z)
+ \overset{\beta}{\cong}
+ \operatorname{Hom}(X,Y)\times\operatorname{Hom}(X,Z).
+\]
+\noindent For (b), the map is given by
+\[
+ \beta(f)=\bigl(P_Y\circ f,\,P_Z\circ f\bigr).
+\]
+\[
+\begin{tikzcd}[column sep=large,row sep=large]
+ & X \arrow[dl,swap,"P_Y\circ f"] \arrow[d,"f"]
+     \arrow[dr,"P_Z\circ f"] & \\
+ Y & Y\times Z \arrow[l,"P_Y"] \arrow[r,swap,"P_Z"] & Z
+\end{tikzcd}
+\]
+\noindent $P_Y(y,z)=y$, $P_Z(y,z)=z$.
+
+\bigskip
+\noindent\fbox{12}\quad \underline{Counting derangements (continued).}
+
+\noindent $\delta(n)$ equals $n!$ minus the number of permutations
+ for which there exists an $i$ such that $\sigma(i)=i$.
+\[
+ A_i=\{\sigma\in S_n\mid\sigma(i)=i\}.
+\]
+\noindent We have
+\[
+ |A_i|=(n-1)!,\qquad
+ |A_i\cap A_j|=(n-2)!,\qquad
+ |A_i\cap A_j\cap A_k|=(n-3)!.
+\]
+\[
+ \delta_n=n!-\bigl|A_1\cup A_2\cup\cdots\cup A_n\bigr|.
+\]
+\noindent By inclusion-exclusion,
+\[
+\begin{aligned}
+ \bigl|A_1\cup\cdots\cup A_n\bigr|
+  ={}&n(n-1)!-\binom{n}{2}(n-2)!+\binom{n}{3}(n-3)!+\cdots\\
+     &+(-1)^{n-2}\binom{n}{n-1}\cdot1\\
+  ={}&\sum_{k=1}^{n-1}\binom{n}{k}(-1)^{k-1}(n-k)!.
+\end{aligned}
+\]
+\noindent Hence, in the manuscript's notation,
+\[
+\begin{aligned}
+ \delta_n
+  &=n!-\sum_{k=1}^{n-1}(-1)^{k-1}\binom{n}{k}(n-k)!\\
+  &=\boxed{\displaystyle\sum_{k=0}^{n-1}(-1)^k\binom{n}{k}(n-k)!}.
+\end{aligned}
+\]

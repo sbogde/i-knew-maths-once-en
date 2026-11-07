@@ -1,0 +1,100 @@
+% Seminar 2 - Page 5. Fragment for \input{seminars/pages/seminar2-pagina5-en}.
+% No preamble and no forced page break.
+% EDITORIAL NOTES:
+% - A crossed-out calculation below Problem 5 (apparently g(x)-f(x)>0?)
+%   is omitted from the clean transcription.
+% - In Solution 5, membership f(n_2) in A follows from the strict
+%   inequality f(n_2)<g(n_2); the manuscript abbreviates this step.
+% - The condition in Problem 7 is read as f(n+1)>f(f(n)).
+% - The final lines only establish f(n)>=n; the missing concluding
+%   argument for f=id is not supplied or reconstructed.
+
+\subsection*{Seminar 2 - Page 5}
+
+\noindent\fbox{5}\quad Let $f,g:\mathbb{N}\longrightarrow\mathbb{N}$,
+with $f$ injective and $g$ surjective. If
+\[
+ f(n)\leq g(n)\qquad (\forall n\in\mathbb{N}),
+\]
+\noindent then $f=g$.
+
+\medskip
+\noindent\fbox{6}\quad Let $f,g:\mathbb{N}\longrightarrow\mathbb{N}$. If
+\[
+ \max(f,g)\ \text{is surjective},\qquad
+ \min(f,g)\ \text{is injective},
+\]
+\noindent then $f=g$.
+
+\medskip
+\noindent\underline{Solution 5.} Suppose $f\neq g$. Then there exists
+$n\in\mathbb{N}$ such that
+\[
+ f(n)\neq g(n)\quad\Longrightarrow\quad f(n)<g(n).
+\]
+\noindent Let
+\[
+ A=\{f(n)\mid f(n)\neq g(n)\}\neq\varnothing.
+\]
+\noindent $A$ is a set of natural numbers, so there exists
+\[
+ m=\min A=f(n_1)\in\mathbb{N}.
+\]
+\noindent Since $g$ is surjective, there is $n_2\in\mathbb{N}$ such that
+\[
+ g(n_2)=m=f(n_1),\qquad n_1\neq n_2.
+\]
+\noindent By injectivity of $f$,
+\[
+ f(n_1)\neq f(n_2).
+\]
+\noindent However,
+\[
+ f(n_2)\leq g(n_2)=f(n_1)
+ \quad\Longrightarrow\quad f(n_2)<f(n_1).
+\]
+\noindent Consequently, $f(n_2)\in A$ and
+\[
+ f(n_2)<\min A,\qquad \text{a contradiction}.
+\]
+\noindent Thus $A=\varnothing$, whence $f=g$.
+
+\medskip
+\noindent\underline{Solution 6.}
+\[
+ \min(f,g)\leq\max(f,g)
+ \quad\Longrightarrow\quad
+ \min(f,g)=\max(f,g)
+ \quad\Longrightarrow\quad f=g.
+\]
+
+\bigskip
+\noindent\fbox{7}\quad Let
+$f:\mathbb{N}^{*}\longrightarrow\mathbb{N}^{*}$ satisfy
+\[
+ f(n+1)>f(f(n))\qquad (\forall n\in\mathbb{N}^{*}).
+\]
+\noindent Then $f=1_{\mathbb{N}^{*}}$.
+
+\medskip
+\noindent\underline{Solution.} $f(k)\geq k$ for every
+$k\in\mathbb{N}^{*}$.
+
+\noindent More generally:
+\[
+ n\geq k\quad\Longrightarrow\quad f(n)\geq k.
+\]
+\noindent Induction on $k$.
+
+\noindent $k=1$: there is nothing to prove.
+
+\noindent $k\longmapsto k+1$: if $n\geq k+1$, then
+\[
+ n-1\geq k\quad\Longrightarrow\quad f(n-1)\geq k.
+\]
+\noindent By the inductive hypothesis and the condition in the question,
+\[
+ f(n)>f\bigl(f(n-1)\bigr)\geq k
+ \quad\Longrightarrow\quad f(n)>k.
+\]
+% Any remaining argument, if present, belongs on the next manuscript page.

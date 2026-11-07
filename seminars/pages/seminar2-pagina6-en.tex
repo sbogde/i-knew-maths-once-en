@@ -1,0 +1,98 @@
+% Seminar 2 - Page 6. Fragment for \input{seminars/pages/seminar2-pagina6-en}.
+% No preamble and no forced page break.
+% EDITORIAL NOTES:
+% - This page continues the argument for Problem 7 from Page 5.
+% - Several intermediate expressions are crossed out or overwritten;
+%   only legible, uncancelled expressions appear in the clean text.
+% - The indices u_1,u_2,u_3 in the descending sequence follow the
+%   handwriting; the repeated construction is abbreviated in the source.
+% - In Problem 8, Hom(A,B) denotes all maps A -> B, not explicitly
+%   homomorphisms of an algebraic structure.
+% - Problem 9 asserts there is no surjection X -> P(X) without a proof
+%   on this manuscript page.
+% - Problem 10 proves only injectivity of phi; a proof of surjectivity
+%   has not been invented or added.
+
+\subsection*{Seminar 2 - Page 6}
+
+\noindent\underline{Solution 7 (continued).}
+\[
+\Longrightarrow f(n)\geq k+1.
+\]
+\noindent Hence
+\[
+ f(k)\geq k\qquad (\forall k\in\mathbb{N}^{*}).
+\]
+
+\noindent Suppose, for a contradiction, that there exists
+$k\in\mathbb{N}^{*}$ such that
+\[
+ f(k)>k.
+\]
+\noindent We show that if $n>k$, then $f(n-1)>k$.
+\[
+ n>k\ \Longrightarrow\ n\geq k+1\ \Longrightarrow\ n-1\geq k
+ \ \Longrightarrow\ f(n-1)\geq k.
+\]
+\noindent Suppose $f(n-1)=k$. Then
+\[
+ k=f(n-1)\geq n-1\geq k
+ \quad\Longrightarrow\quad n-1=k
+ \quad\Longrightarrow\quad f(k)=k,\quad\text{a contradiction}.
+\]
+
+\noindent Let $u_1>k$. Then
+\[
+ f(u_1)>f(u_2),\qquad u_2=f(u_1-1)>k.
+\]
+\noindent Similarly,
+\[
+ f(u_2)>f(u_3),\qquad u_3=f(u_2-1)>k.
+\]
+\noindent Continuing indefinitely, we obtain an infinite strictly
+ decreasing sequence of natural numbers.
+
+\bigskip
+\noindent\fbox{8}\quad
+\[
+ \operatorname{Hom}(A,B)\overset{\mathrm{def}}{=}
+ \{f\mid f:A\longrightarrow B\}.
+\]
+\noindent $\mathcal{P}(X)$ is in bijection with
+\[
+ \operatorname{Hom}(X,\{0,1\})
+   =\{\varphi\mid\varphi:X\longrightarrow\{0,1\}\}.
+\]
+
+\medskip
+\noindent\fbox{9}\quad There is no surjective map
+\[
+ f:X\longrightarrow\mathcal{P}(X).
+\]
+
+\medskip
+\noindent\fbox{10}\quad
+\[
+ \varphi:\mathcal{P}(X)\longrightarrow
+ \operatorname{Hom}(X,\{0,1\}).
+\]
+\noindent If $A\subseteq X$, let
+$\varphi(A)=\varphi_A:X\longrightarrow\{0,1\}$, where
+\[
+ \varphi_A(x)=
+ \begin{cases}
+  1,&x\in A,\\
+  0,&x\notin A.
+ \end{cases}
+\]
+\noindent $\varphi$ is injective: if
+\[
+ \varphi(A)=\varphi(B),\qquad \varphi_A=\varphi_B,
+\]
+\noindent then
+\[
+ x\in A\ \Longleftrightarrow\ \varphi_A(x)=1
+ \ \Longleftrightarrow\ \varphi_B(x)=1
+ \ \Longleftrightarrow\ x\in B
+ \quad\Longrightarrow\quad A=B.
+\]

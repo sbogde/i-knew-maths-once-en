@@ -1,0 +1,99 @@
+% Seminar 2 - Page 7. Fragment for \input{seminars/pages/seminar2-pagina7-en}.
+% No preamble and no forced page break.
+% EDITORIAL NOTES:
+% - The opening lines continue Problem 10 from Page 6, proving surjectivity
+%   of the correspondence between subsets and characteristic functions.
+% - Problem 9 uses the diagonal subset M to refute a surjection X -> P(X).
+%   The subsequent assertion that there is no injection P(X) -> X is
+%   preserved as written, without supplying a further proof.
+% - The inclusion-exclusion formula and induction follow the manuscript.
+%   The final displayed calculation stops where the manuscript page ends.
+% - Crossed-out marks and faint show-through from the reverse are omitted.
+
+\subsection*{Seminar 2 - Page 7}
+
+\noindent\underline{Solution 10 (continued).} $\varphi$ is surjective.
+
+\noindent Let $\varphi:X\longrightarrow\{0,1\}$. Find $A\subseteq X$ such
+that $\varphi=\varphi_A$. Take
+\[
+ A:=\varphi^{-1}(1)=\{x\in X\mid\varphi(x)=1\}.
+\]
+\noindent Then
+\[
+ \varphi_A=\varphi_{\varphi^{-1}(1)}=\varphi,
+\]
+\[
+ \varphi_{\varphi^{-1}(1)}(y)=
+ \begin{cases}
+  1,& y\in\varphi^{-1}(1),\\
+  0,& y\notin\varphi^{-1}(1)
+ \end{cases}
+ =
+ \begin{cases}
+  1,&\varphi(y)=1,\\
+  0,&\varphi(y)=0.
+ \end{cases}
+\]
+
+\bigskip
+\noindent\fbox{9}\quad\underline{Solution.} There is no surjective map
+$f:X\longrightarrow\mathcal{P}(X)$.
+
+\noindent Suppose, for a contradiction, that there exists a surjective map
+$f:X\longrightarrow\mathcal{P}(X)$.
+
+\noindent Let
+\[
+ M:=\{a\in X\mid a\notin f(a)\}=f(b),\qquad b\in X.
+\]
+\noindent Then
+\[
+ b\in M\ \Longleftrightarrow\ b\notin f(b)=M,\qquad\text{a contradiction},
+\]
+\[
+ b\notin M\ \Longleftrightarrow\ b\in f(b)=M.
+\]
+\noindent This implies that there is no injective map
+$i:\mathcal{P}(X)\longrightarrow X$.
+
+\noindent $\mathcal{P}(X)$ cannot be embedded in $X$.
+
+\bigskip
+\noindent\underline{The principle of inclusion-exclusion.}
+
+\noindent Let $A_1,A_2,\ldots,A_n$ be finite sets. Then
+\[
+\begin{aligned}
+ \bigl|A_1\cup\cdots\cup A_n\bigr|
+ ={}&\sum_{i=1}^{n}|A_i|
+ -\sum_{1\leq i<j\leq n}|A_i\cap A_j|\\
+ &+\sum_{1\leq i<j<k\leq n}|A_i\cap A_j\cap A_k|
+ -\cdots\\
+ &+(-1)^{n-1}|A_1\cap\cdots\cap A_n|.
+\end{aligned}
+\]
+
+\noindent\underline{Solution.} Induction on $n$.
+
+\noindent $n=1$: O.K., $|A_1|=|A_1|$.
+
+\noindent $n=2$:
+\[
+ |A_1\cup A_2|=|A_1|+|A_2|-|A_1\cap A_2|,
+ \qquad\text{O.K.}
+\]
+
+\noindent $n\longmapsto n+1$:
+\[
+\begin{aligned}
+ &|A_1\cup\cdots\cup A_n\cup A_{n+1}|\\
+ &\quad=|A_1\cup\cdots\cup A_n|+|A_{n+1}|
+ -|(A_1\cup\cdots\cup A_n)\cap A_{n+1}|\\
+ &\quad=\sum_{i=1}^{n+1}|A_i|
+ -\sum_{1\leq i<j\leq n}|A_i\cap A_j|
+ +\sum_{1\leq i<j<k\leq n}|A_i\cap A_j\cap A_k|
+ -\cdots
+\end{aligned}
+\]
+% The inductive calculation is unfinished at the foot of the manuscript page.

@@ -1,0 +1,122 @@
+% Seminar 2 - Page 4. Fragment for \input{seminars/pages/seminar2-pagina4-en}.
+% No preamble and no forced page break.
+% EDITORIAL NOTES:
+% - This page continues the work begun on Page 3: it first returns to
+%   parts (a) and (b), then begins the proof of (c).
+% - The equality in (b), for injective f, tacitly assumes a non-empty
+%   index family; the manuscript does not discuss the empty case.
+% - In the finite example A={-1,0,1}, f(x)=x^2, the handwriting seems
+%   to say f(X_1)=A, although f({-1,1})={1}. The apparent A is retained.
+% - Right-margin interval calculations seem to concern f(x)=x^2, but
+%   the domain is not restated. The manuscript appears to say
+%   f([-1,3])=[1,9]; mathematically its image would be [0,9].
+%   That apparent source expression is retained and flagged here.
+% - Interval brackets and certain endpoints in the boxed calculation
+%   are provisional readings of the handwriting.
+% - The final proof (c) ends mid-argument; no continuation or part (d)
+%   has been added.
+
+\subsection*{Seminar 2 - Page 4}
+
+\noindent\underline{Solution (continued)}
+
+\medskip
+\noindent $a)$ \underline{$\subseteq$}.
+Let $y\in f\left(\bigcup_{i\in I}X_i\right)$. Then
+\[
+\exists\,x\in\bigcup_{i\in I}X_i\quad\text{such that}\quad f(x)=y.
+\]
+\noindent Thus there is $i_0\in I$ with $x\in X_{i_0}$ and $f(x)=y$, hence
+\[
+ y\in f(X_{i_0})\subseteq\bigcup_{i\in I}f(X_i).
+\]
+\noindent \underline{$\supseteq$}.
+There is $i_0\in I$ such that
+$y\in f(X_{i_0})$, whence
+\[
+ y\in f\left(\bigcup_{i\in I}X_i\right).
+\]
+
+\medskip
+\noindent $b)$ Let
+\[
+ y\in f\left(\bigcap_{i\in I}X_i\right).
+\]
+\noindent There is $x\in\bigcap_{i\in I}X_i$ with $f(x)=y$, so
+\[
+ y\in\bigcap_{i\in I}f(X_i).
+\]
+\noindent Suppose $f$ is injective. If
+$y\in\bigcap_{i\in I}f(X_i)$, then
+$y\in f(X_i)$ for every $i\in I$. Thus
+\[
+ (\forall i\in I)(\exists a_i\in X_i):\ f(a_i)=y.
+\]
+\noindent By injectivity, $a_i=a_j$ for all $i,j\in I$.
+Denote this common element by $a$. Then
+\[
+ f(a)=y,\qquad a\in\bigcap_{i\in I}X_i,
+ \qquad y\in f\left(\bigcap_{i\in I}X_i\right).
+\]
+
+\medskip
+\noindent\underline{Example.} The manuscript also gives
+\[
+ A=\{-1,0,1\},\qquad B=\{0,1\},\qquad f(x)=x^2,
+\]
+\[
+ X_1=\{-1,1\},\qquad X_2=\{-1,0\},
+\]
+\[
+ f(X_1)=A,\qquad f(X_2)=\{0,1\}.
+\]
+
+% Small sketch of the parabola y=x^2, after the marginal drawing.
+\begin{center}
+\begin{tikzpicture}[>=stealth,scale=.77]
+  \draw[->] (-1.8,0)--(3.0,0) node[right] {$x$};
+  \draw[->] (0,-.25)--(0,3.45) node[above] {$y$};
+  \foreach \x in {-1,0,1,2,3}{\draw (\x,.06)--(\x,-.06) node[below] {\scriptsize $\x$};}
+  \draw[domain=-1.35:2.35,samples=70,smooth,thick] plot (\x,{.5*\x*\x});
+\end{tikzpicture}
+\end{center}
+
+% Right-margin examples: interval brackets and some endpoints are uncertain.
+\noindent\underline{Marginal calculations (provisional readings):}
+\[
+\begin{aligned}
+ f([1,2])&=[1,4], & f([-1,3])&=[1,9],\\
+ f([1,2])&=f([1,3]\cap[1,2])=[1,4].
+\end{aligned}
+\]
+\[
+\boxed{\begin{aligned}
+ f([-1,0])&=[0,1],\\
+ f([0,2])&=[0,4],\\
+ f([-1,0]\cap[0,2])&=f(0)=0,\\
+ f([-1,0])\cap f([0,2])&=[0,1].
+\end{aligned}}
+\]
+
+\medskip
+\noindent $c)$ \underline{$\subseteq$}.
+Let
+\[
+ x\in f^{-1}\left(\bigcup_{j\in J}Y_j\right).
+\]
+\noindent Then
+\[
+ f(x)\in\bigcup_{j\in J}Y_j
+ \quad\Longrightarrow\quad
+ (\exists j_0\in J):\ f(x)\in Y_{j_0}
+ \quad\Longrightarrow\quad
+ x\in f^{-1}(Y_{j_0})
+ \subseteq\bigcup_{j\in J}f^{-1}(Y_j).
+\]
+\noindent \underline{$\supseteq$}.
+If $x\in\bigcup_{j\in J}f^{-1}(Y_j)$, there is $j_0\in J$
+with $x\in f^{-1}(Y_{j_0})$, and therefore
+\[
+ f(x)\in Y_{j_0}\ \Longrightarrow\ f(x)\in\bigcup_{j\in J}Y_j.
+\]
+% The handwritten page stops here.
