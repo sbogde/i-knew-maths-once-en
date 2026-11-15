@@ -1,0 +1,121 @@
+% Seminar 4 - Page 3. Fragment for
+% \input{seminars/pages/seminar4-pagina3-en}; no preamble or forced page break.
+% EDITORIAL NOTES:
+% - In Exercise 7 the manuscript appears to say "nu e inj." (not
+%   injective). The canonical inclusion Z -> Q IS injective, but not
+%   surjective. This apparent slip is retained in the displayed text,
+%   marked "as written", rather than silently replaced.
+% - All monoids in Exercise 7 are considered under multiplication.
+%   The diagram and the argument use the epimorphism definition: two
+%   morphisms out of Q agreeing on Z must be equal.
+% - The proof writes e=u(1)=u(m/m) and similarly for v, then uses
+%   uniqueness of inverses in a monoid. The handwritten line for v
+%   uses a long dash in place of repeated intermediate steps.
+% - Exercise 8 assumes a hypothetical isomorphism (not merely an
+%   arbitrary bijection), as shown by the homomorphism identity and
+%   use of injectivity at the end.
+% - The handwritten right-hand brace at f(a)f(b)=4 contains a faint
+%   second entry f(b)=...?; the decisive f(a)=1 => a=1 is clear.
+% - The primes x_1,x_2,x_3 are prime in N^*, not "prime" elements of
+%   3N+1. The word "prime" is taken verbatim from the manuscript.
+% - Faint show-through and crossed-out intermediate notes are omitted.
+
+\subsection*{Seminar 4 - Page 3}
+
+\noindent\underline{Exercise 7.}
+The inclusion
+\[
+ i:(\mathbb Z,\cdot)\longrightarrow(\mathbb Q,\cdot),
+ \qquad i(x)=x,
+\]
+is an epimorphism of monoids which is \emph{not injective}
+(as written in the manuscript).
+
+\smallskip
+\noindent\underline{Epimorphism.}
+For every monoid $M$ and all monoid homomorphisms $u,v$ such that
+$u\circ i=v\circ i$, one has $u=v$.
+\[
+\begin{tikzcd}[column sep=large]
+ \mathbb Z \arrow[r,"i"] &
+ \mathbb Q \arrow[r,shift left=.7ex,"u"]
+            \arrow[r,shift right=.7ex,swap,"v"] & M
+\end{tikzcd}
+\]
+
+\noindent Let $(M,\cdot)$ be a monoid and
+$u,v:\mathbb Q\to M$ monoid homomorphisms with
+$u\circ i=v\circ i$. Hence
+\[
+ u(m)=v(m)\qquad(\forall m\in\mathbb Z).
+\]
+We wish to show $u(r)=v(r)$ for every $r\in\mathbb Q$.
+Let $m\in\mathbb Z$, $m\ne0$. Then
+\[
+\begin{aligned}
+ e=u(1)
+  &=u\!\left(\frac{m}{m}\right)
+   =u\!\left(m\cdot\frac1m\right)
+   =u(m)u\!\left(\frac1m\right)
+   =u\!\left(\frac1m\right)u(m),\\
+ e=v(1)
+  &=\cdots
+   =v\!\left(\frac1m\right)v(m).
+\end{aligned}
+\]
+Therefore $u(1/m)$ is the inverse of $u(m)$, and similarly
+$v(1/m)$ is the inverse of $v(m)$. Since $u(m)=v(m)$,
+\[
+ u\!\left(\frac1m\right)=v\!\left(\frac1m\right).
+\]
+For $r=n/m\in\mathbb Q$, with $m\ne0$,
+\[
+ u(r)=u(n)u\!\left(\frac1m\right)
+     =v(n)v\!\left(\frac1m\right)=v(r).
+\]
+Consequently $u=v$.
+
+\smallskip
+\noindent [Every epimorphism of groups is surjective.]
+
+\medskip
+\noindent\underline{Exercise 8.}
+The monoids
+\[
+ (\mathbb N^*,\cdot),\qquad
+ (3\mathbb N+1,\cdot),\qquad
+ 3\mathbb N+1=\{3k+1\mid k\in\mathbb N\},
+\]
+are not isomorphic.
+
+\noindent\underline{Proof.}
+Suppose that there exists an isomorphism
+\[
+ f:\mathbb N^*\longrightarrow 3\mathbb N+1,
+ \qquad f(xy)=f(x)f(y)
+ \quad(\forall x,y\in\mathbb N^*).
+\]
+Since $f$ is surjective, there exist $x_1,x_2,x_3\in\mathbb N^*$
+such that
+\[
+ f(x_1)=4,\qquad f(x_2)=10,\qquad f(x_3)=25.
+\]
+We show that $x_1,x_2,x_3$ are prime numbers.
+If $x_1=ab$ with $a,b>1$, then
+\[
+ f(x_1)=f(a)f(b)=4
+ \quad\Longrightarrow\quad f(a)=1
+ \quad\Longrightarrow\quad a=1,
+ \qquad\text{a contradiction.}
+\]
+Analogously, $x_2$ and $x_3$ are prime numbers.
+But $4\cdot25=10^2$, so
+\[
+\begin{aligned}
+ f(x_1)f(x_3)&=f(x_2)^2,\\
+ f(x_1x_3)&=f(x_2^2),\\
+ x_1x_3&=x_2^2
+  \quad\Longrightarrow\quad x_1=x_2=x_3,
+  \qquad\text{false.}
+\end{aligned}
+\]

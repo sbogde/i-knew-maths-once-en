@@ -1,0 +1,84 @@
+% Seminar 4 - Page 5. Fragment for
+% \input{seminars/pages/seminar4-pagina5-en}; no preamble or forced page break.
+% EDITORIAL NOTES:
+% - The opening is a counterexample to a Cantor-Bernstein-type assertion
+%   for groups: each group can be isomorphic to a subgroup of the other,
+%   without the groups being isomorphic. The handwritten implication
+%   ending in G_1 not isomorphic to G_2 is interpreted in this context,
+%   not as a universal implication.
+% - The tuples are handwritten as (q_0,q_1,...,q_n), while the displayed
+%   shift phi(q_0,...,q_n)=(0,q_0,...) only gives the intended group
+%   isomorphism when the coordinates continue indefinitely. This
+%   indexing ambiguity is NOT silently repaired in the displayed text.
+%   For finite fixed n, Q^(n+1) is not isomorphic to 0 x Q^n.
+% - The reason G_1 and G_2 are not isomorphic is not proved in the notes.
+%   For the infinite-sequence reading, G_1 is divisible, whereas G_2
+%   (with its integral first coordinate) is not.
+% - The final line lists orders 4,5,6,7, but spells out only the groups
+%   of orders 4,5,6. No classification for order 7 is written down.
+% - An ink correction precedes the Z_6/S_3 line; only the legible
+%   group names are transcribed. Very faint show-through is omitted.
+
+\subsection*{Seminar 4 - Page 5}
+
+\noindent Let $G_1,G_2$ be groups. The manuscript considers the situation
+\[
+\begin{gathered}
+ G_1\text{ is isomorphic to a subgroup of }G_2,\\
+ G_2\text{ is isomorphic to a subgroup of }G_1,
+\end{gathered}
+\qquad\text{but}\qquad G_1\not\cong G_2.
+\]
+
+\medskip
+\noindent Define
+\[
+ G_1:=\bigl\{x=(q_0,q_1,\ldots,q_n)\mid q_i\in\mathbb Q\bigr\}.
+\]
+Then $(G_1,+)$ is a group. For
+$y=(u_0,u_1,\ldots,u_n)$,
+\[
+ x+y=(q_0+u_0,\ldots,q_n+u_n).
+\]
+
+\noindent Consider also
+\[
+ \begin{aligned}
+ G_2:=\bigl\{\,&x=(q_0,q_1,\ldots,q_n)\mid
+     q_0\in\mathbb Z,\quad q_i\in\mathbb Q\ 
+     (1\leq i\leq n)\,\bigr\}\subseteq G_1.
+ \end{aligned}
+\]
+The set $(G_2,+)$ is a group and $G_2\leq G_1$
+($G_2$ is a subgroup of $G_1$).
+
+\medskip
+\noindent Put
+\[
+ H:=\bigl\{x=(0,q_1,\ldots,q_n)\mid
+     q_i\in\mathbb Q\ (1\leq i\leq n)\bigr\}.
+\]
+Then $H\leq G_2$. The notes give the map
+\[
+ \begin{aligned}
+ \varphi:G_1&\longrightarrow H,\\
+ \varphi\bigl((q_0,\ldots,q_n)\bigr)&=(0,q_0,\ldots),
+ \end{aligned}
+\]
+and state that $\varphi$ is a group isomorphism.
+
+\medskip
+\noindent\textbf{Conclusion (as in the manuscript).}
+$G_1$ and $G_2$ are not isomorphic groups.
+
+\medskip
+\noindent\underline{Groups of small order.}
+The manuscript mentions $|G|\in\{4,5,6,7\}$ and records
+\[
+\begin{array}{r@{\quad\Longrightarrow\quad}l}
+ |G|=4 & G\cong\mathbb Z_4\quad\text{or}\quad
+               \mathbb Z_2\times\mathbb Z_2,\\[2pt]
+ |G|=5 & G\cong\mathbb Z_5,\\[2pt]
+ |G|=6 & G\cong\mathbb Z_6\quad\text{or}\quad S_3.
+\end{array}
+\]

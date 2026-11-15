@@ -1,0 +1,114 @@
+% Seminar 4 - Page 1. Fragment for
+% \input{seminars/pages/seminar4-pagina1-en}; no preamble or forced page break.
+% EDITORIAL NOTES:
+% - The manuscript heading is "ALGEBRA (Seminar 4)" and the visible date
+%   reads "31-OCT-95". This appears chronologically inconsistent with
+%   Seminar 3 (24-Oct-1994). The written year 95 is retained, not corrected.
+% - The cardinal sum is written using A_i UNION {i}. This does not, in
+%   general, give the cardinal sum: ordinarily one takes a disjoint
+%   union, e.g. |union_i (A_i TIMES {i})|. The manuscript is retained.
+% - The claim that the operations are well-defined is stated, but the
+%   only accompanying diagram concerns transport of a map B -> A
+%   along bijections A -> A' and B -> B'.
+% - The manuscript repeats the labels Exercise 4 and Exercise 5.
+%   Both occurrences have been kept in their original order.
+% - Cantor's paradox is reported using a "set of all cardinals";
+%   modern set theory distinguishes this collection as a proper class.
+%   This is an editorial observation, not a silent change to the text.
+% - The proof that a set of cardinals has a strict upper bound uses the
+%   handwritten sum formula, whose disjointness issue is noted above.
+% - Minor cancelled writing and faint show-through are not reconstructed.
+
+% \phantomsection
+\section{Seminar 4}
+% \addcontentsline{toc}{subsection}{Seminar 4}
+\begin{flushright}
+\textit{31-Oct-1995 (as written)}
+\end{flushright}
+\begingroup
+\setlength{\abovedisplayskip}{5pt}
+\setlength{\belowdisplayskip}{5pt}
+\setlength{\abovedisplayshortskip}{3pt}
+\setlength{\belowdisplayshortskip}{3pt}
+
+\noindent\underline{Operations on cardinal numbers.}
+Let $\alpha=|A|$, $\beta=|B|$. Define
+\[
+  \alpha\beta\ \overset{\mathrm{def}}{=}\ |A\times B|,
+  \qquad
+  \alpha^{\beta}\ \overset{\mathrm{def}}{=}\
+      |\operatorname{Hom}(B,A)|.
+\]
+For $\alpha=2$,
+\[
+  2^{\beta}=|\mathcal P(B)|.
+\]
+Let $(\alpha_i)_{i\in I}$ be a family of cardinal numbers,
+$\alpha_i=|A_i|$. The handwritten sum is defined by
+\[
+  \sum_{i\in I}\alpha_i\ \overset{\mathrm{def}}{=}\
+  \left|\bigcup_{i\in I}(A_i\cup\{i\})\right|.
+\]
+
+\noindent\underline{The operations are well-defined.}
+Suppose
+\[
+\begin{aligned}
+ \alpha=|A|=|A'|&\iff\exists\,f:A\longrightarrow A'\text{ bijective},\\
+ \beta=|B|=|B'|&\iff\exists\,g:B\longrightarrow B'\text{ bijective}.
+\end{aligned}
+\]
+For any $h:B\longrightarrow A$, the transported map is
+\[
+  \varphi(h)=f\circ h\circ g^{-1},\qquad\varphi\text{ bijective}.
+\]
+\[
+\begin{tikzcd}[column sep=large,row sep=large]
+ B\arrow[r,"h"] & A\arrow[d,"f"]\\
+ B'\arrow[u,"g^{-1}"]\arrow[r,"f\circ h\circ g^{-1}"'] & A'
+\end{tikzcd}
+\]
+
+\medskip
+\noindent\underline{Exercise 4.}
+Let $K$ be a set of cardinal numbers. Show that there exists a
+cardinal number larger than every cardinal in $K$.
+
+\smallskip
+\noindent\underline{Exercise 5 (Cantor's paradox).}
+The collection of all cardinal numbers, taken as a set, leads to a
+contradiction.
+
+\smallskip
+\noindent\underline{Exercise 4 (as numbered again in the manuscript).}
+For $\alpha=|A|$ and $\beta=|B|$, the notes define
+\[
+ \alpha\leq\beta\ \overset{\mathrm{def}}{\iff}\
+ \exists\,f:A\longrightarrow B\text{ injective},
+ \qquad
+ \alpha<\beta\ \overset{\mathrm{def}}{\iff}\
+ \alpha\leq\beta\ \text{and}\ \alpha\neq\beta.
+\]
+\noindent\underline{Observation.}
+There is no surjection $A\longrightarrow\mathcal P(A)$, whereas
+$h:A\longrightarrow\mathcal P(A)$, $h(a)=\{a\}$, is injective. Hence
+\[
+ \alpha=|A|<|\mathcal P(A)|\iff\alpha<2^{\alpha}.
+\]
+
+\noindent\underline{Proof of the first Exercise 4.}
+Write $K=\{\alpha_i\mid i\in I\}$ and put
+$\beta\overset{\mathrm{not}}{=}\sum_{i\in I}\alpha_i$.
+The notes use the maps
+\[
+ \varphi_i:A_i\longrightarrow\bigcup_{i\in I}(A_i\cup\{i\}),
+ \qquad\varphi_i(x)=x,
+\]
+so that $\alpha_i\leq\beta$ for every $i\in I$. Since $\beta<2^{\beta}$, put $\gamma=2^{\beta}$. Then
+$\alpha_i<\gamma$ for every $i\in I$.
+
+\noindent\underline{Exercise 5 (repeated).}
+If $\mathcal C$ is the set of all cardinal numbers, the preceding
+argument gives $\gamma\in\mathcal C$ with $\gamma>\alpha$ for
+every $\alpha\in\mathcal C$, which is a contradiction.
+\endgroup

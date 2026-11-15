@@ -1,0 +1,90 @@
+% Seminar 4 - Page 2. Fragment for
+% \input{seminars/pages/seminar4-pagina2-en}; no preamble or forced page break.
+% EDITORIAL NOTES:
+% - Exercise 6 has two parts. The proof distinguishes an existing monoid
+%   from a semigroup without an identity, then adjoins a new symbol, infinity.
+% - The source explicitly writes x*infinity = infinity*x = x. It does not
+%   separately write infinity*infinity = infinity; that case is required
+%   to make the new operation a monoid operation.
+% - The source first writes Z_n generically. The subsequent equality
+%   3-hat*2-hat = 1-hat*2-hat, with 3-hat != 1-hat, works for n=4;
+%   it is NOT true for arbitrary n. We retain Z_n and flag this issue.
+% - The final matrix-monoid example is recorded as an observation, not
+%   expanded into a proof: AB=CB with A != C.
+% - Handwritten abbreviations and very faint show-through are not
+%   reconstructed beyond what the mathematical lines support.
+
+\subsection*{Seminar 4 - Page 2}
+
+\noindent\underline{Exercise 6.}
+
+\noindent\textbf{(a)} Show that every semigroup $S$ can be embedded in a
+monoid: there exist a monoid $M$ and an injective semigroup
+homomorphism
+\[
+  f:S\longrightarrow M, \qquad f(xy)=f(x)f(y).
+\]
+
+\noindent\textbf{(b)} There also exists a monoid that cannot be embedded
+in a group: a monoid $M$ for which there are no group $G$ and
+injective monoid homomorphism $f:M\to G$.
+
+\medskip
+\noindent\underline{Proof.}
+
+\noindent\textbf{(a)} Let $S$ be a semigroup.
+
+\smallskip
+\noindent\textbf{I.} If $S$ is already a monoid, take $M=S$ and
+\[
+  i:S\longrightarrow M=S,\qquad i(x)=x.
+\]
+
+\noindent\textbf{II.} Suppose $S$ is a semigroup but not a monoid.
+Take $\infty\notin S$ and put
+\[
+  M\overset{\mathrm{not}}{=}S\cup\{\infty\}.
+\]
+For $x,y\in M$ the operation is defined, as written in the notes, by
+\[
+\begin{gathered}
+  x\circ y\ \overset{\mathrm{def}}{=}\ xy
+     \quad(x,y\in S),\\
+  \infty\circ x\ \overset{\mathrm{def}}{=}\
+     x\circ\infty\ \overset{\mathrm{def}}{=}\ x
+     \quad(x\in S).
+\end{gathered}
+\]
+Then $(M,\circ,\infty)$ is a monoid. Consider
+\[
+  f:S\longrightarrow S\cup\{\infty\}=M,\qquad f(x)=x;
+\]
+thus $S$ is embedded in the monoid $M$.
+
+\medskip
+\noindent\textbf{(b)} The notes consider the monoid
+\[
+  \mathbb Z_n=\{\widehat{0},\widehat{1},\ldots,
+      \widehat{n-1}\},\qquad (\mathbb Z_n,\cdot).
+\]
+Suppose that there exist a group $G$ and an injective monoid
+homomorphism $f:\mathbb Z_n\to G$. Thus
+\[
+  f(xy)=f(x)f(y),\qquad f(\widehat{1})=e.
+\]
+The handwritten cancellation argument is
+\[
+\begin{aligned}
+  f(\widehat{3})f(\widehat{2})
+    &=f(\widehat{1})f(\widehat{2})\\
+  &\Longrightarrow f(\widehat{3})=f(\widehat{1})\\
+  &\overset{f\,\mathrm{injective}}{\Longrightarrow}
+      \widehat{3}=\widehat{1}\qquad\text{(false).}
+\end{aligned}
+\]
+
+\noindent Another example written at the bottom is the matrix monoid
+$(M_n(K),\cdot)$, with matrices $A,B,C\in M_n(K)$ such that
+\[
+  AB=CB,\qquad A\neq C.
+\]

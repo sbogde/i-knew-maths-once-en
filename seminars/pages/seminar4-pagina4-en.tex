@@ -1,0 +1,98 @@
+% Seminar 4 - Page 4. Fragment for
+% \input{seminars/pages/seminar4-pagina4-en}; no preamble or forced page break.
+% EDITORIAL NOTES:
+% - The opening "Show that" statement appears to compare multiplicative
+%   monoids mN+1 and tN+1 with groups U(Z_m), U(Z_t), presumably the
+%   groups of units of the residue-class rings. The handwritten symbol
+%   resembles a large U; this identification is provisional. No proof
+%   of this opening statement is present on the manuscript page.
+% - Exercise 9, AS WRITTEN, requires a left identity ex=x and a RIGHT
+%   inverse xx'=e for each x. That combination does not characterise
+%   groups (a right-zero semigroup provides a counterexample).
+%   The handwritten PROOF instead chooses LEFT inverses x'x=e and
+%   x''x'=e, then derives xx'=e and xe=x. We retain the two distinct
+%   readings faithfully rather than silently repairing the theorem.
+% - Exercise 10 claims a finite subset H of a group is a subgroup iff
+%   it is closed under products; one must also require H non-empty.
+%   The proof implicitly uses h in H and hence this condition.
+% - The number "1" and "e" both denote the group identity in the notes.
+% - Scribbled-out marks, highlighting strokes and faint reverse-page
+%   impressions have not been reconstructed.
+
+\subsection*{Seminar 4 - Page 4}
+
+\noindent\underline{Show that:}
+\[
+\begin{gathered}
+ (m\mathbb N+1,\cdot)\cong(t\mathbb N+1,\cdot),
+ \qquad m,t\in\mathbb N \\[2pt]
+ \Longleftrightarrow\\[-2pt]
+ (\mathcal U(\mathbb Z_m),\cdot)
+   \cong (\mathcal U(\mathbb Z_t),\cdot).
+\end{gathered}
+\]
+\noindent (The manuscript labels $\mathcal U(\mathbb Z_m)$ as a group.)
+
+\medskip
+\noindent\underline{Exercise 9.}
+Let $(G,\cdot)$ be a semigroup. Then $G$ is a group if and only if
+\begin{enumerate}
+ \item there exists $e\in G$ such that
+       $ex=x$ for all $x\in G$;
+ \item for every $x\in G$ there exists $x'\in G$ with
+       $xx'=e$ (as written in the statement).
+\end{enumerate}
+
+\noindent\underline{Proof (converse, as written in the notes).}
+Let $x\in G$. Choose $x'\in G$ such that $x'x=e$, and
+choose $x''\in G$ such that $x''x'=e$. Then
+\[
+\begin{aligned}
+ xx'&=(ex)x'=(x''x')xx'
+       =x''(x'x)x'=x''ex'=x''x'=e,\\
+ xe&=x(x'x)=(xx')x=ex=x.
+\end{aligned}
+\]
+
+\medskip
+\noindent\underline{Exercise 10.}
+Let $(G,\cdot)$ be a group and $H\subseteq G$ a finite set. Then
+\[
+ H\leq G\quad\Longleftrightarrow\quad
+ H\text{ is closed under multiplication}.
+\]
+
+\noindent\underline{Proof.}
+The forward implication is clear. Conversely, let $h\in H$ and put
+\[
+ hH=\{hx\mid x\in H\},\qquad
+ H^2=\{xy\mid x,y\in H\}.
+\]
+Since $H$ is closed under multiplication,
+\[
+ hH\subseteq H^2\subseteq H.
+\]
+The map
+\[
+ \varphi_h:H\longrightarrow hH,\qquad
+ \varphi_h(x)=hx
+\]
+is bijective. Since $H$ is finite, $|hH|=|H|$; hence
+\[
+ hH=H^2=H.
+\]
+As $h\in H=hH$, there exists $x\in H$ such that
+$h=hx$, so $x=1_G$. Thus $1_G\in H$. Furthermore,
+\[
+ 1_G\in hH\ \Longrightarrow\
+  1_G=hx\ (x\in H)\ \Longrightarrow\
+  x=h^{-1}\in H.
+\]
+
+\medskip
+\noindent\underline{Cantor-Bernstein theorem.}
+If $\alpha=|A|$, $\beta=|B|$, and
+\[
+ \alpha\leq\beta,\qquad\beta\leq\alpha,
+ \qquad\text{then}\qquad \alpha=\beta.
+\]
