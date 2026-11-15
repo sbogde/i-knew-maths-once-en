@@ -1,0 +1,79 @@
+% Seminar 3 - Page 10. Fragment for
+% \input{seminars/pages/seminar3-pagina10-en}; no preamble or page break.
+% EDITORIAL NOTES:
+% - This final manuscript page continues the discussion of cardinality
+%   begun on Seminar 3, Page 9.
+% - For the cardinal 1 the handwritten set looks like {{empty set}}, rather
+%   than the usual {empty set}. Either is a singleton and has cardinal 1.
+% - The handwritten cardinal sum appears to use A_i UNION {i}, not
+%   A_i TIMES {i}. That literal expression does not in general produce a
+%   disjoint union, and its cardinality need not be the intended sum.
+%   The standard tagged-disjoint-union construction would instead be
+%     | \bigcup_{i\in I} (A_i \times \{i\}) |.
+%   We retain the apparent handwriting in the displayed expression.
+% - The manuscript states that these definitions are correct without a
+%   proof of independence of the representing sets A_i, A and B.
+% - "Cantor's paradox" is transcribed as a note about the putative set
+%   of all cardinals; its proper-class distinction is not supplied in
+%   the manuscript and is not inserted into the text.
+% - The last comparison of cardinalities uses injective/bijective maps
+%   without addressing any set-theoretic axioms. It is left as written.
+
+\subsection*{Seminar 3 - Page 10}
+\begingroup
+\setlength{\abovedisplayskip}{5pt}
+\setlength{\belowdisplayskip}{5pt}
+\setlength{\abovedisplayshortskip}{3pt}
+\setlength{\belowdisplayshortskip}{3pt}
+
+\noindent The first cardinal numbers are written as
+\[
+\begin{aligned}
+0 &:= \operatorname{card}(\varnothing),\\
+1 &:= \operatorname{card}\bigl(\{\{\varnothing\}\}\bigr),\\
+2 &:= \operatorname{card}\bigl(\{\{\varnothing\},\{\{\varnothing\}\}\}\bigr).
+\end{aligned}
+\]
+
+\medskip
+\noindent\underline{Operations with cardinal numbers.}
+
+Let $\alpha=|A|$. If $(\alpha_i)_{i\in I}$ is a family of cardinal
+numbers, with $\alpha_i=|A_i|$, define
+\[
+\sum_{i\in I}\alpha_i\ \overset{\mathrm{def}}{=}
+\left|\bigcup_{i\in I}\bigl(A_i\cup\{i\}\bigr)\right|.
+\]
+
+\noindent For $\alpha=|A|$ and $\beta=|B|$, define
+\[
+\alpha\cdot\beta\ \overset{\mathrm{def}}{=}\ |A\times B|,
+\qquad
+\alpha^{\beta}\ \overset{\mathrm{def}}{=}
+\bigl|\operatorname{Hom}(B,A)\bigr|.
+\]
+
+\noindent The definitions are well-defined.
+
+\medskip
+\noindent\underline{Cantor's paradox.}
+The collection of all cardinal numbers, regarded as a set,
+leads to a contradiction (one obtains $\alpha<\alpha$).
+
+\medskip
+\noindent For $\alpha=|A|$ and $\beta=|B|$,
+\[
+\alpha\leq\beta\ \iff
+\exists\, f:A\longrightarrow B\text{ injective}.
+\]
+The strict inequality is given by
+\[
+\alpha<\beta\quad\iff\quad
+\begin{cases}
+\text{there exists an injection }f:A\longrightarrow B,\\
+\text{there is no bijection }A\longrightarrow B.
+\end{cases}
+\]
+
+\noindent The definition is correct.
+\endgroup

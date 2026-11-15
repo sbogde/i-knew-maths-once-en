@@ -1,0 +1,95 @@
+% Seminar 3 - Page 2. Fragment for
+% \input{seminars/pages/seminar3-pagina2-en}; no preamble or forced page break.
+% EDITORIAL NOTES:
+% - This page continues Problem 2(b) from Seminar 3 - Page 1.
+% - The handwritten notation varies between P_y/P_z and p_y/p_z;
+%   the projection maps are typeset consistently as p_Y and p_Z.
+% - The diagram below rearranges the handwritten projection sketch for
+%   clarity; the two component maps and the projections are retained.
+% - A short aside seems to read: fix a in Z and define i_Y(y)=(y,a).
+%   This is included, although it is not used in the following proof.
+% - Crossed-out calculations near the two composition identities are
+%   omitted; all legible final calculations are retained.
+% - The manuscript occasionally writes an identity without a domain;
+%   the domains are made explicit in the displayed proof.
+
+\subsection*{Seminar 3 - Page 2}
+
+\noindent\textbf{(b) Continued.} We have the correspondence
+\[
+  \operatorname{Hom}(X,Y\times Z)
+  \;\overset{\alpha}{\underset{\beta}{\rightleftarrows}}\;
+  \operatorname{Hom}(X,Y)\times\operatorname{Hom}(X,Z).
+\]
+Let $p_Y:Y\times Z\to Y$ and $p_Z:Y\times Z\to Z$ be the
+canonical projections:
+\[
+ p_Y(y,z)=y,\qquad p_Z(y,z)=z.
+\]
+The diagram representing the projections and the component maps is
+\[
+\begin{tikzcd}[column sep=large, row sep=large]
+ & X \arrow[dl, "h"'] \arrow[dr, "g"]
+     \arrow[d, dashed, "{\beta(g,h)}"] & \\
+ Z & Y\times Z \arrow[l, "p_Z"] \arrow[r, "p_Y"'] & Y
+\end{tikzcd}
+\]
+For $f:X\to Y\times Z$ we define
+\[
+  \alpha(f)=(p_Y\circ f,\,p_Z\circ f).
+\]
+Conversely, for $g:X\to Y$ and $h:X\to Z$, set
+\[
+  \beta(g,h)(x)=(g(x),h(x)),\qquad x\in X.
+\]
+
+\medskip
+\noindent\emph{Aside in the manuscript.} Fix $a\in Z$ and consider
+\[
+ \iota_Y:Y\longrightarrow Y\times Z,\qquad
+ \iota_Y(y)=(y,a).
+\]
+
+\medskip
+\noindent We prove first that $\alpha\circ\beta=\operatorname{id}$.
+For every $g:X\to Y$ and $h:X\to Z$,
+\[
+  \alpha\bigl(\beta(g,h)\bigr)=(g,h).
+\]
+Indeed,
+\[
+\begin{aligned}
+ \bigl(p_Y\circ\beta(g,h)\bigr)(x)
+   &=p_Y\bigl(\beta(g,h)(x)\bigr) \\
+   &=p_Y(g(x),h(x))=g(x),
+ \qquad \forall x\in X,\\[3pt]
+ \bigl(p_Z\circ\beta(g,h)\bigr)(x)
+   &=p_Z\bigl(\beta(g,h)(x)\bigr) \\
+   &=p_Z(g(x),h(x))=h(x),
+ \qquad \forall x\in X.
+\end{aligned}
+\]
+Consequently,
+\[
+  (\alpha\circ\beta)(g,h)
+    =(p_Y\circ\beta(g,h),\,p_Z\circ\beta(g,h))
+    =(g,h).
+\]
+
+\medskip
+\noindent Conversely, we show that $\beta\circ\alpha=\operatorname{id}$.
+Let $f:X\to Y\times Z$. Then
+\[
+ (\beta\circ\alpha)(f)=f.
+\]
+For $x\in X$, write $f(x)=(y,z)$. We have
+\[
+\begin{aligned}
+ \beta\bigl(\alpha(f)\bigr)(x)
+   &=\beta(p_Y\circ f,\,p_Z\circ f)(x)\\
+   &=\bigl((p_Y\circ f)(x),\,(p_Z\circ f)(x)\bigr)\\
+   &=\bigl(p_Y(y,z),\,p_Z(y,z)\bigr)\\
+   &=(y,z)=f(x).
+\end{aligned}
+\]
+Thus the two correspondences are mutually inverse.

@@ -1,0 +1,125 @@
+% Seminar 3 - Page 1, manuscript dated 24-Oct-1994.
+% Fragment for \input{seminars/pages/seminar3-pagina1-en}; no preamble.
+% EDITORIAL NOTES:
+% - The first exercise revisits the derangements problem from Seminar 2.
+%   The handwritten symbol resembles delta(n), whereas the final line
+%   appears to use D_n. Both notations are represented below at the
+%   points where they occur.
+% - The permutation notation, inclusion-exclusion argument, and
+%   the displayed final summation are retained in their original order.
+% - In Problem 2(a), there is a crossed-out argument inside the initial
+%   Hom expression; the readable final expression is Hom(X x Y, Z).
+% - The inverse of the currying map is called beta in the proof; beta
+%   is also used for the separate correspondence in part (b) on the
+%   previous seminar page. This is retained as a local name.
+% - Some intermediate arrows and calculations are crossed out; only
+%   the clear final equalities are typeset.
+% - The manuscript states the correspondence in 2(b), but only proves
+%   2(a) on this page; no proof of (b) is supplied here.
+
+\section{Seminar 3}
+
+% \phantomsection
+% \subsection*{Seminar 3}
+% \addcontentsline{toc}{subsection}{Seminar 3}
+\begin{flushright}
+\textit{24-Oct-1994}
+\end{flushright}
+
+\noindent\fbox{1}\quad A permutation $\sigma\in S_n$ is called a
+\emph{derangement} if
+\[
+  \sigma(i)\neq i,\qquad \forall i=1,\ldots,n.
+\]
+For $n\in\mathbb N^{*}$, let
+\[
+ \delta(n)=\bigl|\{\sigma\in S_n\mid\sigma\text{ is a derangement}\}\bigr|.
+\]
+Compute $\delta(n)$.
+
+\medskip
+\noindent Let
+\[
+ A_i=\{\sigma\in S_n\mid\sigma(i)=i\},
+ \qquad |A_i|=(n-1)!.
+\]
+Then
+\[
+ \delta(n)=n!-\bigl|\{\sigma\in S_n\mid
+                   \sigma\text{ is not a derangement}\}\bigr|.
+\]
+Denote the set in braces by $B$. Thus
+\[
+ B=A_1\cup\cdots\cup A_n.
+\]
+By inclusion-exclusion,
+\[
+\begin{aligned}
+ |B|
+ &=|A_1\cup\cdots\cup A_n|\\
+ &=\sum_{i=1}^{n}|A_i|
+    -\sum_{1\le i<j\le n}|A_i\cap A_j|+\cdots
+      +(-1)^{n-1}|A_1\cap\cdots\cap A_n|\\[3pt]
+ &=\binom n1(n-1)!-\binom n2(n-2)!+\cdots
+      +(-1)^{n-1}\binom nn\,0!\\[3pt]
+ &=\sum_{k=1}^{n}(-1)^{k-1}\binom nk(n-k)!.
+\end{aligned}
+\]
+Hence, in the final notation of the manuscript,
+\[
+ \boxed{D_n=n!-|B|=\sum_{k=0}^{n}(-1)^k\binom nk(n-k)!}.
+\]
+
+\bigskip
+\noindent\fbox{2}\quad Let $X,Y,Z$ be sets.
+
+\medskip
+\noindent\textbf{(a)} The function sets are in correspondence:
+\[
+ \operatorname{Hom}(X\times Y,Z)
+ \;\overset{\alpha}{\underset{\beta}{\rightleftarrows}}\;
+ \operatorname{Hom}\bigl(X,\operatorname{Hom}(Y,Z)\bigr),
+\]
+where
+\[
+ \alpha(f)(x)(y)=f(x,y).
+\]
+
+\noindent\textbf{(b)} Likewise,
+\[
+ \operatorname{Hom}(X,Y\times Z)
+ \cong\operatorname{Hom}(X,Y)\times\operatorname{Hom}(X,Z).
+\]
+
+\medskip
+\noindent\underline{Proof of (a).}
+Define the reverse map by
+\[
+ \beta(g)(a,b)=g(a)(b),\qquad
+ g:X\longrightarrow\operatorname{Hom}(Y,Z).
+\]
+For every such $g$,
+\[
+ (\alpha\circ\beta)(g)=g.
+\]
+Indeed, for all $x\in X$ and $y\in Y$,
+\[
+ \begin{aligned}
+ (\alpha\circ\beta)(g)(x)(y)
+ &=\alpha\bigl(\beta(g)\bigr)(x)(y)\\
+ &=\beta(g)(x,y)\\
+ &=g(x)(y).
+ \end{aligned}
+\]
+On the other hand, for $f:X\times Y\longrightarrow Z$,
+\[
+ (\beta\circ\alpha)(f)=\operatorname{id}_{\operatorname{Hom}(X\times Y,Z)}(f)=f.
+\]
+Indeed, for every $x\in X$ and $y\in Y$,
+\[
+ \begin{aligned}
+ \beta\bigl(\alpha(f)\bigr)(x,y)
+ &=\alpha(f)(x)(y)\\
+ &=f(x,y).
+ \end{aligned}
+\]

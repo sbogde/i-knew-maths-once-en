@@ -1,0 +1,86 @@
+% Seminar 3 - Page 8. Fragment for
+% \input{seminars/pages/seminar3-pagina8-en}; no preamble or page break.
+% EDITORIAL NOTES:
+% - The manuscript uses Hom(A,B) for the set of all functions A -> B.
+% - It calls an equivalence class a "germ" (Romanian "germene") of f
+%   along A'. In standard terminology, germs usually involve agreement
+%   on a neighbourhood; here the equivalence is precisely agreement on A'.
+% - The handwritten phrase after "germenele lui f" is not fully clear;
+%   it appears to refer to A', possibly "in punctul lui A'".
+% - The restriction diagram has been drawn with tikz-cd; p is the
+%   canonical quotient map and h the restriction map.
+% - The final extension construction chooses a in B, implicitly assuming
+%   B is non-empty when A\A' is non-empty. The notes do not state this.
+% - Crossed-out symbols near the diagrams are not reconstructed.
+% - The manuscript ends after writing the existence of an extension;
+%   no additional proof step has been supplied.
+
+\subsection*{Seminar 3 - Page 8}
+\begingroup
+\setlength{\abovedisplayskip}{5pt}
+\setlength{\belowdisplayskip}{5pt}
+\setlength{\abovedisplayshortskip}{3pt}
+\setlength{\belowdisplayshortskip}{3pt}
+
+Let $A,B$ be sets and $A'\subseteq A$. For
+$f,g\in\operatorname{Hom}(A,B)$, define
+\[
+ f\sim g\overset{\mathrm{def}}\iff f|_{A'}=g|_{A'}.
+\]
+Show that $\sim$ is an equivalence relation and that
+\[
+ \operatorname{Hom}(A,B)/{\sim}
+ \ \overset{\mathrm{bij}}{\cong}\ \operatorname{Hom}(A',B).
+\]
+An element of the quotient is called in the notes a \emph{germ}
+of $f$ on $A'$.
+
+\medskip
+\noindent\underline{Proof.}
+Consider the canonical projection $p$ and the restriction map $h$:
+\[
+\begin{tikzcd}[column sep=huge,row sep=large]
+ \operatorname{Hom}(A,B)
+    \arrow[r,"p"]\arrow[d,"h"']
+  & \operatorname{Hom}(A,B)/{\sim}
+       \arrow[dl,dashed,"\overline h"] \\
+ \operatorname{Hom}(A',B) &
+\end{tikzcd}
+\qquad h(f)=f|_{A'}.
+\]
+The relation is the equivalence relation induced by $h$:
+\[
+ \sim\;=R_h,
+ \qquad f\sim g\iff h(f)=h(g)
+ \iff f|_{A'}=g|_{A'}.
+\]
+Therefore the induced map $\overline h$ is injective.
+
+\medskip
+\noindent For every map $t:A'\longrightarrow B$, we seek a map
+$f:A\longrightarrow B$ such that $f|_{A'}=t$.
+Choose $a\in B$ and put
+\[
+ f(x)=
+ \begin{cases}
+   t(x),&x\in A',\\
+   a,&x\in A\setminus A'.
+ \end{cases}
+\]
+This is the extension indicated by the diagram:
+\[
+\begin{tikzcd}[column sep=large,row sep=large]
+ A'\arrow[r,hook,"i"]\arrow[d,"t"']
+    & A\arrow[dl,dashed,"f"]\\
+ B &
+\end{tikzcd}
+\qquad f\circ i=t.
+\]
+Thus, as written at the end of the page,
+\[
+ \forall\,g:A'\longrightarrow B,\quad
+ \exists\,f:A\longrightarrow B
+ \quad\text{such that}\quad f|_{A'}=g.
+\]
+
+\endgroup

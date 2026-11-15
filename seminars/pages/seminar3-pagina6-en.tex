@@ -1,0 +1,101 @@
+% Seminar 3 - Page 6. Fragment for
+% \input{seminars/pages/seminar3-pagina6-en}; no preamble or forced page break.
+% EDITORIAL NOTES:
+% - This page continues examples (i), (iii), and (iv) of the preceding page.
+% - In the opening line, square brackets and braces denote the integer and
+%   fractional parts; the compact handwritten expression is interpreted as
+%   [x]+{x}-[y]-{y} being an integer when x~y.
+% - The proof explicitly shows reflexivity and symmetry of congruence mod Z;
+%   transitivity is not written out on this manuscript page.
+% - A small marginal reminder repeats (iv), x~y iff x-y in Q, and R/~ ~ R.
+%   It is not reproduced as another numbered example.
+% - The diagrams are redrawn for legibility; p restricted to a chosen set
+%   of representatives is the indicated bijection.
+% - Equality of complex arguments depends on a consistent choice of argument
+%   (or equality modulo 2pi); the notes leave this convention implicit.
+% - In the last diagram the handwritten notation for the map to S' is faint;
+%   the unit-normalisation map z -> z/|z| is consistent with the proof.
+
+\subsection*{Seminar 3 - Page 6}
+\begingroup
+\setlength{\abovedisplayskip}{5pt}
+\setlength{\belowdisplayskip}{5pt}
+\setlength{\abovedisplayshortskip}{3pt}
+\setlength{\belowdisplayshortskip}{3pt}
+
+\noindent\textbf{Proof (continuation of example (i)).}
+Write $x=\lfloor x\rfloor+\{x\}$ and $y=\lfloor y\rfloor+\{y\}$.
+If $x-y\in\mathbb Z$, then
+\[
+ \lfloor x\rfloor+\{x\}-\lfloor y\rfloor-\{y\}\in\mathbb Z,
+ \qquad \{x\}-\{y\}\in\mathbb Z.
+\]
+For the relation $x\sim y\iff x-y\in\mathbb Z$:
+\[
+ \begin{aligned}
+ \text{(R)}\quad &x\sim x &&(x-x=0\in\mathbb Z),\\
+ \text{(S)}\quad &x\sim y\Longrightarrow y\sim x
+     &&(x-y\in\mathbb Z\Longrightarrow y-x\in\mathbb Z).
+ \end{aligned}
+\]
+
+\noindent\underline{Variant 1.} The interval $[0,1)$ is a system of
+representatives for $\sim$ if and only if
+\[
+ p|_{[0,1)}:[0,1)\longrightarrow\mathbb R/{\sim}
+ \quad\text{is bijective}.
+\]
+\noindent\textbf{Step 1.} If $x,y\in[0,1)$ and $x\ne y$, then
+$x\not\sim y$ (evident).
+
+\noindent\textbf{Step 2.} For every $x\in\mathbb R$ there is
+$t\in[0,1)$ with $x-t\in\mathbb Z$: take $t=\{x\}$.
+
+\medskip
+\noindent\textbf{(iii) Complex numbers with equal modulus.}
+For the quotient $\mathbb C/{\sim}$, where
+$z_1\sim z_2\iff|z_1|=|z_2|$, consider
+\[
+ p|_{[0,+\infty)}:[0,+\infty)\longrightarrow\mathbb C/{\sim}.
+\]
+\noindent\textbf{(1)} For $x,y\in[0,+\infty)$,
+$x\ne y\Longrightarrow x\not\sim y$.
+
+\noindent\textbf{(2)} For every $z\in\mathbb C$ there is
+$t\in[0,+\infty)$ with $z\sim t$: take $t=|z|$.
+\[
+\begin{tikzcd}[column sep=large,row sep=small]
+ \mathbb C\arrow[r,"p"]\arrow[d,"{f(z)=|z|}"']
+    & \mathbb C/{\sim} \\
+ {[0,+\infty)}\arrow[ur,dashed,"{p|_{[0,+\infty)}}"'] &
+\end{tikzcd}
+\]
+If $|z_1|=|z_2|$, then $f(z_1)=f(z_2)$.
+
+\medskip
+\noindent\textbf{(iv) Complex numbers with equal argument.}
+Put
+\[
+ S'=\{z\in\mathbb C\mid |z|=1\},\qquad
+ z_1\sim z_2\iff\arg(z_1)=\arg(z_2)
+ \quad(z_1,z_2\in\mathbb C^*).
+\]
+\noindent\textbf{(1)} If $z_1,z_2\in S'$ and $z_1\ne z_2$,
+then $z_1\not\sim z_2$ (their arguments differ).
+
+\noindent\textbf{(2)} For every $z\in\mathbb C^*$ there exists
+$z_1\in S'$ with $z\sim z_1$. Indeed, write
+\[
+ z=r(\cos t+i\sin t),\qquad z_1=\cos t+i\sin t.
+\]
+Thus the notes identify $\mathbb C^*/{\sim}$ with $S'$ via
+representatives on the unit circle:
+\[
+\begin{tikzcd}[column sep=large,row sep=small]
+ \mathbb C^*\arrow[r,"p"]\arrow[d,"{f(z)=z/|z|}"']
+    & \mathbb C^*/{\sim} \\
+ S'\arrow[ur,dashed,"{p|_{S'}}"'] &
+\end{tikzcd}
+\]
+
+\endgroup

@@ -1,0 +1,119 @@
+% Seminar 3 - Page 5. Fragment for
+% \input{seminars/pages/seminar3-pagina5-en}; no preamble or page break.
+% EDITORIAL NOTES:
+% - The opening lines continue the universal property of the quotient set
+%   from Page 4. The word attached to the second criterion is overwritten:
+%   it may read "inj." or "bij.". The injectivity reading is provisional;
+%   if "bij." was intended, surjectivity is also required.
+% - The example defining rational numbers writes Z x Z without excluding
+%   zero denominators. On all of Z x Z, cross-multiplication is NOT an
+%   equivalence relation. The necessary restriction is not silently added.
+% - The Cauchy-sequence construction is read as sequences with terms in Q;
+%   it is written compactly in the original manuscript.
+% - Example (i) includes a small sketch of the quotient projection, here
+%   rendered as a commutative diagram.
+% - The right-margin scribbles and small shaded circle are not part of an
+%   identifiable calculation and are omitted from the main transcription.
+% - Example (iv) appears to identify R/~ with R; this is only an abstract
+%   (non-canonical) identification, not a specified quotient map.
+
+\subsection*{Seminar 3 - Page 5}
+\begingroup
+\setlength{\abovedisplayskip}{5pt}
+\setlength{\belowdisplayskip}{5pt}
+\setlength{\abovedisplayshortskip}{3pt}
+\setlength{\belowdisplayshortskip}{3pt}
+
+\noindent\textbf{Universal property (continued).}
+For the map $\overline f$ of the preceding page,
+\[
+\begin{aligned}
+ \overline f\text{ is surjective}
+   &\iff f\text{ is surjective},\\
+ \overline f\text{ is injective}
+   &\iff {\sim}\;=R_f.
+\end{aligned}
+\]
+Moreover, for a system of representatives $(x_i)_{i\in I}$,
+\[
+ M=\bigcup_{i\in I}\widehat{x_i}.
+\]
+
+\medskip
+\noindent\underline{Examples of quotient sets}
+
+\noindent\textbf{(a) Rational numbers.}
+Consider $\mathbb Z\times\mathbb Z$ and the relation
+\[
+ (m,n)\sim(m',n')
+ \overset{\mathrm{def}}{\iff}mn'=nm'.
+\]
+The notes identify the quotient as
+\[
+ (\mathbb Z\times\mathbb Z)/{\sim}
+   \overset{\mathrm{def}}{=}\mathbb Q,
+ \qquad
+ r\in\mathbb Q,\quad r=\widehat{(m,n)}.
+\]
+% Source caveat: n,n' != 0 is required for the intended construction.
+
+\noindent\textbf{(b) Real numbers from Cauchy sequences.}
+Let
+\[
+ \mathcal C=\bigl\{(x_n)_{n\geq1}\text{ with }x_n\in\mathbb Q
+       \mid (x_n)_{n\geq1}\text{ is Cauchy}\bigr\}.
+\]
+Define
+\[
+ (x_n)_n\sim(y_n)_n
+ \overset{\mathrm{def}}{\iff}
+ \lim_{n\to\infty}(x_n-y_n)=0.
+\]
+This is an equivalence relation; with the manuscript's notation,
+\[
+ \mathcal C/{\sim}\ \overset{\mathrm{not.}}{=}\ \mathbb R,
+ \qquad
+ r=\widehat{(x_n)_n}\in\mathbb R.
+\]
+
+\medskip
+\noindent\textbf{(i)} On $\mathbb R$, put
+\[
+ x\sim y\iff x-y\in\mathbb Z.
+\]
+This is an equivalence relation and\enspace\(\mathbb R/{\sim}\cong[0,1)\).
+The quotient sketch is
+\[
+\begin{tikzcd}[column sep=large,row sep=small]
+ \mathbb R\arrow[r,"p_{\sim}"]\arrow[d,"{x\mapsto x-\lfloor x\rfloor}"']
+    & \mathbb R/{\sim} \\
+ {[0,1)}\arrow[ur,dashed,"\cong"'] &
+\end{tikzcd}
+\]
+% The floor-map label explicates the diagram's unlabeled vertical arrow.
+
+\noindent\textbf{(ii)} On $\mathbb C$, define
+\[
+ z_1\sim z_2\overset{\mathrm{def}}{\iff}|z_1|=|z_2|.
+\]
+This is an equivalence relation on $\mathbb C$, with\enspace\(\mathbb C/{\sim}\cong[0,+\infty)\).
+
+\noindent\textbf{(iii)} On $\mathbb C^*$, define
+\[
+ z_1\sim z_2\overset{\mathrm{def}}{\iff}
+ \arg(z_1)=\arg(z_2).
+\]
+This is an equivalence relation on $\mathbb C^*$ and
+\[
+ \mathbb C^*/{\sim}\;\cong\;S^1,
+ \qquad S^1=\{z\in\mathbb C\mid |z|=1\}.
+\]
+% Equality of arguments is understood with a consistent branch/modulo 2pi.
+
+\noindent\textbf{(iv)} On $\mathbb R$, put
+\[
+ x\sim y\iff x-y\in\mathbb Q.
+\]
+The manuscript records $\mathbb R/{\sim}\cong\mathbb R$.
+
+\endgroup

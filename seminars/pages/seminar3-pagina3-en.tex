@@ -1,0 +1,117 @@
+% Seminar 3 - Page 3. Fragment for
+% \input{seminars/pages/seminar3-pagina3-en}; no preamble or forced page break.
+% EDITORIAL NOTES:
+% - The manuscript defines "countable" through a bijection from N; this
+%   describes countably infinite sets. It then notes that a subset of such
+%   a set is either finite or countable.
+% - The exact symbol beside the subset remark is faint. Its mathematical
+%   reading (finite or countable) is used below, provisionally.
+% - Q ~ Z x Z is the example as written; no explicit bijection is supplied.
+% - In the diagonal argument the manuscript uses a subscript scheme
+%   y_{n1}, y_{n2}, ... and z_0,z_1,...; this is preserved.
+% - At the contradiction line the letter is faint; z != y_n is inferred
+%   from the immediately preceding construction.
+% - The manuscript does not discuss the ambiguity of decimal expansions,
+%   nor does it impose a convention for trailing nines. No additional
+%   justification has been inserted into the transcription.
+% - The product-of-injections note is separate from Exercise 1 in the source.
+% - Exercise 2 is unfinished at the bottom of the manuscript page.
+
+\subsection*{Seminar 3 - Page 3}
+
+\noindent A set $A$ is called \emph{countable} if there exists a bijection
+\[
+  f:\mathbb N\longrightarrow A.
+\]
+\noindent\textbf{Examples.} $\mathbb N$, $\mathbb Z$,
+$\mathbb Q\ (\sim\mathbb Z\times\mathbb Z)$.
+
+\noindent If $A$ is countable and $B\subseteq A$, then $B$ is
+finite or countable.
+
+\medskip
+\noindent\textbf{(1) $\mathbb R$ is not countable.}
+
+\noindent\underline{Proof (by contradiction).}
+If $\mathbb R$ were countable, then $[0,1)$ would be countable.
+Suppose
+\[
+  [0,1)=\{y_n\mid n\in\mathbb N\},
+\]
+where the elements have decimal expansions
+\[
+\begin{aligned}
+ y_0 &= 0,y_{01}y_{02}y_{03}\ldots,\\
+ y_1 &= 0,y_{11}y_{12}y_{13}\ldots,\\
+     &\ \vdots\\
+ y_n &= 0,y_{n1}y_{n2}y_{n3}\ldots .
+\end{aligned}
+\]
+Construct the number
+\[
+  z:=0,z_0z_1z_2\ldots z_t\ldots\in[0,1)
+\]
+by defining
+\[
+ z_0=\begin{cases}
+       1+y_{01},&y_{01}\neq9,\\
+       0,&y_{01}=9,
+     \end{cases}
+ \qquad
+ z_t=\begin{cases}
+       1+y_{t,t+1},&y_{t,t+1}\neq9,\\
+       0,&y_{t,t+1}=9.
+     \end{cases}
+\]
+Thus $z\neq y_n$ for every $n\in\mathbb N$, contradicting
+$[0,1)=\{y_n\mid n\in\mathbb N\}$.
+Consequently, $[0,1)$ is not countable and therefore
+$\mathbb R$ is not countable.
+
+\medskip
+\noindent\emph{Note on products of countable sets.}
+Let
+\[
+ A_1=\{x_1,x_2,\ldots,x_n,\ldots\},\qquad
+ B_1=\{y_1,y_2,\ldots,y_n,\ldots\},
+\]
+with maps $f_1:A_1\to\mathbb N$ and $f_2:B_1\to\mathbb N$.
+The manuscript records the product map
+\[
+\begin{aligned}
+ f_1\times f_2 &: A_1\times B_1\longrightarrow
+                    \mathbb N\times\mathbb N,\\
+ (f_1\times f_2)(x_i,y_j)
+   &=\bigl(f_1(x_i),f_2(y_j)\bigr).
+\end{aligned}
+\]
+
+\medskip
+\noindent\textbf{Exercise 2.} Show that there is no function
+$f:\mathbb R\to\mathbb R$ such that
+\[
+ |f(x)-f(y)|>1\qquad(\forall x\neq y).
+\]
+
+\noindent\underline{Proof (by contradiction).}
+Suppose that such a map $f:\mathbb R\to\mathbb R$ exists.
+Then
+\[
+ x\neq y\ \Longrightarrow\ f(x)\neq f(y),
+\]
+so $f$ is injective. Let
+\[
+ \operatorname{im}(f)=\{f(x)\mid x\in\mathbb R\}.
+\]
+Since $f$ is injective,
+$\operatorname{im}(f)\sim\mathbb R$, hence
+$\operatorname{im}(f)$ is not countable.
+On the other hand,
+\[
+ \operatorname{im}(f)
+  =\operatorname{im}(f)\cap\mathbb R
+  =\operatorname{im}(f)\cap
+     \left(\bigcup_{n\in\mathbb Z}[n,n+1)\right)
+  =\ \cdots
+\]
+% The argument continues on the next manuscript page.

@@ -1,0 +1,82 @@
+% Seminar 3 - Page 7. Fragment for
+% \input{seminars/pages/seminar3-pagina7-en}; no preamble or page break.
+% EDITORIAL NOTES:
+% - This page continues the examples from pages 5-6. The visible labels
+%   (ii), (iii), (iv) are retained even where neighbouring pages differ.
+% - The two triangular diagrams have been redrawn using tikz-cd.
+% - For the argument map on C*, the notes suppress the choice of argument;
+%   normalisation z/|z| is used to express the indicated correspondence.
+% - In (iv), the handwritten reflexivity line says "0 in R" rather than
+%   the needed "0 in Q". It is retained in the displayed source argument;
+%   the discrepancy is recorded here, not silently corrected.
+% - The sketch involving a map R -> R/~ and f(x)=f(y) iff x-y in Q is
+%   visibly struck through. It is noted here but not asserted as a map.
+% - R/~ ~ R is a set-theoretic assertion, not a canonical identification.
+% - A handwritten sentence after p:R -> R/~ appears to say that R itself
+%   is not a system of representatives; the reading is somewhat unclear.
+
+\subsection*{Seminar 3 - Page 7}
+\begingroup
+\setlength{\abovedisplayskip}{5pt}
+\setlength{\belowdisplayskip}{5pt}
+\setlength{\abovedisplayshortskip}{3pt}
+\setlength{\belowdisplayshortskip}{3pt}
+
+\noindent\textbf{(ii) Equal-modulus classes (continued).}
+The canonical projection $p$ and the modulus map $f$ give the diagram
+\[
+\begin{tikzcd}[column sep=large,row sep=small]
+ \mathbb C\arrow[r,"p"]\arrow[d,"f"'] & \mathbb C/{\sim}\\
+ {[0,+\infty)}\arrow[ur,dashed,"\overline f"'] &
+\end{tikzcd}
+\qquad f(z)=|z|.
+\]
+Here $\sim=R_f$, that is,
+\[
+ x\sim y\iff f(x)=f(y).
+\]
+
+\noindent\textbf{(iii) Equal-argument classes (continued).}
+For $\mathbb C^*=\mathbb C\setminus\{0\}$ and the unit circle $S'$:
+\[
+\begin{tikzcd}[column sep=large,row sep=small]
+ \mathbb C^*\arrow[r,"p"]\arrow[d,"f"'] & \mathbb C^*/{\sim}\\
+ S'\arrow[ur,dashed,"\overline f"'] &
+\end{tikzcd}
+\]
+Writing $z=r(\cos t+i\sin t)$, the notes give
+\[
+ f(z)=f\bigl(r(\cos t+i\sin t)\bigr)=\cos t+i\sin t.
+\]
+
+\noindent\textbf{(iv) Equivalence modulo $\mathbb Q$ on $\mathbb R$.}
+Define
+\[
+ x\sim y\overset{\mathrm{def}}\iff x-y\in\mathbb Q,
+ \qquad \mathbb R/{\sim}\cong\mathbb R.
+\]
+Check the three properties:
+\[
+\begin{aligned}
+\text{(R)}\quad &x\sim x\quad(0\in\mathbb R),\\
+\text{(S)}\quad &x-y\in\mathbb Q\Longrightarrow y-x\in\mathbb Q,\\
+\text{(T)}\quad &x-y\in\mathbb Q,\ y-z\in\mathbb Q
+      \Longrightarrow x-z\in\mathbb Q.
+\end{aligned}
+\]
+The projection is $p:\mathbb R\to\mathbb R/{\sim}$.
+The notes remark that $\mathbb R$ itself is not a system of representatives.
+For a system $S=(x_i)_{i\in I}$ of representatives,
+\[
+ p|_S:S\longrightarrow\mathbb R/{\sim}\quad\text{is bijective}.
+\]
+Since
+\[
+ \mathbb R=\bigcup_{i\in I}\widehat{x_i},\qquad
+ \widehat{x_i}=\{y\in\mathbb R\mid y-x_i\in\mathbb Q\}
+   =x_i+\mathbb Q\cong\mathbb Q,
+\]
+each $\widehat{x_i}$ is countable. If $I$ were countable,
+$\mathbb R$ would be countable, a contradiction. Hence $I$ is uncountable.
+
+\endgroup
